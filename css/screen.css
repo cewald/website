@@ -1,0 +1,376 @@
+/* Google Fonts */
+
+@import url(http://fonts.googleapis.com/css?family=Anonymous+Pro:400,400italic,700,700italic);
+
+/* Clearfix */
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+ 
+.clearfix {
+    display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+    display: block;
+}
+ 
+* html .clearfix {
+    height: 1%;
+}
+
+.hidden{
+    display:none;
+}
+
+/* Box-Model */
+
+body{
+    background:url(../img/bg_1.jpg) bottom center no-repeat #333 fixed;
+}
+
+.container{
+    width:95%;
+    margin:1em auto 1em auto;
+    position:relative;
+}
+
+.container .status-bar-top .left{
+    float:left;
+    height:43px;
+    width:90px;
+    background:url(../img/console_top_left.png) no-repeat;
+}
+
+.container .status-bar-top .right{
+    float:right;
+    height:43px;
+    width:90px;
+    background:url(../img/console_top_right.png) no-repeat;
+}
+
+.container .status-bar-top .center{
+    height:25px;
+    background:url(../img/console_top_center.png) repeat-x;
+    margin:0 90px;
+    padding:18px 0 0 0;
+}
+
+.container .content-box .left{
+    float:left;
+    width:19px;
+    background:url(../img/console_left.png) repeat-y;
+}
+
+.container .content-box .right{
+    float:right;
+    width:22px;
+    background:url(../img/console_right.png) repeat-y;
+}
+
+.container .content-box .content-wrapper{
+    background:url(../img/console_bg.png);
+    margin:0 22px 0 19px;
+}
+
+.container .status-bar-bottom .left{
+    float:left;
+    height:47px;
+    width:34px;
+    background:url(../img/console_bottom_left.png) no-repeat;
+}
+
+.container .status-bar-bottom .right{
+    float:right;
+    height:47px;
+    width:38px;
+    background:url(../img/console_bottom_right.png) no-repeat;
+}
+
+.container .status-bar-bottom .center{
+    height:25px;
+    background:url(../img/console_bottom_center.png) repeat-x;
+    margin:0 38px 0 34px;
+    padding:0 0 22px 0;
+}
+
+/* Statusbar » Top */
+
+.container .status-bar-top .left{
+    height:19px;
+    width:62px;
+    padding:24px 0 0 28px;
+}
+
+.container .status-bar-top .left span{
+    float:left;
+    width:12px;
+    height:13px;
+    margin:0 8px 0 0;
+    cursor:pointer;
+}
+
+.container .status-bar-top .left span.red:hover{
+    background:url(../img/console_top_left.png) no-repeat -28px -67px;
+}
+
+.container .status-bar-top .left span.yellow:hover{
+    background:url(../img/console_top_left.png) no-repeat -48px -67px;
+}
+
+.container .status-bar-top .left span.green{
+    margin-right:0;
+}
+
+.container .status-bar-top .left span.green:hover{
+    background:url(../img/console_top_left.png) no-repeat -68px -67px;
+}
+
+.container .status-bar-top .center{
+    text-align:center;
+    color:#b6b6b6;
+    font-family:'Anonymous Pro','Courier',monospace;
+    font-size:0.8em;
+    font-weight:400;
+    line-height:25px;
+    text-shadow: 0 1px 0 #000;
+    overflow: hidden;
+}
+
+.container .status-bar-top .center .greyed{
+    color:#7d7d7d;
+}
+
+/* Content */
+
+.container .content{
+    color:#fff;
+    font-family:'Anonymous Pro','Courier',monospace;
+    font-size:1em;
+    font-weight:400;
+    line-height:1.25em;
+    padding:1.25em 15px 2.5em 15px;
+}
+
+.container .content .headline{
+    min-height:80px;
+    padding:6px 0 6px 110px;
+    margin:0 0 2.5em 0;
+    background:url(../img/console_logo.png) center left no-repeat;
+}
+
+.container .content .manual{
+    margin:0 0 1.25em 0;
+}
+
+.container .content .big{
+    font-size:1.15em;
+    font-weight:700;
+}
+
+.container .content .highlight{
+    color:#30cccc;
+}
+
+.container .content .greyed,
+.container .content .greyed a{
+    color:#666;
+}
+
+.container .content .lightgreyed,
+.container .content .lightgreyed a{
+    color:#999;
+}
+
+.container .content a{
+    color:#fff;
+    text-decoration:underline;
+}
+
+.container .content a:hover{
+    color:#30cccc;
+}
+
+.container .hidden{
+     margin:0 0 1.25em 0;
+}
+
+.container .always-hidden{
+     display:none;
+}
+
+.container .content #command{
+    white-space:pre;
+}
+
+.container .content .console .output{
+    margin:0 0 1.25em 0;
+}
+
+.container .content .margin-left{
+    margin:1.25em 0 0 2.5em;
+}
+
+.container .content #shortcuts em a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Statusbar » bottom */
+
+#console-input{
+    position:absolute;
+    bottom:0;
+    left:-6000px;
+}
+
+.container .status-bar-bottom .center,
+.container .status-bar-bottom .center a{
+    color:#7d7d7d;
+    font-family:'Anonymous Pro','Courier',monospace;
+    font-size:0.8em;
+    font-weight:400;
+    line-height:25px;
+    text-shadow: 0 -1px 0 #000;
+    text-decoration:none;
+}
+
+.container .status-bar-bottom .center a{
+    font-size:1em;
+}
+
+.container .status-bar-bottom .center a:hover,
+.container .status-bar-bottom .center .col_left a:hover{
+    color:#b6b6b6;
+}
+
+.container .status-bar-bottom .center .col_left{
+    float:left;
+}
+
+.container .status-bar-bottom .center .col_left,
+.container .status-bar-bottom .center .col_left a{
+    color:#606060;
+}
+
+.container .status-bar-bottom .center .col_right{
+    float:right;
+}
+
+/* Mobile version  » iPhone */
+
+@media only screen and (min-device-width:320px) and (max-width: 480px){
+
+body{
+    background-size:cover;
+}
+
+.container{
+    padding-top:90px;
+    background:url(../img/console_logo.png) top center no-repeat;
+}
+
+.container .status-bar-top .center .wrapper,
+.container .status-bar-bottom .center .col_right,
+.container .status-bar-bottom .center .col_left .background,
+.container .content .headline .divider,
+.container .content .manual,
+.container #work .description{
+    display:none;
+}
+
+.container .content .headline{
+    padding:0;
+    background:none;
+    line-height:1.5em;
+}
+
+.container .content .headline .metaline{
+    display:block;
+    margin:0 0 1em 0;
+}
+
+.container .content .headline br{
+    display:none;
+}
+
+.container .content .margin-left{
+    margin-left:2em;
+}
+
+.container .content{
+    font-size:0.9em;
+    line-height:1.4em;
+    padding-top:1.5em;
+    padding-bottom:1.5em;
+}
+
+#skillset,#work,#contact{
+    display:block;
+}
+
+.console .output{
+    display:none;
+}
+
+}
+
+/* Mobile version  » iPad */
+
+@media only screen and (max-width: 1024px){
+
+.container .content .manual{
+    display:none;
+}
+
+#skillset,#work,#contact{
+    display:block;
+}
+
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait){
+
+.container .status-bar-bottom .center .col_left .background,
+.container .content .headline .divider,
+.container #work .description{
+    display:none;
+}
+
+.container .content .headline .metaline{
+    display:block;
+    margin:0 0 0.5em 0;
+}
+
+.container .content .headline br{
+    display:none;
+}
+
+}
+
+/* Small screen */
+@media only screen and (max-width: 880px){
+
+.container .status-bar-bottom .center .col_left .background,
+.container .content .headline .divider,
+.container #work .description,
+.container .status-bar-bottom .center .col_right{
+    display:none;
+}
+
+.container .content .headline .metaline{
+    display:block;
+    margin:0 0 0.5em 0;
+}
+
+.container .content .headline br{
+    display:none;
+}
+
+}
