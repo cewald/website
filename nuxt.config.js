@@ -1,5 +1,6 @@
 export default {
-  // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
+  // We need to disable `ssr` to have "real" prerendering.
+  // @see https://nuxtjs.org/blog/going-full-static#new-config-option-target
   // ssr: false,
 
   // Target: https://go.nuxtjs.dev/config-target
