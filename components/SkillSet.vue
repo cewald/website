@@ -24,6 +24,7 @@ export default {
           'vuejs',
           'nuxt',
           'vue-storefront',
+          'magento',
           'webpack'
         ],
         'server-side': ['nodejs', 'php', 'nginx'],
