@@ -40,7 +40,9 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     // https://github.com/nuxt-community/fontawesome-module
-    '@nuxtjs/fontawesome'
+    '@nuxtjs/fontawesome',
+    // https://github.com/nuxt-community/google-analytics-module
+    '@nuxtjs/google-analytics'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
