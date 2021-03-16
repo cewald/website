@@ -1,6 +1,6 @@
 <template>
   <div>
-    <slot />
+    <h2 class="font-bold mb-2"><slot /></h2>
     <div class="mb-2 md:mb-0 md:inline-block">
       <ContactPill
         to="https://github.com/cewald"
