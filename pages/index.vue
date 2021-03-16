@@ -1,80 +1,34 @@
 <template>
   <div class="container">
+    <h1>Christian Ewald</h1>
+    <h2>full-stack javascript developer and software-engineer</h2>
     <div>
-      <Logo />
-      <h1 class="title">
-        website
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
+      <h3>Skillset:</h3>
+      <Skillset title="frontend" :skills="['javascript', 'nodejs', 'typescript', 'vuejs', 'nuxt', 'vue-storefront', 'webpack']" />
+      <Skillset title="dev-ops" :skills="['cypress-io', 'jest', 'codeception', 'continous-integration & -deployment', 'test-driven development', 'automated-testing', 'github-actions', 'gitlab-pipelines', 'git']" />
+      <Skillset title="server-side" :skills="['nodejs', 'php', 'nginx', 'aws', 'gcs', 'netlify', 'heroku']" />
+      <Skillset title="maxim" :skills="['microservice', 'headless', 'serverless']" />
+      <Skillset title="data" :skills="['elasticsearch', 'mysql', 'redis']" />
+    </div>
+    <div>
+      <h3>Get in touch:</h3>
+      <a href="https://github.com/cewald">github.com/cewald</a>
+      <a href="https://www.linkedin.com/in/cewald1">linkedin.com/in/cewald1</a>
+      <a href="mailto:hello@christianewald.de">hello@christianewald.de</a>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
 
-export default Vue.extend({})
+export default {
+  head () {
+    return {
+      title: 'full-stack javascript developer and software-engineer',
+      meta: [
+        { hid: 'description', name: 'description', content: 'Full-stack javascript developer and software-engineer' }
+      ]
+    }
+  }
+}
 </script>
-
-<style>
-/* Sample `apply` at-rules with Tailwind CSS
-.container {
-@apply min-h-screen flex justify-center items-center text-center mx-auto;
-}
-*/
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>
