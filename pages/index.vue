@@ -4,10 +4,49 @@
     <h2>full-stack javascript developer and software-engineer</h2>
     <div>
       <h3>Skillset:</h3>
-      <Skillset title="frontend" :skills="['javascript', 'nodejs', 'typescript', 'vuejs', 'nuxt', 'vue-storefront', 'webpack']" />
-      <Skillset title="dev-ops" :skills="['cypress-io', 'jest', 'codeception', 'continous-integration & -deployment', 'test-driven development', 'automated-testing', 'github-actions', 'gitlab-pipelines', 'git']" />
-      <Skillset title="server-side" :skills="['nodejs', 'php', 'nginx', 'aws', 'gcs', 'netlify', 'heroku']" />
-      <Skillset title="maxim" :skills="['microservice', 'headless', 'serverless']" />
+      <Skillset
+        title="frontend"
+        :skills="[
+          'javascript',
+          'nodejs',
+          'typescript',
+          'vuejs',
+          'nuxt',
+          'vue-storefront',
+          'webpack'
+        ]"
+      />
+      <Skillset title="server-side" :skills="['nodejs', 'php', 'nginx']" />
+      <Skillset
+        title="dev-ops"
+        :skills="[
+          'cypress-io',
+          'jest',
+          'codeception',
+          'continous-integration & -deployment',
+          'test-driven development',
+          'automated-testing',
+          'github-actions',
+          'gitlab-pipelines',
+          'git'
+        ]"
+      />
+      <Skillset
+        title="architecture"
+        :skills="[
+          'docker',
+          'kubernetes',
+          'helmet',
+          'aws',
+          'gcs',
+          'netlify',
+          'heroku'
+        ]"
+      />
+      <Skillset
+        title="maxim"
+        :skills="['microservice', 'headless', 'serverless']"
+      />
       <Skillset title="data" :skills="['elasticsearch', 'mysql', 'redis']" />
     </div>
     <div>
@@ -20,13 +59,16 @@
 </template>
 
 <script lang="ts">
-
 export default {
-  head () {
+  head() {
     return {
       title: 'full-stack javascript developer and software-engineer',
       meta: [
-        { hid: 'description', name: 'description', content: 'Full-stack javascript developer and software-engineer' }
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Full-stack javascript developer and software-engineer'
+        }
       ]
     }
   }
