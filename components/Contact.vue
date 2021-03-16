@@ -10,7 +10,7 @@
         Github
       </ContactPill>
       <ContactPill
-        to="https://www.linkedin.com/in/cewald1"
+        to="https://www.linkedin.com/in/ewaldtm"
         :icon="['fab', 'linkedin']"
         class="mr-4"
       >
