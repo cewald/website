@@ -7,7 +7,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Christian Ewald - full-stack developer',
+    title: 'Christian Ewald | Full-stack developer',
     htmlAttrs: {
       lang: 'en'
     },

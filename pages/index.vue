@@ -26,23 +26,6 @@ export default Vue.extend({
       metaLine:
         'freelance full-stack javascript developer and software-engineer'
     }
-  },
-  head() {
-    return {
-      title: this.metaTitle,
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: 'Full-stack javascript developer and software-engineer'
-        }
-      ]
-    }
-  },
-  computed: {
-    metaTitle() {
-      return `${this.headline} - ${this.metaLine}`
-    }
   }
 })
 </script>
