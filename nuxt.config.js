@@ -54,5 +54,9 @@ export default {
       regular: ['faEnvelope'],
       brands: ['faGithub', 'faLinkedin']
     }
+  },
+
+  googleAnalytics: {
+    id: 'UA-49232641-1'
   }
 }
