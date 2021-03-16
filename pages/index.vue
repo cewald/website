@@ -3,9 +3,9 @@
     class="container min-h-screen mx-auto flex flex-col justify-center px-4 py-10 font-mono text-base-darkest"
   >
     <div class="mb-10">
-      <h1 class="text-2xl font-bold">Christian Ewald</h1>
+      <h1 class="text-2xl font-bold">{{ headline }}</h1>
       <p class="font-thin text-lg">
-        freelance full-stack javascript developer and software-engineer
+        {{ metaLine }}
       </p>
     </div>
     <div class="mb-10">
@@ -20,19 +20,51 @@
       </template>
     </div>
     <div>
-      <h2 class="font-bold">Get in touch:</h2>
-      <a href="https://github.com/cewald">github.com/cewald</a>
-      <a href="https://www.linkedin.com/in/cewald1">linkedin.com/in/cewald1</a>
-      <a href="mailto:hello@christianewald.de">hello@christianewald.de</a>
+      <h2 class="font-bold mb-2">Get in touch:</h2>
+      <div class="mb-2 md:mb-0 md:inline-block">
+        <ContactPill
+          to="https://github.com/cewald"
+          :icon="['fab', 'github']"
+          class="mr-4"
+        >
+          Github
+        </ContactPill>
+        <ContactPill
+          to="https://www.linkedin.com/in/cewald1"
+          :icon="['fab', 'linkedin']"
+          class="mr-4"
+        >
+          LinkedIn
+        </ContactPill>
+      </div>
+      <ContactPill
+        to="mailto:hello@christianewald.de"
+        :icon="['far', 'envelope']"
+        :transparent="true"
+        class="mr-4"
+      >
+        hello@christianewald.de
+      </ContactPill>
     </div>
   </div>
 </template>
 
-<script lang="ts">
-export default {
+<script>
+import Vue from 'vue'
+import ContactPill from '~/components/ContactPill.vue'
+
+export default Vue.extend({
+  components: { ContactPill },
+  data() {
+    return {
+      headline: 'Christian Ewald',
+      metaLine:
+        'freelance full-stack javascript developer and software-engineer'
+    }
+  },
   head() {
     return {
-      title: 'full-stack javascript developer and software-engineer',
+      title: this.metaTitle,
       meta: [
         {
           hid: 'description',
@@ -43,6 +75,9 @@ export default {
     }
   },
   computed: {
+    metaTitle() {
+      return `${this.headline} - ${this.metaLine}`
+    },
     skillset() {
       return {
         frontend: [
@@ -80,5 +115,5 @@ export default {
       }
     }
   }
-}
+})
 </script>
