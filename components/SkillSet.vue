@@ -50,7 +50,7 @@ export default {
           'heroku'
         ],
         data: ['elasticsearch', 'mysql', 'redis'],
-        maxim: ['microservice', 'headless', 'serverless']
+        paradigm: ['microservice', 'headless', 'serverless']
       }
     }
   }
