@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <h2 class="font-bold mb-2"><slot /></h2>
-    <div class="mb-2 md:mb-0 md:inline-block">
+  <div class="flex flex-wrap">
+    <h2 class="w-full font-bold mb-2"><slot /></h2>
+    <div class="flex mb-2 md:mb-0">
       <ContactPill
         to="https://github.com/cewald"
         :icon="['fab', 'github']"

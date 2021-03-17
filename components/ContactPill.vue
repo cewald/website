@@ -1,7 +1,7 @@
 <template>
   <a
     :href="to"
-    class="inline-block px-3 py-2 rounded"
+    class="px-3 py-2 rounded"
     :class="{
       'bg-base-darkest text-white': !transparent,
       'hover:bg-base-lightest': transparent
