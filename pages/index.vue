@@ -18,6 +18,7 @@
 
 <script>
 import Vue from 'vue'
+import upperFirst from 'lodash-es/upperFirst'
 
 export default Vue.extend({
   data() {
@@ -25,6 +26,18 @@ export default Vue.extend({
       headline: 'Christian Ewald',
       metaLine:
         'freelance full-stack javascript developer and software-engineer'
+    }
+  },
+  head() {
+    return {
+      title: `${this.headline} | Full-stack developer`,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: `${upperFirst(this.metaLine)}`
+        }
+      ]
     }
   }
 })
