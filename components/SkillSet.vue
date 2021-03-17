@@ -2,12 +2,12 @@
   <div>
     <h2 class="font-bold"><slot /></h2>
     <template v-for="(skills, set) in skillset">
-      <h3 :key="set" class="mt-2 text-base-light md:inline-block md:mt-0">
-        {{ set }}:
-      </h3>
-      <SkillPill v-for="skill in skills" :key="set + skill">
-        {{ skill }}
-      </SkillPill>
+      <h3
+        :key="set"
+        class="mt-2 text-base-light md:inline-block md:mt-0"
+        v-text="`${set}:`"
+      />
+      <SkillPill v-for="skill in skills" :key="set + skill" v-text="skill" />
     </template>
   </div>
 </template>

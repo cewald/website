@@ -31,10 +31,10 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     '@nuxt/typescript-build',
-    // https://go.nuxtjs.dev/tailwindcss
-    '@nuxtjs/tailwindcss',
     // https://github.com/nuxt-community/fontawesome-module
     '@nuxtjs/fontawesome',
+    // https://go.nuxtjs.dev/tailwindcss
+    '@nuxtjs/tailwindcss',
     // https://github.com/nuxt-community/google-analytics-module
     '@nuxtjs/google-analytics'
   ],
@@ -43,13 +43,19 @@ export default {
   modules: [],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    extractCSS: true
+  },
 
   fontawesome: {
     icons: {
       regular: ['faEnvelope'],
       brands: ['faGithub', 'faLinkedin']
     }
+  },
+
+  purgeCSS: {
+    whitelistPatterns: [/svg.*/, /fa.*/]
   },
 
   googleAnalytics: {

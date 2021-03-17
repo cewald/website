@@ -6,9 +6,7 @@
       <logo class="mb-4 md:mr-4 md:mb-0" />
       <div>
         <h1 class="text-2xl font-bold">{{ headline }}</h1>
-        <p class="font-thin text-lg">
-          {{ metaLine }}
-        </p>
+        <p class="font-thin text-lg" v-text="metaLine" />
       </div>
     </div>
     <skill-set class="mb-10">Skillset:</skill-set>
