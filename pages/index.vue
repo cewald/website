@@ -18,7 +18,7 @@
 
 <script>
 import Vue from 'vue'
-import upperFirst from 'lodash-es/upperFirst'
+import upperFirst from 'lodash/upperFirst'
 
 export default Vue.extend({
   data() {
