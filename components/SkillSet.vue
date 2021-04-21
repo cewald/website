@@ -42,14 +42,15 @@ export default {
         ],
         architecture: [
           'docker',
-          'kubernetes',
-          'helmet',
+          'gcp',
+          'app-engine',
+          'firebase',
           'aws',
-          'gcs',
           'netlify',
-          'heroku'
+          'kubernetes',
+          'helmet'
         ],
-        data: ['elasticsearch', 'mysql', 'redis'],
+        data: ['elasticsearch', 'mysql', 'redis', 'firestore'],
         paradigm: ['microservice', 'headless', 'serverless']
       }
     }
