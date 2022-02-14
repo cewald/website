@@ -1,0 +1,12 @@
+html {
+  @apply antialiased;
+  word-spacing: 1px;
+}
+
+.svg-icon > svg {
+  display: inline-block;
+  font-size: inherit;
+  height: 1em;
+  width: 1em;
+  vertical-align: -0.125em;
+}
