@@ -27,7 +27,8 @@ export default {
           'vue-storefront',
           'magento',
           'webpack',
-          'vite'
+          'vite',
+          'esbuild'
         ],
         'server-side': ['nodejs', 'php', 'nginx'],
         'dev-ops': [
