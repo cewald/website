@@ -19,6 +19,7 @@
     "tailwindcss": "^3.0.22"
   },
   "dependencies": {
-    "lodash-es": "^4.17.21"
+    "lodash-es": "^4.17.21",
+    "vue-gtag-next": "^1.14.0"
   }
 }
