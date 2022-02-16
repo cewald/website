@@ -7,7 +7,7 @@
       'hover:bg-base-lightest': transparent
     }"
   >
-    <span v-if="icon && svg" class="mr-2 svg-icon" v-html="svg" />
+    <span v-if="icon" class="mr-2 svg-icon" v-html="icon" />
     <slot />
   </a>
 </template>
@@ -32,15 +32,6 @@ export default {
     transparent: {
       type: Boolean,
       default: false
-    }
-  },
-  async mounted () {
-    this.svg = await this.loadSvg(this.icon)
-  },
-  methods: {
-    async loadSvg (iconName) {
-      const module = await import(`../assets/icons/${iconName}.svg?raw`)
-      return module.default
     }
   }
 }
