@@ -23,14 +23,13 @@ export default {
           'nodejs',
           'typescript',
           'vuejs',
-          'nuxt',
           'vue-storefront',
           'magento',
           'webpack',
           'vite',
           'esbuild'
         ],
-        'server-side': ['nodejs', 'php', 'nginx'],
+        'server-side': ['nodejs', 'nuxt', 'php', 'nginx'],
         'dev-ops': [
           'jest',
           'cypress-io',
