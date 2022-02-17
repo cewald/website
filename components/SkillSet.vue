@@ -1,9 +1,9 @@
 <template>
   <div>
-    <h2 class="font-bold"><slot /></h2>
+    <h2 class="font-bold mb-4 md:mb-0"><slot /></h2>
     <template v-for="(skills, set) in skillset" :key="set">
       <h3
-        class="mt-2 mr-2 text-base-light md:inline-block md:mt-0"
+        class="mt-2 mr-2 text-base-semilight md:inline-block md:mt-0"
         v-text="`${set}:`"
       />
       <SkillPill v-for="skill in skills" :key="set + skill">
@@ -54,7 +54,8 @@ export default {
           'helmet'
         ],
         data: ['elasticsearch', 'mysql', 'redis', 'firestore'],
-        paradigm: ['microservice', 'headless', 'serverless']
+        paradigm: ['microservice', 'headless', 'serverless'],
+        seo: ['lighthouse', 'web-vitals', 'structured-data']
       }
     }
   }

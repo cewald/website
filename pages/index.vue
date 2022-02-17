@@ -28,7 +28,8 @@ useMeta({
       name: 'description',
       content: `${upperFirst(metaLine.value)}`
     }
-  ]
+  ],
+  htmlAttrs: { lang: 'en' }
 })
 
 </script>
