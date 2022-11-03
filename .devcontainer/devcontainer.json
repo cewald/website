@@ -10,9 +10,8 @@
   "workspaceFolder": "/var/www",
   "extensions": [
     "bradlc.vscode-tailwindcss",
-    "eamodio.gitlens",
     "esbenp.prettier-vscode",
-    "johnsoncodehk.volar",
-    "johnsoncodehk.vscode-typescript-vue-plugin"
+    "Vue.volar",
+    "Vue.vscode-typescript-vue-plugin"
   ]
 }

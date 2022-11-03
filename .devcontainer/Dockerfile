@@ -1,15 +1,15 @@
-FROM node:17-alpine
+FROM node:18-alpine
 
 WORKDIR /var/www
 EXPOSE 3000
 
 COPY package.json ./
-COPY yarn.lock ./
+COPY package-lock.json ./
 
 RUN apk add --no-cache \
   bash curl wget git rsync
 
-RUN yarn install
+RUN npm ci
 
-ENTRYPOINT [ "yarn" ]
-CMD [ "start" ]
+ENTRYPOINT [ "npm" ]
+CMD [ "run", "start" ]
