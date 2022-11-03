@@ -13,51 +13,47 @@
   </div>
 </template>
 
-<script lang="ts">
-export default {
-  computed: {
-    skillset() {
-      return {
-        frontend: [
-          'javascript',
-          'nodejs',
-          'typescript',
-          'vuejs',
-          'vue-storefront',
-          'magento',
-          'webpack',
-          'vite',
-          'esbuild'
-        ],
-        'server-side': ['nodejs', 'nuxt', 'php', 'nginx'],
-        'dev-ops': [
-          'jest',
-          'cypress-io',
-          'codeception',
-          'continous-integration',
-          'continous-deployment',
-          'test-driven development',
-          'automated-testing',
-          'github-actions',
-          'gitlab-pipelines',
-          'git'
-        ],
-        architecture: [
-          'docker',
-          'gcp',
-          'app-engine',
-          'cloud-run',
-          'firebase',
-          'aws',
-          'netlify',
-          'kubernetes',
-          'helmet'
-        ],
-        data: ['elasticsearch', 'mysql', 'redis', 'firestore'],
-        paradigm: ['microservice', 'headless', 'serverless'],
-        seo: ['lighthouse', 'web-vitals', 'structured-data']
-      }
-    }
-  }
-}
+<script lang="ts" setup>
+import { reactive } from 'vue'
+
+const skillset = reactive({
+  frontend: [
+    'javascript',
+    'nodejs',
+    'typescript',
+    'vuejs',
+    'vue-storefront',
+    'magento',
+    'webpack',
+    'vite',
+    'esbuild'
+  ],
+  'server-side': ['nodejs', 'nuxt', 'php', 'nginx'],
+  'dev-ops': [
+    'jest',
+    'cypress-io',
+    'codeception',
+    'continous-integration',
+    'continous-deployment',
+    'test-driven development',
+    'automated-testing',
+    'github-actions',
+    'gitlab-pipelines',
+    'git'
+  ],
+  architecture: [
+    'docker',
+    'gcp',
+    'app-engine',
+    'cloud-run',
+    'firebase',
+    'aws',
+    'netlify',
+    'kubernetes',
+    'helmet'
+  ],
+  data: ['elasticsearch', 'mysql', 'redis', 'firestore'],
+  paradigm: ['microservice', 'headless', 'serverless'],
+  seo: ['lighthouse', 'web-vitals', 'structured-data']
+})
 </script>

@@ -22,7 +22,7 @@
 </template>
 
 <script setup>
-import { ref, useMeta } from 'vue'
+import { ref } from 'vue'
 import upperFirst from 'lodash-es/upperFirst'
 
 const headline = ref('Christian Ewald')
@@ -30,15 +30,15 @@ const metaLine = ref(
   'freelance full-stack javascript developer and software-engineer'
 )
 
-useMeta({
-  title: `${headline.value} | Full-stack developer`,
-  meta: [
-    {
-      hid: 'description',
-      name: 'description',
-      content: `${upperFirst(metaLine.value)}`
-    }
-  ],
-  htmlAttrs: { lang: 'en' }
-})
+// useMeta({
+//   title: `${headline.value} | Full-stack developer`,
+//   meta: [
+//     {
+//       hid: 'description',
+//       name: 'description',
+//       content: `${upperFirst(metaLine.value)}`
+//     }
+//   ],
+//   htmlAttrs: { lang: 'en' }
+// })
 </script>

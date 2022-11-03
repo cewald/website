@@ -6,22 +6,25 @@
         to="https://github.com/cewald"
         :icon="faBrandsGithub"
         class="mr-4"
-        >Github</ContactPill
       >
+        Github
+      </ContactPill>
       <ContactPill
         to="https://www.linkedin.com/in/ewaldtm"
         :icon="faBrandsLinkedin"
         class="mr-4"
-        >LinkedIn</ContactPill
       >
+        LinkedIn
+      </ContactPill>
     </div>
     <ContactPill
       to="mailto:hello@christianewald.de"
       :icon="faBrandsEnvelope"
       :transparent="true"
-      class="mr-4"
-      >hello@christianewald.de</ContactPill
+      class="mr-4 whitespace-nowrap"
     >
+      hello@christianewald.de
+    </ContactPill>
   </div>
 </template>
 

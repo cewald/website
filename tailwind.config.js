@@ -1,7 +1,15 @@
 module.exports = {
   theme: {
     fontFamily: {
-      'mono': ['ui-monospace', 'Menlo','Monaco','Consolas','"Liberation Mono"','"Courier New"','monospace']
+      mono: [
+        'ui-monospace',
+        'Menlo',
+        'Monaco',
+        'Consolas',
+        '"Liberation Mono"',
+        '"Courier New"',
+        'monospace'
+      ]
     },
     extend: {
       colors: {

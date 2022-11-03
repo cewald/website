@@ -12,26 +12,10 @@
   </a>
 </template>
 
-<script lang="ts">
-export default {
-  data() {
-    return {
-      svg: false
-    }
-  },
-  props: {
-    to: {
-      type: String,
-      required: true
-    },
-    icon: {
-      type: [String, Boolean],
-      default: false
-    },
-    transparent: {
-      type: Boolean,
-      default: false
-    }
-  }
-}
+<script lang="ts" setup>
+defineProps<{
+  to: string
+  icon: string | boolean
+  transparent?: boolean
+}>()
 </script>

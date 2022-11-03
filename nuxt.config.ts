@@ -13,21 +13,13 @@ export default defineNuxtConfig({
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
-  css: [
-    '@/assets/styles/main.scss'
-  ],
+  css: ['@/assets/styles/main.scss'],
   vite: {
-    plugins: [
-      svgLoader(),
-    ]
+    plugins: [svgLoader()]
   },
-  buildModules: [
-    '@nuxtjs/tailwindcss'
-  ],
+  buildModules: ['@nuxtjs/tailwindcss'],
   build: {
     extractCSS: true,
-    transpile: [
-      'lodash-es'
-    ]
+    transpile: ['lodash-es']
   }
 })
