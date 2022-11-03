@@ -22,7 +22,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, useMeta } from 'vue'
 import upperFirst from 'lodash-es/upperFirst'
 
 const headline = ref('Christian Ewald')
