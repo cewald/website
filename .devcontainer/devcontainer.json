@@ -1,17 +1,19 @@
 {
   "name": "cewald/website",
+  "image": "mcr.microsoft.com/vscode/devcontainers/typescript-node:18",
   "forwardPorts": [
     3000
   ],
-  "dockerComposeFile": [
-    "docker-compose.yml"
-  ],
-  "service": "app",
-  "workspaceFolder": "/var/www",
-  "extensions": [
-    "bradlc.vscode-tailwindcss",
-    "esbenp.prettier-vscode",
-    "Vue.volar",
-    "Vue.vscode-typescript-vue-plugin"
-  ]
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "bradlc.vscode-tailwindcss",
+        "csstools.postcss",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "Vue.volar",
+        "Vue.vscode-typescript-vue-plugin"
+      ]
+    }
+  }
 }
