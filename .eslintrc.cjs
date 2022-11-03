@@ -14,6 +14,12 @@ module.exports = {
   },
   overrides: [
     {
+      files: ['*.vue'],
+      rules: {
+        'vue/multi-word-component-names': 'off'
+      }
+    },
+    {
       files: ['tailwind.config.js', 'postcss.config.js'],
       env: {
         node: true

@@ -1,9 +1,9 @@
 <template>
   <div>
-    <h2 class="font-bold mb-4 md:mb-0"><slot /></h2>
+    <h2 class="mb-4 font-bold md:mb-0"><slot /></h2>
     <template v-for="(skills, set) in skillset" :key="set">
       <h3
-        class="mt-2 mr-2 text-base-semilight md:inline-block md:mt-0"
+        class="mt-2 mr-2 text-base-semilight md:mt-0 md:inline-block"
         v-text="`${set}:`"
       />
       <SkillPill v-for="skill in skills" :key="set + skill">
@@ -13,7 +13,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   computed: {
     skillset() {

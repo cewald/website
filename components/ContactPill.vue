@@ -1,21 +1,20 @@
 <template>
   <a
     :href="to"
-    class="px-3 py-2 rounded"
+    class="rounded px-3 py-2"
     :class="{
       'bg-base-darkest text-white': !transparent,
       'hover:bg-base-lightest': transparent
     }"
   >
-    <span v-if="icon" class="mr-2 svg-icon" v-html="icon" />
+    <span v-if="icon" class="svg-icon mr-2" v-html="icon" />
     <slot />
   </a>
 </template>
 
-<script type="ts">
-
+<script lang="ts">
 export default {
-  data () {
+  data() {
     return {
       svg: false
     }
