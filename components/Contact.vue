@@ -12,7 +12,7 @@
       >
         <faBrandsLinkedin class="mr-2" />
       </ContactPill>
-      <ContactPill title="cv" to="https://cewald.github.io/cv/" class="mr-4">
+      <ContactPill title="CV" to="https://cewald.github.io/cv/" class="mr-4">
         <faFileCode class="mr-2" />
       </ContactPill>
     </div>
