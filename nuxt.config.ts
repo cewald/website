@@ -15,7 +15,6 @@ export default defineNuxtConfig({
     }
   },
   build: {
-    extractCSS: true,
     transpile: ['lodash-es']
   }
 })
