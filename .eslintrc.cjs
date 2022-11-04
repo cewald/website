@@ -17,7 +17,8 @@ module.exports = {
     {
       files: ['*.vue'],
       rules: {
-        'vue/multi-word-component-names': 'off'
+        'vue/multi-word-component-names': 'off',
+        'vue/no-v-for-template-key': 'off'
       }
     },
     {

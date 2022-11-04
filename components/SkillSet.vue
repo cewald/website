@@ -14,8 +14,6 @@
 </template>
 
 <script lang="ts" setup>
-import { reactive } from 'vue'
-
 const skillset = reactive({
   frontend: [
     'javascript',
