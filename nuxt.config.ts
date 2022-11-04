@@ -4,7 +4,7 @@ import Icons from 'unplugin-icons/vite'
 
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
-  base: '/website/',
+  baseUrl: '/website/',
   css: ['@/assets/styles/main.scss'],
   vite: {
     plugins: [svgLoader(), Icons({})]
