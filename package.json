@@ -32,7 +32,6 @@
     "vite-svg-loader": "^3.6.0"
   },
   "dependencies": {
-    "lodash-es": "^4.17.21",
-    "vue-gtag-next": "^1.14.0"
+    "lodash-es": "^4.17.21"
   }
 }

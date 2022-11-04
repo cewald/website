@@ -21,8 +21,9 @@
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import upperFirst from 'lodash-es/upperFirst'
+import gtag from '@/composables/gtag'
 
 const headline = ref('Christian Ewald')
 const metaLine = ref(
@@ -41,4 +42,6 @@ useHead({
   htmlAttrs: { lang: 'en' },
   link: [{ rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' }]
 })
+
+gtag()
 </script>
