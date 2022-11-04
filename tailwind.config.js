@@ -1,4 +1,6 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
+  content: ['./app.vue', './{pages,components}/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
     fontFamily: {
       mono: [

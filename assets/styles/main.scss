@@ -1,5 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html {
   @apply antialiased;
   word-spacing: 1px;
 }
-
