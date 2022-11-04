@@ -1,38 +1,22 @@
 <template>
   <a
     :href="to"
-    class="px-3 py-2 rounded"
+    class="flex items-center rounded px-3 py-2"
     :class="{
       'bg-base-darkest text-white': !transparent,
       'hover:bg-base-lightest': transparent
     }"
+    :title="title"
   >
-    <span v-if="icon" class="mr-2 svg-icon" v-html="icon" />
     <slot />
+    <span v-text="title" />
   </a>
 </template>
 
-<script type="ts">
-
-export default {
-  data () {
-    return {
-      svg: false
-    }
-  },
-  props: {
-    to: {
-      type: String,
-      required: true
-    },
-    icon: {
-      type: [String, Boolean],
-      default: false
-    },
-    transparent: {
-      type: Boolean,
-      default: false
-    }
-  }
-}
+<script lang="ts" setup>
+defineProps<{
+  title: string
+  to: string
+  transparent?: boolean
+}>()
 </script>

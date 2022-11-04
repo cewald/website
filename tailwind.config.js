@@ -1,7 +1,17 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
+  content: ['./app.vue', './{pages,components}/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
     fontFamily: {
-      'mono': ['ui-monospace', 'Menlo','Monaco','Consolas','"Liberation Mono"','"Courier New"','monospace']
+      mono: [
+        'ui-monospace',
+        'Menlo',
+        'Monaco',
+        'Consolas',
+        '"Liberation Mono"',
+        '"Courier New"',
+        'monospace'
+      ]
     },
     extend: {
       colors: {

@@ -7,7 +7,7 @@ This is the repository for www.christianewald.de
 Make sure to install the dependencies
 
 ```bash
-yarn install
+npm i
 ```
 
 ## Development
@@ -15,15 +15,19 @@ yarn install
 Start the development server on http://localhost:3000
 
 ```bash
-yarn dev
+npm run dev
 ```
 
 ## Production
 
-Build the application for production:
+Build the application with SSR using nitro:
 
 ```bash
-yarn build
+npm run build
 ```
 
-Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment).
+Build the application as SPR – you can server it for testing using `npm run preview` or `serve -s ./.output/public`:
+
+```bash
+npm run generate
+```
