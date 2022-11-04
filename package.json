@@ -7,7 +7,9 @@
   "scripts": {
     "dev": "nuxi dev --host 0.0.0.0",
     "build": "nuxi build",
-    "start": "node .output/server/index.mjs"
+    "start": "node .output/server/index.mjs",
+    "generate": "nuxi generate",
+    "preview": "nuxi preview"
   },
   "devDependencies": {
     "@iconify-json/fa-brands": "^1.1.2",
