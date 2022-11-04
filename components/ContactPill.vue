@@ -1,14 +1,14 @@
 <template>
   <a
     :href="to"
-    class="rounded px-3 py-2"
+    class="flex items-center rounded px-3 py-2"
     :class="{
       'bg-base-darkest text-white': !transparent,
       'hover:bg-base-lightest': transparent
     }"
   >
     <span v-if="icon" class="svg-icon mr-2" v-html="icon" />
-    <slot />
+    <span><slot /></span>
   </a>
 </template>
 
@@ -19,3 +19,12 @@ defineProps<{
   transparent?: boolean
 }>()
 </script>
+
+<style lang="scss">
+.svg-icon > svg {
+  display: inline-block;
+  font-size: inherit;
+  height: 1.2em;
+  width: 1.2em;
+}
+</style>

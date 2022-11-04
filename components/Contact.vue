@@ -16,6 +16,13 @@
       >
         LinkedIn
       </ContactPill>
+      <ContactPill
+        to="https://cewald.github.io/cv/"
+        :icon="faFileCode"
+        class="mr-4"
+      >
+        CV
+      </ContactPill>
     </div>
     <ContactPill
       to="mailto:hello@christianewald.de"
@@ -28,18 +35,9 @@
   </div>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 import faBrandsGithub from '~/assets/icons/fa-brands-github.svg?raw'
 import faBrandsLinkedin from '~/assets/icons/fa-brands-linkedin.svg?raw'
+import faFileCode from '~/assets/icons/fa-regular-file-code-regular.svg?raw'
 import faBrandsEnvelope from '~/assets/icons/fa-regular-envelope.svg?raw'
-
-export default {
-  data() {
-    return {
-      faBrandsGithub,
-      faBrandsLinkedin,
-      faBrandsEnvelope
-    }
-  }
-}
 </script>

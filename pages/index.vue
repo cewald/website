@@ -23,7 +23,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import upperFirst from 'lodash-es/upperFirst'
+// import upperFirst from 'lodash-es/upperFirst'
 
 const headline = ref('Christian Ewald')
 const metaLine = ref(
