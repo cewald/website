@@ -1,5 +1,6 @@
 import { defineNuxtConfig } from 'nuxt/config'
 import svgLoader from 'vite-svg-loader'
+import Icons from 'unplugin-icons/vite'
 
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
@@ -15,7 +16,7 @@ export default defineNuxtConfig({
   },
   css: ['@/assets/styles/main.scss'],
   vite: {
-    plugins: [svgLoader()]
+    plugins: [svgLoader(), Icons({})]
   },
   buildModules: ['@nuxtjs/tailwindcss'],
   build: {

@@ -2,42 +2,34 @@
   <div class="flex flex-wrap">
     <h2 class="mb-2 w-full font-bold"><slot /></h2>
     <div class="mb-2 flex md:mb-0">
-      <ContactPill
-        to="https://github.com/cewald"
-        :icon="faBrandsGithub"
-        class="mr-4"
-      >
-        Github
+      <ContactPill title="Github" to="https://github.com/cewald" class="mr-4">
+        <faBrandsGithub class="mr-2" />
       </ContactPill>
       <ContactPill
+        title="LinkedIn"
         to="https://www.linkedin.com/in/ewaldtm"
-        :icon="faBrandsLinkedin"
         class="mr-4"
       >
-        LinkedIn
+        <faBrandsLinkedin class="mr-2" />
       </ContactPill>
-      <ContactPill
-        to="https://cewald.github.io/cv/"
-        :icon="faFileCode"
-        class="mr-4"
-      >
-        CV
+      <ContactPill title="cv" to="https://cewald.github.io/cv/" class="mr-4">
+        <faFileCode class="mr-2" />
       </ContactPill>
     </div>
     <ContactPill
+      title="hello@christianewald.de"
       to="mailto:hello@christianewald.de"
-      :icon="faBrandsEnvelope"
       :transparent="true"
       class="mr-4 whitespace-nowrap"
     >
-      hello@christianewald.de
+      <faBrandsEnvelope class="mr-2" />
     </ContactPill>
   </div>
 </template>
 
 <script lang="ts" setup>
-import faBrandsGithub from '~/assets/icons/fa-brands-github.svg?raw'
-import faBrandsLinkedin from '~/assets/icons/fa-brands-linkedin.svg?raw'
-import faFileCode from '~/assets/icons/fa-regular-file-code-regular.svg?raw'
-import faBrandsEnvelope from '~/assets/icons/fa-regular-envelope.svg?raw'
+import faFileCode from '~icons/fa6-solid/file-lines'
+import faBrandsGithub from '~icons/fa-brands/github'
+import faBrandsLinkedin from '~icons/fa-brands/linkedin'
+import faBrandsEnvelope from '~icons/fa6-regular/envelope'
 </script>
