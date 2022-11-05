@@ -12,7 +12,7 @@
           title="I'm currently available"
           class="order-2 ml-2 text-xs uppercase text-red-700"
         >
-          <span class="text-base-light"> | </span> Hire me
+          <span class="text-base-light"> | </span> Hire
         </a>
       </div>
     </div>
