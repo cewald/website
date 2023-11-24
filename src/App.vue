@@ -30,7 +30,7 @@ gtag()
 
 <template>
   <div
-    class="text-base-darkest container mx-auto flex min-h-screen flex-col justify-center px-4 py-10 font-mono"
+    class="container mx-auto flex min-h-screen flex-col justify-center px-4 py-10 font-mono text-base-darkest"
   >
     <div class="mb-10 flex flex-wrap items-center">
       <Logo class="mb-4 md:mb-0 md:mr-4" />

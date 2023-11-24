@@ -1,3 +1,11 @@
+<script lang="ts" setup>
+defineProps<{
+  title: string
+  to: string
+  transparent?: boolean
+}>()
+</script>
+
 <template>
   <a
     :href="to"
@@ -12,11 +20,3 @@
     <span v-text="title" />
   </a>
 </template>
-
-<script lang="ts" setup>
-defineProps<{
-  title: string
-  to: string
-  transparent?: boolean
-}>()
-</script>
