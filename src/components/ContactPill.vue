@@ -1,0 +1,22 @@
+<template>
+  <a
+    :href="to"
+    class="flex items-center rounded px-3 py-2"
+    :class="{
+      'bg-base-darkest text-white': !transparent,
+      'hover:bg-base-lightest': transparent
+    }"
+    :title="title"
+  >
+    <slot />
+    <span v-text="title" />
+  </a>
+</template>
+
+<script lang="ts" setup>
+defineProps<{
+  title: string
+  to: string
+  transparent?: boolean
+}>()
+</script>

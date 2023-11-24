@@ -5,6 +5,7 @@ import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import svgLoader from 'vite-svg-loader'
 import viteCompression from 'vite-plugin-compression'
+import Icons from 'unplugin-icons/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -15,6 +16,7 @@ export default defineConfig({
     vue(),
     vueJsx(),
     svgLoader(),
+    Icons({ /* options */ }),
     viteCompression({ algorithm: 'brotliCompress' }),
   ],
   resolve: {
