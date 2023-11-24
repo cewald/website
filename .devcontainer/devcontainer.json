@@ -19,16 +19,16 @@
   },
   "postCreateCommand": "npm i",
   "forwardPorts": [
-    3000,
-    3001
+    3333,
+    3331
   ],
   "portsAttributes": {
-    "3000": {
+    "3333": {
       "label": "vue-dev",
       "protocol": "https",
       "elevateIfNeeded": false
     },
-    "3001": {
+    "3331": {
       "label": "vue-preview",
       "protocol": "https",
       "elevateIfNeeded": false
