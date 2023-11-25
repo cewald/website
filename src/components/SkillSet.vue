@@ -10,6 +10,7 @@ const skillset = reactive({
     'vuejs',
     'gsap',
     'motion one',
+    'tailwindcss',
     'vite',
     'rollup',
     'esbuild',
@@ -39,7 +40,7 @@ const skillset = reactive({
     'helmet'
   ],
   data: ['elasticsearch', 'firestore', 'mysql', 'redis'],
-  paradigm: ['microservice', 'headless', 'serverless'],
+  paradigm: ['microservice', 'headless', 'serverless', 'acss'],
   seo: ['lighthouse', 'web-vitals', 'structured-data']
 })
 </script>
