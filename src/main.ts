@@ -1,9 +1,11 @@
 import '@/styles/main.scss'
 
 import { createApp } from 'vue'
-import { createHead } from 'unhead'
+import { createHead, CapoPlugin } from 'unhead'
 import App from '@/App.vue'
 
-createHead()
+const head = createHead()
+head.use(CapoPlugin({}))
+
 createApp(App)
   .mount('#app')
