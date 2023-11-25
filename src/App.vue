@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
 import { useHead } from 'unhead'
-import gtag from '@/composables/gtag'
 import Logo from '@/assets/logo.svg'
 import SkillSet from '@/components/SkillSet.vue'
 import ContactBlock from '@/components/ContactBlock.vue'
@@ -29,7 +28,6 @@ useHead({
   link: [{ rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' }]
 })
 
-gtag()
 </script>
 
 <template>
