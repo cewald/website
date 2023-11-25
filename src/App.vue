@@ -5,7 +5,7 @@ import upperFirst from 'lodash-es/upperFirst'
 import gtag from '@/composables/gtag'
 import Logo from '@/assets/logo.svg'
 import SkillSet from '@/components/SkillSet.vue'
-import Contact from '@/components/Contact.vue'
+import ContactBlock from '@/components/ContactBlock.vue'
 
 const headline = ref('Christian Ewald')
 const metaLine = ref(
@@ -54,6 +54,6 @@ gtag()
     <SkillSet class="mb-14">
       skillset:
     </SkillSet>
-    <Contact>get in touch:</Contact>
+    <ContactBlock>get in touch:</ContactBlock>
   </div>
 </template>

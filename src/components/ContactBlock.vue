@@ -1,8 +1,13 @@
 <script lang="ts" setup>
+// @ts-ignore
 import faFileCode from '~icons/fa6-solid/file-lines'
+// @ts-ignore
 import faBrandsGithub from '~icons/fa-brands/github'
+// @ts-ignore
 import faBrandsLinkedin from '~icons/fa-brands/linkedin'
+// @ts-ignore
 import faBrandsEnvelope from '~icons/fa6-regular/envelope'
+
 import ContactPill from '@/components/ContactPill.vue'
 </script>
 
