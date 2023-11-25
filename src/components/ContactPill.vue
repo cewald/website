@@ -9,7 +9,7 @@ defineProps<{
 <template>
   <a
     :href="to"
-    class="flex items-center rounded px-3 py-2"
+    class="flex items-center rounded px-3 py-2 text-lg"
     :class="{
       'bg-base-darkest text-white': !transparent,
       'hover:bg-base-lightest': transparent

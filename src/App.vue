@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import { useHead } from 'unhead'
 import upperFirst from 'lodash-es/upperFirst'
 import gtag from '@/composables/gtag'
@@ -12,8 +12,13 @@ const metaLine = ref(
   'freelance full-stack javascript developer and software-engineer'
 )
 
+const shortName = computed(() => {
+  const [ prename, lastname ] = headline.value.toLowerCase().split(' ')
+  return `${prename[0]}:/${lastname}`
+})
+
 useHead({
-  title: `${headline.value} | Full-stack developer`,
+  title: `${shortName.value} _ full-stack developer`,
   meta: [
     {
       hid: 'description',
@@ -30,30 +35,25 @@ gtag()
 
 <template>
   <div
-    class="container mx-auto flex min-h-screen flex-col justify-center px-4 py-10 font-mono text-base-darkest"
+    class="container mx-auto flex min-h-screen flex-col justify-center px-6 py-12 font-mono text-base-darkest"
   >
-    <div class="mb-10 flex flex-wrap items-center">
-      <Logo class="mb-4 md:mb-0 md:mr-4" />
+    <div class="mb-14 flex flex-wrap items-center md:mb-10">
+      <div class="basis-full">
+        <Logo class="mb-6 w-20 md:w-28" />
+      </div>
       <div class="flex flex-wrap items-center">
-        <h1 class="order-1 flex-initial text-2xl font-bold">
-          {{ headline }}
+        <h1 class="order-1 mb-3 flex flex-initial items-baseline text-3xl font-bold md:text-5xl">
+          {{ shortName }}
         </h1>
         <p
-          class="order-3 w-full text-lg font-thin"
-          v-text="metaLine"
+          class="order-3 w-full text-xl font-thin"
+          v-text="'_' + metaLine"
         />
-        <a
-          href="https://www.linkedin.com/in/ewaldtm"
-          title="I'm currently available"
-          class="order-2 ml-2 text-xs uppercase text-red-700"
-        >
-          <span class="text-base-light"> | </span> Hire
-        </a>
       </div>
     </div>
-    <SkillSet class="mb-10">
-      Skillset:
+    <SkillSet class="mb-14">
+      skillset:
     </SkillSet>
-    <Contact>Get in touch:</Contact>
+    <Contact>get in touch:</Contact>
   </div>
 </template>

@@ -8,17 +8,17 @@ const skillset = reactive({
     'nodejs',
     'typescript',
     'vuejs',
-    'vue-storefront',
-    'magento',
-    'webpack',
+    'gsap',
+    'motion one',
     'vite',
-    'esbuild'
+    'rollup',
+    'esbuild',
+    'webpack',
   ],
-  'server-side': ['nodejs', 'nuxt', 'php', 'nginx'],
+  'server-side': ['nodejs', 'php', 'nginx'],
   'dev-ops': [
     'jest',
     'cypress-io',
-    'codeception',
     'continous-integration',
     'continous-deployment',
     'test-driven development',
@@ -38,15 +38,15 @@ const skillset = reactive({
     'kubernetes',
     'helmet'
   ],
-  data: ['elasticsearch', 'mysql', 'redis', 'firestore'],
+  data: ['elasticsearch', 'firestore', 'mysql', 'redis'],
   paradigm: ['microservice', 'headless', 'serverless'],
   seo: ['lighthouse', 'web-vitals', 'structured-data']
 })
 </script>
 
 <template>
-  <div>
-    <h2 class="mb-4 font-bold md:mb-0">
+  <div class="text-lg">
+    <h2 class="mb-4 text-xl font-medium md:text-2xl">
       <slot />
     </h2>
     <template
@@ -54,7 +54,7 @@ const skillset = reactive({
       :key="set"
     >
       <h3
-        class="mr-2 mt-2 text-base-semilight md:mt-0 md:inline-block"
+        class="mr-2 mt-6 text-base-semilight md:mt-0 md:inline-block"
         v-text="`${set}:`"
       />
       <SkillPill
