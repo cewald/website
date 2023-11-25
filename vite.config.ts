@@ -16,7 +16,7 @@ export default defineConfig({
     vue(),
     vueJsx(),
     svgLoader(),
-    Icons({ /* options */ }),
+    Icons({ compiler: 'vue3' }),
     viteCompression({ algorithm: 'brotliCompress' }),
   ],
   resolve: {
