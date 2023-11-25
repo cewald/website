@@ -13,7 +13,7 @@ import ContactPill from '@/components/ContactPill.vue'
 
 <template>
   <div class="flex flex-wrap overflow-scroll">
-    <h2 class="mb-4 w-full text-xl font-medium md:text-2xl">
+    <h2 class="mb-4 w-full text-xl font-medium lowercase md:text-2xl">
       <slot />
     </h2>
     <div class="flex flex-wrap [&>*]:mb-4 [&>*]:mr-4 md:[&>*]:mb-0">

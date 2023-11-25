@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
 import { useHead } from 'unhead'
-import upperFirst from 'lodash-es/upperFirst'
 import gtag from '@/composables/gtag'
 import Logo from '@/assets/logo.svg'
 import SkillSet from '@/components/SkillSet.vue'
@@ -9,7 +8,7 @@ import ContactBlock from '@/components/ContactBlock.vue'
 
 const headline = ref('Christian Ewald')
 const metaLine = ref(
-  'freelance full-stack javascript developer and software-engineer'
+  'Freelance full-stack javascript developer and software-engineer'
 )
 
 const shortName = computed(() => {
@@ -23,7 +22,7 @@ useHead({
     {
       hid: 'description',
       name: 'description',
-      content: `${upperFirst(metaLine.value)}`
+      content: metaLine.value
     }
   ],
   htmlAttrs: { lang: 'en' },
@@ -46,14 +45,14 @@ gtag()
           {{ shortName }}
         </h1>
         <p
-          class="order-3 w-full text-xl font-thin"
+          class="order-3 w-full text-xl font-thin lowercase"
           v-text="'_' + metaLine"
         />
       </div>
     </div>
     <SkillSet class="mb-14">
-      skillset:
+      Skillset:
     </SkillSet>
-    <ContactBlock>get in touch:</ContactBlock>
+    <ContactBlock>Get in touch:</ContactBlock>
   </div>
 </template>

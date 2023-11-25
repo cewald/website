@@ -47,7 +47,7 @@ const skillset = reactive({
 
 <template>
   <div class="text-lg">
-    <h2 class="mb-4 text-xl font-medium md:text-2xl">
+    <h2 class="mb-4 text-xl font-medium lowercase md:text-2xl">
       <slot />
     </h2>
     <template
