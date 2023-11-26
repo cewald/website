@@ -1,6 +1,8 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+  darkMode: 'class',
   theme: {
     extend: {
       fontFamily: {
@@ -27,6 +29,14 @@ module.exports = {
       }
     }
   },
-  plugins: [],
+  plugins: [
+    ({ addUtilities }) => {
+      addUtilities({
+        '.vertical-rl': { writingMode: 'vertical-rl' },
+        '.vertical-lr': { writingMode: 'vertical-lr' },
+        '.horizontal-tb': { writingMode: 'horizontal-tb' },
+      })
+    }
+  ],
 }
 

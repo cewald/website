@@ -1,9 +1,11 @@
 <script lang="ts" setup>
 import { computed, ref } from 'vue'
 import { useHead } from 'unhead'
+
 import Logo from '@/assets/logo.svg'
 import SkillSet from '@/components/SkillSet.vue'
 import ContactBlock from '@/components/ContactBlock.vue'
+import DarkModeToggle from '@/components/DarkModeToggle.vue'
 
 const headline = ref('Christian Ewald')
 const metaLine = ref(
@@ -54,4 +56,5 @@ useHead({
     </SkillSet>
     <ContactBlock>Get in touch:</ContactBlock>
   </div>
+  <DarkModeToggle />
 </template>

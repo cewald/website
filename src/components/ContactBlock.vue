@@ -1,12 +1,12 @@
 <script lang="ts" setup>
 // @ts-ignore
-import faFileCode from '~icons/fa6-solid/file-lines'
+import faFileCode from '~icons/material-symbols/description'
 // @ts-ignore
-import faBrandsGithub from '~icons/fa-brands/github'
+import faBrandsGithub from '~icons/mdi/github'
 // @ts-ignore
-import faBrandsLinkedin from '~icons/fa-brands/linkedin'
+import faBrandsLinkedin from '~icons/mdi/linkedin'
 // @ts-ignore
-import faBrandsEnvelope from '~icons/fa6-regular/envelope'
+import faBrandsEnvelope from '~icons/material-symbols/mail-outline'
 
 import ContactPill from '@/components/ContactPill.vue'
 </script>
@@ -21,19 +21,19 @@ import ContactPill from '@/components/ContactPill.vue'
         title="CV"
         to="https://cewald.github.io/cv/"
       >
-        <faFileCode class="mr-3" />
+        <faFileCode class="mr-2" />
       </ContactPill>
       <ContactPill
         title="Github"
         to="https://github.com/cewald"
       >
-        <faBrandsGithub class="mr-3" />
+        <faBrandsGithub class="mr-2" />
       </ContactPill>
       <ContactPill
         title="LinkedIn"
         to="https://www.linkedin.com/in/ewaldtm"
       >
-        <faBrandsLinkedin class="mr-3" />
+        <faBrandsLinkedin class="mr-2" />
       </ContactPill>
     </div>
     <ContactPill
@@ -42,7 +42,7 @@ import ContactPill from '@/components/ContactPill.vue'
       :transparent="true"
       class="mr-4 whitespace-nowrap"
     >
-      <faBrandsEnvelope class="mr-3" />
+      <faBrandsEnvelope class="mr-2" />
     </ContactPill>
   </div>
 </template>
