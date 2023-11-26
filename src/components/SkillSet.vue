@@ -55,7 +55,7 @@ const skillset = reactive({
       :key="set"
     >
       <h3
-        class="mr-2 mt-6 text-base-semilight md:mt-0 md:inline-block"
+        class="mr-2 mt-6 text-base-semilight dark:text-slate-300 md:mt-0 md:inline-block"
         v-text="`${set}:`"
       />
       <SkillPill
