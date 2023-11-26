@@ -4,7 +4,6 @@
     "csstools.postcss",
     "dbaeumer.vscode-eslint",
     "vue.volar",
-    "vue.vscode-typescript-vue-plugin",
-    "tamasfe.even-better-toml"
+    "vue.vscode-typescript-vue-plugin"
   ]
 }
