@@ -37,8 +37,8 @@ import ContactPill from '@/components/ContactPill.vue'
       </ContactPill>
     </div>
     <ContactPill
-      title="hello@christianewald.de"
-      to="mailto:hello@christianewald.de"
+      title="hello@cewald.de"
+      to="mailto:hello@cewald.de"
       :transparent="true"
       class="mr-4 whitespace-nowrap"
     >
