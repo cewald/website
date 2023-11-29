@@ -12,6 +12,7 @@
   from = "https://www.christianewald.de"
   to = "https://ewaldewald.com"
   status = 301
+  force = true
 [[redirects]]
   from = "https://www.christianewald.de/*"
   to = "https://ewaldewald.com/:splat"
@@ -31,6 +32,7 @@
   from = "https://www.cewald.de"
   to = "https://ewaldewald.com"
   status = 301
+  force = true
 [[redirects]]
   from = "https://www.cewald.de/*"
   to = "https://ewaldewald.com/:splat"
@@ -50,6 +52,7 @@
   from = "https://www.ewald.codes"
   to = "https://ewaldewald.com"
   status = 301
+  force = true
 [[redirects]]
   from = "https://www.ewald.codes/*"
   to = "https://ewaldewald.com/:splat"
@@ -69,6 +72,7 @@
   from = "https://www.ewaldewald.me"
   to = "https://ewaldewald.com"
   status = 301
+  force = true
 [[redirects]]
   from = "https://www.ewaldewald.me/*"
   to = "https://ewaldewald.com/:splat"
