@@ -8,17 +8,14 @@
   from = "https://christianewald.de/*"
   to = "https://ewaldewald.com/:splat"
   status = 301
-  force = true
 [[redirects]]
   from = "https://www.christianewald.de"
   to = "https://ewaldewald.com"
   status = 301
-  force = true
 [[redirects]]
   from = "https://www.christianewald.de/*"
   to = "https://ewaldewald.com/:splat"
   status = 301
-  force = true
 
 # cewald.de
 [[redirects]]
@@ -30,17 +27,14 @@
   from = "https://cewald.de/*"
   to = "https://ewaldewald.com/:splat"
   status = 301
-  force = true
 [[redirects]]
   from = "https://www.cewald.de"
   to = "https://ewaldewald.com"
   status = 301
-  force = true
 [[redirects]]
   from = "https://www.cewald.de/*"
   to = "https://ewaldewald.com/:splat"
   status = 301
-  force = true
 
 # ewald.codes
 [[redirects]]
@@ -52,17 +46,14 @@
   from = "https://ewald.codes/*"
   to = "https://ewaldewald.com/:splat"
   status = 301
-  force = true
 [[redirects]]
   from = "https://www.ewald.codes"
   to = "https://ewaldewald.com"
   status = 301
-  force = true
 [[redirects]]
   from = "https://www.ewald.codes/*"
   to = "https://ewaldewald.com/:splat"
   status = 301
-  force = true
 
 # ewaldewald.me
 [[redirects]]
@@ -74,17 +65,14 @@
   from = "https://ewaldewald.me/*"
   to = "https://ewaldewald.com/:splat"
   status = 301
-  force = true
 [[redirects]]
   from = "https://www.ewaldewald.me"
   to = "https://ewaldewald.com"
   status = 301
-  force = true
 [[redirects]]
   from = "https://www.ewaldewald.me/*"
   to = "https://ewaldewald.com/:splat"
   status = 301
-  force = true
 
 # Default Settings
 [[redirects]]
