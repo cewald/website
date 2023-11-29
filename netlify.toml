@@ -1,5 +1,15 @@
 [[redirects]]
-  from = "https://ewaldewald.me"
+  from = "https://christianewald.de/*"
+  to = "https://ewaldewald.com"
+  status = 301
+
+[[redirects]]
+  from = "https://cewald.de/*"
+  to = "https://ewaldewald.com"
+  status = 301
+
+[[redirects]]
+  from = "https://ewald.codes/*"
   to = "https://ewaldewald.com"
   status = 301
 
