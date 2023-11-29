@@ -24,6 +24,10 @@ useHead({
       hid: 'description',
       name: 'description',
       content: metaLine.value
+    },
+    {
+      name: 'robots',
+      content: 'index, follow'
     }
   ],
   htmlAttrs: { lang: 'en' },
