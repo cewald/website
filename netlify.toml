@@ -86,6 +86,7 @@
   status = 301
   force = true
 
+# Default Settings
 [[redirects]]
   from = "/*"
   to = "/index.html"
