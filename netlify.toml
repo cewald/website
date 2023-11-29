@@ -1,9 +1,4 @@
 [[redirects]]
-  from = "https://ewaldewald.me/*"
-  to = "https://ewaldewald.com/:splat"
-  status = 301
-
-[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
