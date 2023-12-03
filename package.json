@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-app",
+  "name": "@cewald/nuxt-boilerplate",
   "private": true,
   "type": "module",
   "scripts": {
