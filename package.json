@@ -7,13 +7,17 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "lint": "eslint ."
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
-    "autoprefixer": "^10.4.16",
-    "nuxt": "^3.8.2",
+    "@nuxt/eslint-config": "^0.2.0",
     "@pinia/nuxt": "^0.5.1",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.55.0",
+    "eslint-plugin-tailwindcss": "^3.13.0",
+    "nuxt": "^3.8.2",
     "pinia": "^2.1.7",
     "postcss": "^8.4.32",
     "sass": "^1.69.5",
