@@ -1,0 +1,39 @@
+{
+  "name": "Node.js & TypeScript",
+  // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-20-bullseye",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers-contrib/features/netlify-cli:1": {},
+    "ghcr.io/jckimble/devcontainer-features/ngrok:3": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "bradlc.vscode-tailwindcss",
+        "csstools.postcss",
+        "dbaeumer.vscode-eslint",
+        "Vue.volar",
+        "Vue.vscode-typescript-vue-plugin",
+        "tamasfe.even-better-toml"
+      ]
+    }
+  },
+  "postCreateCommand": "npm i",
+  "forwardPorts": [
+    3000,
+    3001
+  ],
+  "portsAttributes": {
+    "3000": {
+      "label": "vue-dev",
+      "protocol": "https",
+      "elevateIfNeeded": false
+    },
+    "3001": {
+      "label": "vue-preview",
+      "protocol": "https",
+      "elevateIfNeeded": false
+    }
+  }
+}
