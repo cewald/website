@@ -36,7 +36,7 @@ definePageMeta({
     <h1 class="sr-only mb-4 block text-lg">
       {{ t('Random quotes') }}:
     </h1>
-    <div class="mb-4 text-4xl italic">
+    <div class="mb-4 w-full text-4xl italic">
       "{{ quote.quote }}"
     </div>
     <div class="text-lg">
