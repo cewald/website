@@ -8,8 +8,9 @@ export default defineNuxtConfig({
     strategy: 'prefix',
     defaultLocale: 'en',
     langDir: 'i18n/lang',
+    baseUrl: 'https://https://cewald-nuxt-boilerplate.netlify.app',
     locales: [
-      { code: 'en', iso: 'en-US', name: 'English', file: 'en-US.json' },
+      { code: 'en', iso: 'en-US', name: 'English', file: 'en-US.json', isCatchallLocale: true },
       { code: 'de', iso: 'de-DE', name: 'German', file: 'de-DE.json' },
     ],
   },
