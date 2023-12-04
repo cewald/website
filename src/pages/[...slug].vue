@@ -29,11 +29,14 @@ definePageMeta({
 </script>
 
 <template>
-  <div v-if="quote">
+  <div
+    v-if="quote"
+    class="px-10 md:mx-auto md:w-1/2"
+  >
     <h1 class="sr-only mb-4 block text-lg">
       {{ t('Quote of the day') }}:
     </h1>
-    <div class="mb-2 italic">
+    <div class="mb-4 text-4xl italic">
       "{{ quote.quote }}"
     </div>
     <div class="text-lg">
