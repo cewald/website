@@ -6,6 +6,13 @@ const quote = await useFetch<{ quote: string, author: string }>(
   { pick: ['quote', 'author'] }
 )
 
+if (quote.error.value) {
+  throw showError({
+    statusCode: 400,
+    message: 'Not found',
+  })
+}
+
 useHead({
   title: quote.data.value?.author || 'Unknown',
   titleTemplate: '%s - Quotes',
@@ -26,8 +33,9 @@ definePageMeta({
     <h1 class="text-lg">
       {{ $route.params.slug[0] }}
     </h1>
-    <pre class="max-w-[50%] overflow-scroll">
-      {{ quote }}
-    </pre>
+    <div>
+      {{ quote.data.value?.author }}:
+      {{ quote.data.value?.quote }}
+    </div>
   </div>
 </template>
