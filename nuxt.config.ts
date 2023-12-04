@@ -7,9 +7,10 @@ export default defineNuxtConfig({
   i18n: {
     strategy: 'prefix',
     defaultLocale: 'en',
+    langDir: 'i18n/lang',
     locales: [
-      { code: 'en', iso: 'en-US', name: 'English' },
-      { code: 'de', iso: 'de-DE', name: 'German' },
+      { code: 'en', iso: 'en-US', name: 'English', file: 'en-US.json' },
+      { code: 'de', iso: 'de-DE', name: 'German', file: 'de-DE.json' },
     ],
   },
   googleFonts: {
@@ -37,7 +38,8 @@ export default defineNuxtConfig({
     },
   },
   modules: [
-    '@nuxtjs/google-fonts', // Cant use `vite-plugin-webfont-dl` because of missing `transformIndexHtml` hook in Nuxt/Nitro
+    // Cant use `vite-plugin-webfont-dl` because of missing `transformIndexHtml` hook in Nuxt/Nitro
+    '@nuxtjs/google-fonts',
     '@nuxtjs/i18n',
     '@pinia/nuxt',
   ],

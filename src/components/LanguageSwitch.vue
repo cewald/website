@@ -17,7 +17,7 @@ const switchLocalePath = useSwitchLocalePath()
       </NuxtLink>
       <span
         v-else
-        class="text-gray-400"
+        class="underline"
       >{{ l.name }}</span>
     </template>
   </div>
