@@ -31,7 +31,7 @@ definePageMeta({
 <template>
   <div
     v-if="quote"
-    class="px-10 md:mx-auto md:w-1/3 md:px-0"
+    class="px-10 md:mx-auto md:w-1/2 md:px-0"
   >
     <h1 class="sr-only mb-4 block text-lg">
       {{ t('Random quotes') }}:
