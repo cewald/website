@@ -1,5 +1,4 @@
 import svgLoader from 'vite-svg-loader'
-import webfontDownload from 'vite-plugin-webfont-dl'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -13,17 +12,21 @@ export default defineNuxtConfig({
       { code: 'de', iso: 'de-DE', name: 'German' },
     ],
   },
+  googleFonts: {
+    families: {
+      'Fira Code': {
+        wght: [400, 500, 700],
+      },
+      'Noto Serif': {
+        wght: [300, 400],
+        ital: [300, 400],
+      },
+    },
+    download: true
+  },
   vite: {
     plugins: [
       svgLoader(),
-      webfontDownload([
-        'https://fonts.googleapis.com/css2?' +
-        'family=Fira+Code:wght@400;500;700' + '&display=swap',
-        'https://fonts.googleapis.com/css2?' +
-        'family=Noto+Serif:ital,wght@0,300;0,400;1,300;1,400' + '&display=swap',
-      ], {
-        injectAsStyleTag: false
-      })
     ]
   },
   css: ['@/styles/main.scss'],
@@ -34,8 +37,9 @@ export default defineNuxtConfig({
     },
   },
   modules: [
-    '@pinia/nuxt',
+    '@nuxtjs/google-fonts', // Cant use `vite-plugin-webfont-dl` because of missing `transformIndexHtml` hook in Nuxt/Nitro
     '@nuxtjs/i18n',
+    '@pinia/nuxt',
   ],
   devtools: { enabled: true },
 })
