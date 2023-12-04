@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const route = useRoute()
+const { t } = useI18n()
 
 const quote = await useFetch<{ quote: string, author: string }>(
   `https://dummyjson.com/quotes/${route.params.slug}`,
@@ -29,13 +30,15 @@ definePageMeta({
 </script>
 
 <template>
-  <div class="flex flex-col items-center justify-center">
-    <h1 class="text-lg">
-      {{ $route.params.slug[0] }}
+  <div>
+    <h1 class="sr-only mb-4 block text-lg">
+      {{ t('Quote of the day') }}:
     </h1>
-    <div>
-      {{ quote.data.value?.author }}:
-      {{ quote.data.value?.quote }}
+    <div class="mb-2 italic">
+      "{{ quote.data.value?.quote }}"
+    </div>
+    <div class="text-lg">
+      – {{ quote.data.value?.author }}
     </div>
   </div>
 </template>

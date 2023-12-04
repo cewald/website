@@ -4,7 +4,7 @@ const switchLocalePath = useSwitchLocalePath()
 </script>3
 
 <template>
-  <div class="mt-8 flex gap-2 text-xs uppercase">
+  <div class="flex gap-2 text-xs uppercase">
     <template
       v-for="l in locales"
       :key="l.code"

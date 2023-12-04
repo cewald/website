@@ -1,7 +1,11 @@
+<script setup lang="ts">
+const { t } = useI18n()
+</script>
+
 <template>
-  <div class="flex flex-col items-center justify-center">
-    <h1 class="text-lg">
-      Hallo welt
+  <div>
+    <h1 class="mb-4 block text-lg">
+      {{ t('Quote of the day') }}
     </h1>
   </div>
 </template>

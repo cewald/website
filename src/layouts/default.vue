@@ -1,30 +1,24 @@
 <script setup lang="ts">
 const localePath = useLocalePath()
+
+const randomQuotePath = computed(() => {
+  return localePath('/' + randomBetween(0, 12))
+})
 </script>
 
 <template>
-  <div class="flex min-h-screen flex-col items-center justify-center px-4 py-12">
-    <p class="basis-full">
-      Default Layout:
-    </p>
-    <nav>
+  <div class="flex min-h-screen flex-col items-center justify-between px-4 py-12">
+    <nav class="mb-8 flex gap-4 text-xs uppercase">
       <NuxtLink :to="localePath('/')">
-        Index
+        Home
       </NuxtLink>
-      <NuxtLink :to="localePath('/1')">
-        1
-      </NuxtLink>
-      <NuxtLink :to="localePath('/2')">
-        2
-      </NuxtLink>
-      <NuxtLink :to="localePath('/3')">
-        3
-      </NuxtLink>
-      <NuxtLink :to="localePath('/4')">
-        4
+      <NuxtLink :to="randomQuotePath">
+        Shuffle
       </NuxtLink>
     </nav>
-    <slot />
-    <LanguageSwitch />
+    <div class="font-serif text-2xl">
+      <slot />
+    </div>
+    <LanguageSwitch class="mt-8" />
   </div>
 </template>
