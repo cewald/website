@@ -12,10 +12,7 @@ export const useQuotesStore = defineStore('quotes', () => {
       `https://dummyjson.com/quotes/${id}`,
       { pick: ['quote', 'author', 'id'] }
     ).then(quote => {
-      if (!quote.error.value &&
-        quote.data.value &&
-        quote.status.value === 'success'
-      ) {
+      if (!quote.error.value && quote.data.value) {
         quotes.value.push(quote.data.value)
         return quote.data.value
       }

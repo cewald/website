@@ -1,9 +1,10 @@
 <script setup lang="ts">
 const localePath = useLocalePath()
+const { push } = useRouter()
 
-const randomQuotePath = computed(() => {
-  return localePath('/' + randomBetween(1, 12))
-})
+const randomQuotePath = () => {
+  return push(localePath('/' + randomBetween(1, 12)))
+}
 </script>
 
 <template>
@@ -12,7 +13,10 @@ const randomQuotePath = computed(() => {
       <NuxtLink :to="localePath('/')">
         Home
       </NuxtLink>
-      <NuxtLink :to="randomQuotePath">
+      <NuxtLink
+        to="/"
+        @click="randomQuotePath()"
+      >
         Shuffle
       </NuxtLink>
     </nav>
