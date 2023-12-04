@@ -1,13 +1,12 @@
 <script setup lang="ts">
+import { useQuotesStore } from '@/stores/quotes'
 const route = useRoute()
 const { t } = useI18n()
+const { fetchQuote } = useQuotesStore()
 
-const quote = await useFetch<{ quote: string, author: string }>(
-  `https://dummyjson.com/quotes/${route.params.slug}`,
-  { pick: ['quote', 'author'] }
-)
+const quote = await fetchQuote(parseInt(route.params.slug[0]))
 
-if (quote.error.value) {
+if (!quote) {
   throw showError({
     statusCode: 400,
     message: 'Not found',
@@ -15,10 +14,10 @@ if (quote.error.value) {
 }
 
 useHead({
-  title: quote.data.value?.author || 'Unknown',
+  title: quote?.author || 'Unknown',
   titleTemplate: '%s - Quotes',
   meta: [
-    { name: 'description', content: quote.data.value?.quote }
+    { name: 'description', content: quote?.quote }
   ]
 })
 
@@ -30,15 +29,15 @@ definePageMeta({
 </script>
 
 <template>
-  <div>
+  <div v-if="quote">
     <h1 class="sr-only mb-4 block text-lg">
       {{ t('Quote of the day') }}:
     </h1>
     <div class="mb-2 italic">
-      "{{ quote.data.value?.quote }}"
+      "{{ quote.quote }}"
     </div>
     <div class="text-lg">
-      – {{ quote.data.value?.author }}
+      – {{ quote.author }}
     </div>
   </div>
 </template>

@@ -2,7 +2,7 @@
 const localePath = useLocalePath()
 
 const randomQuotePath = computed(() => {
-  return localePath('/' + randomBetween(0, 12))
+  return localePath('/' + randomBetween(1, 12))
 })
 </script>
 

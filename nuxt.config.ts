@@ -3,7 +3,6 @@ export default defineNuxtConfig({
   ssr: true,
   srcDir: 'src',
   i18n: {
-    legacy: false,
     strategy: 'prefix',
     defaultLocale: 'en',
     locales: [
