@@ -2,3 +2,7 @@
   from = "/*"
   to = "/200.html"
   status = 200
+
+[dev]
+  command = "npm run preview"
+  targetPort = 3000
