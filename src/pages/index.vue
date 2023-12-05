@@ -3,8 +3,8 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <div>
-    <h1 class="mb-4 block text-4xl">
+  <div class="text-center">
+    <h1 class="mb-4 text-4xl">
       {{ t('Random quotes') }}
     </h1>
   </div>
