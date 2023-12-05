@@ -18,7 +18,7 @@
       ]
     }
   },
-  "postCreateCommand": "npm i",
+  "postCreateCommand": "npm i && npx nuxi prepare",
   "forwardPorts": [
     3000,
     3001
