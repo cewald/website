@@ -12,6 +12,11 @@ useHead({
   },
   link: [
     ...(head.value.link || []),
+  ],
+  title: 'Index',
+  titleTemplate: '%s - Lorem ipsum',
+  meta: [
+    { name: 'description', content: 'In iaculis eget risus non hendrerit.' }
   ]
 })
 </script>

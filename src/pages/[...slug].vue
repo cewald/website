@@ -15,7 +15,6 @@ if (!quote) {
 
 useHead({
   title: quote?.author || 'Unknown',
-  titleTemplate: '%s - Quotes',
   meta: [
     { name: 'description', content: quote?.quote }
   ]
