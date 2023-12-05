@@ -6,7 +6,7 @@ const { push } = useRouter()
 const { t } = useI18n()
 
 const randomQuotePath = () => {
-  return push(localePath('/' + randomBetween(1, 12)))
+  return push(localePath('/' + randomBetween(1, 12) + '/'))
 }
 </script>
 
