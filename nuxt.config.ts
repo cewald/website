@@ -41,6 +41,7 @@ export default defineNuxtConfig({
   modules: [
     // Cant use `vite-plugin-webfont-dl` because of missing `transformIndexHtml` hook in Nuxt/Nitro
     '@nuxtjs/google-fonts',
+    '@nuxtjs/fontaine',
     '@nuxtjs/i18n',
     '@pinia/nuxt',
   ],
