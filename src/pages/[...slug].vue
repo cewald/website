@@ -34,7 +34,7 @@ definePageMeta({
     class="px-10 md:mx-auto md:w-1/2 md:px-0"
   >
     <h1 class="sr-only mb-4 block text-lg">
-      {{ t('Random quotes') }}:
+      {{ t('Lorem Ipsum') }}:
     </h1>
     <div class="mb-4 w-full text-4xl italic">
       "{{ quote.quote }}"
