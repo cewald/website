@@ -2,11 +2,10 @@
 import HomeIcon from '@/assets/icons/home.svg'
 
 const localePath = useLocalePath()
-const { push } = useRouter()
 const { t } = useI18n()
 
 const randomQuotePath = () => {
-  return push(localePath('/' + randomBetween(1, 12) + '/'))
+  return navigateTo(localePath('/' + randomBetween(1, 12) + '/'))
 }
 </script>
 
