@@ -13,6 +13,9 @@ export default defineNuxtConfig({
       { code: 'en', iso: 'en-US', name: 'English', file: 'en-US.json', isCatchallLocale: true },
       { code: 'de', iso: 'de-DE', name: 'German', file: 'de-DE.json' },
     ],
+    bundle: {
+      fullInstall: false
+    }
   },
   googleFonts: {
     families: {
@@ -53,4 +56,7 @@ export default defineNuxtConfig({
     }
   },
   devtools: { enabled: true },
+  devServer: {
+    host: '0.0.0.0'
+  }
 })
