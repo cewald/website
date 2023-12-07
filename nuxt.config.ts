@@ -57,6 +57,7 @@ export default defineNuxtConfig({
   },
   devtools: { enabled: true },
   devServer: {
+    /** @see https://github.com/nuxt/cli/issues/181 */
     host: '0.0.0.0'
   }
 })
