@@ -4,7 +4,7 @@ import HomeIcon from '@/assets/icons/home.svg'
 const localePath = useLocalePath()
 
 const randomQuotePath = () => {
-  return navigateTo(localePath('/' + randomBetween(1, 12) + '/'))
+  return navigateTo(localePath('/' + randomBetween(1, 12)))
 }
 </script>
 

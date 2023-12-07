@@ -51,7 +51,7 @@ export default defineNuxtConfig({
   experimental: {
     defaults: {
       nuxtLink: {
-        trailingSlash: 'append'
+        trailingSlash: 'remove'
       }
     }
   },
