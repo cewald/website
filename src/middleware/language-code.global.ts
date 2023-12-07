@@ -1,5 +1,4 @@
 export default defineNuxtRouteMiddleware((to, from) => {
-  console.error(to.matched.length)
   // if (to.params.id === '1') {
   //   return abortNavigation()
   // }

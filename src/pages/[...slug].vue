@@ -9,7 +9,7 @@ const quote = await fetchQuote(parseInt(route.params.slug[0]))
 if (!quote) {
   throw showError({
     statusCode: 404,
-    message: t('Page not found'),
+    message: t('Quote not found'),
   })
 }
 
@@ -33,7 +33,7 @@ definePageMeta({
     class="px-10 md:mx-auto md:w-1/2 md:px-0"
   >
     <h1 class="sr-only">
-      {{ t('Lorem Ipsum') }}:
+      {{ $t('Lorem Ipsum') }}:
     </h1>
     <div class="mb-4 w-full text-4xl italic">
       "{{ quote.quote }}"
