@@ -7,7 +7,7 @@ module.exports = {
     extend: {
       fontFamily: {
         mono: [
-          'Fira Code',
+          'Martian Mono',
           'ui-monospace',
           'Menlo',
           'Monaco',

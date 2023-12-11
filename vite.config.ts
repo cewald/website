@@ -4,7 +4,6 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import svgLoader from 'vite-svg-loader'
-import Icons from 'unplugin-icons/vite'
 import webfontDownload from 'vite-plugin-webfont-dl'
 import viteCompression from 'vite-plugin-compression'
 
@@ -17,9 +16,8 @@ export default defineConfig({
     vue(),
     vueJsx(),
     svgLoader(),
-    Icons({ compiler: 'vue3' }),
     webfontDownload([
-      'https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap'
+      'https://fonts.googleapis.com/css2?family=Martian+Mono:wght@300;400;500;700&display=swap'
     ]),
     viteCompression({ algorithm: 'brotliCompress' }),
   ],

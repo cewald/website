@@ -39,23 +39,23 @@ useHead({
 <template>
   <div
     class="container mx-auto flex min-h-screen flex-col justify-center
-    px-6 py-12 font-mono text-base-darkest dark:text-white"
+    px-6 py-16 font-mono text-base-darkest dark:text-white"
   >
-    <div class="mb-14 flex flex-wrap items-center md:mb-10">
+    <div class="mb-16 flex flex-wrap items-center">
       <div class="basis-full">
-        <Logo class="mb-4 w-40 fill-base-darkest dark:fill-white md:mb-6 md:w-48" />
+        <Logo class="mb-16 w-40 fill-base-darkest dark:fill-white md:w-48" />
       </div>
       <div class="flex flex-wrap items-center">
-        <h1 class="order-1 mb-3 flex flex-initial items-baseline text-5xl font-bold">
+        <h1 class="mb-5 flex flex-initial items-baseline text-5xl font-bold">
           {{ shortName }}
         </h1>
         <p
-          class="order-3 w-full text-xl font-thin lowercase"
+          class="w-full text-xl lowercase"
           v-text="'_' + metaLine"
         />
       </div>
     </div>
-    <SkillSet class="mb-14">
+    <SkillSet class="mb-16">
       Skillset:
     </SkillSet>
     <ContactBlock>Get in touch:</ContactBlock>

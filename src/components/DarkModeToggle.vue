@@ -1,10 +1,8 @@
 <script lang="ts" setup>
 import { useDarkMode } from '@/composables/darkMode'
 
-// @ts-ignore
-import LightOnIcon from '~icons/mdi/lightbulb-on'
-// @ts-ignore
-import LightOffIcon from '~icons/mdi/lightbulb-on-outline'
+import LightOnIcon from '@/assets/mdi-lightbuld-on.svg'
+import LightOffIcon from '@/assets/mdi-lightbulb-on-outline.svg'
 
 const { toggle, isActive, isInitial } = useDarkMode()
 
@@ -17,12 +15,12 @@ const { toggle, isActive, isInitial } = useDarkMode()
     @click="toggle()"
   >
     <button
-      class="group flex flex-wrap items-center justify-center self-start font-mono text-2xl text-base-light
+      class="group flex flex-wrap items-center justify-center self-start text-2xl text-base-light
       transition-colors delay-500 duration-500 dark:text-slate-950 md:text-4xl md:text-base-lightest md:vertical-lr"
     >
       <component
         :is="isActive ? LightOnIcon : LightOffIcon"
-        class="mb-2 block"
+        class="mb-2 block w-10"
       />
       <span
         class="basis-full text-base font-semibold lowercase
