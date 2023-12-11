@@ -43,10 +43,10 @@ useHead({
   >
     <div class="mb-14 flex flex-wrap items-center md:mb-10">
       <div class="basis-full">
-        <Logo class="mb-6 w-20 fill-base-darkest dark:fill-white md:w-28" />
+        <Logo class="mb-4 w-40 fill-base-darkest dark:fill-white md:mb-6 md:w-48" />
       </div>
       <div class="flex flex-wrap items-center">
-        <h1 class="order-1 mb-3 flex flex-initial items-baseline text-3xl font-bold md:text-5xl">
+        <h1 class="order-1 mb-3 flex flex-initial items-baseline text-5xl font-bold">
           {{ shortName }}
         </h1>
         <p
