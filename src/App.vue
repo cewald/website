@@ -58,7 +58,7 @@ useHead({
     <SkillSet class="mb-16">
       Skillset:
     </SkillSet>
-    <ContactBlock>Get in touch:</ContactBlock>
+    <ContactBlock>Contact:</ContactBlock>
   </div>
   <DarkModeToggle />
 </template>
