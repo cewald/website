@@ -15,7 +15,7 @@ export default defineNuxtModule({
         const resp: {
           quotes: { quote: string, author: string, id: number }[]
         } = await v.json()
-        if (!resp.quotes) return
+        if (!resp.quotes) return []
         return resp.quotes.map(q => `/${q[urlKey as 'id']}`).slice(0,9)
       }).catch(e => {
         console.error(e)
