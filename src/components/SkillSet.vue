@@ -40,7 +40,7 @@ const skillset = reactive({
     'helmet'
   ],
   data: ['elasticsearch', 'firestore', 'mysql', 'redis'],
-  paradigm: ['microservice', 'headless', 'serverless', 'acss'],
+  paradigm: ['microservice', 'headless', 'serverless', 'acss', '1312'],
   seo: ['lighthouse', 'web-vitals', 'structured-data']
 })
 </script>
