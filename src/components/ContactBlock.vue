@@ -9,10 +9,6 @@ import ContactPill from '@/components/ContactPill.vue'
     </h2>
     <div class="flex flex-wrap [&>*]:mb-4 [&>*]:mr-4 md:[&>*]:mb-0">
       <ContactPill
-        title="CV"
-        to="https://cewald.github.io/cv/"
-      />
-      <ContactPill
         title="Github"
         to="https://github.com/cewald"
       />
