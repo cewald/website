@@ -14,7 +14,10 @@ useHead({
     ...(head.value.link || []),
   ],
   title: 'Index',
-  titleTemplate: '%s - Lorem ipsum',
+  titleTemplate: titleChunk => {
+    const suffix = import.meta.env.VITE_APP_TITLE
+    return titleChunk ? `${titleChunk} @ ${suffix}` : suffix
+  },
   meta: [
     { name: 'description', content: 'In iaculis eget risus non hendrerit.' }
   ]
