@@ -39,7 +39,7 @@ const projects: {
           <a
             :href="link"
             target="_blank"
-            class="underline decoration-base-light underline-offset-8 hover:decoration-black"
+            class="underline decoration-base-light underline-offset-8 hover:decoration-black md:decoration-1"
           >
             {{ title }}
           </a>
