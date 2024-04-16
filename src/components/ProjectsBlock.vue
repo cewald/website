@@ -34,7 +34,7 @@ const projects: {
         class="mt-2"
         aria-label="project"
       >
-        <h3 class="mr-2 mt-6 dark:text-white md:mt-0 md:inline-block">
+        <h3 class="mr-2 mt-6 dark:text-white md:mt-0 md:inline-block text-lg">
           <span class="mr-2 dark:text-white">_</span>
           <a
             :href="link"
@@ -53,7 +53,7 @@ const projects: {
             v-for="tag in tags"
             :key="tag"
             class="mr-2 mt-2 inline-block bg-base-lightest px-2 py-1
-              text-sm lowercase hover:cursor-default dark:bg-gray-900"
+              lowercase hover:cursor-default dark:bg-gray-900"
           >
             {{ tag }}
           </li>
