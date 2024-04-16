@@ -1,6 +1,7 @@
-# Nuxt 3 Minimal Starter
+# ewaldewald.com / cewald.de / christianewald.de
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This is the repository for www.ewaldewald.com, www.christianewald.de and www.cewald.de
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a89881d0-44a2-402a-a08c-b187ced74559/deploy-status)](https://app.netlify.com/sites/cewald/deploys)
 
 ## Setup
 
