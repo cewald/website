@@ -24,6 +24,9 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+  routeRules: {
+    '/': { prerender: true },
+  },
   modules: [
     '@nuxtjs/google-fonts',
     '@nuxtjs/fontaine',
