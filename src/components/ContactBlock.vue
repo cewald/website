@@ -4,8 +4,11 @@ import ContactPill from '@/components/ContactPill.vue'
 </script>
 
 <template>
-  <div class="flex flex-wrap overflow-scroll">
-    <HeadlineComponenent>
+  <section
+    class="flex flex-wrap overflow-scroll"
+    aria-labelledby="contact-headline"
+  >
+    <HeadlineComponenent id="contact-headline">
       <slot />
     </HeadlineComponenent>
     <div class="flex flex-wrap [&>*]:mb-4 [&>*]:mr-4 md:[&>*]:mb-0">
@@ -24,5 +27,5 @@ import ContactPill from '@/components/ContactPill.vue'
       :transparent="true"
       class="mr-4 whitespace-nowrap"
     />
-  </div>
+  </section>
 </template>

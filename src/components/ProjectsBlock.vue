@@ -25,8 +25,8 @@ const projects: {
 </script>
 
 <template>
-  <div>
-    <HeadlineComponenent>
+  <section aria-labelledby="projects-headline">
+    <HeadlineComponenent id="projects-headline">
       <slot />
     </HeadlineComponenent>
     <div>
@@ -34,6 +34,7 @@ const projects: {
         v-for="({ title, link, tags}, i) in projects"
         :key="i"
         class="mt-2"
+        aria-label="Project"
       >
         <h3 class="mr-2 mt-6 dark:text-white md:mt-0 md:inline-block">
           <span class="mr-2 dark:text-white">_</span>
@@ -45,7 +46,10 @@ const projects: {
             {{ title }}
           </a>
         </h3>
-        <ul class="ml-2 mt-2 md:ml-2 md:inline">
+        <ul
+          class="ml-2 mt-2 md:ml-2 md:inline"
+          aria-label="feature tags"
+        >
           <li
             v-for="tag in tags"
             :key="tag"
@@ -57,5 +61,5 @@ const projects: {
         </ul>
       </div>
     </div>
-  </div>
+  </section>
 </template>

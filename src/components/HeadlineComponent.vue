@@ -10,6 +10,7 @@ withDefaults(defineProps<{
   <component
     :is="level"
     class="mb-4 w-full text-xl font-medium lowercase md:text-2xl"
+    v-bind="$attrs"
   >
     <slot />
   </component>

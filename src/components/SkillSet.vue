@@ -48,26 +48,35 @@ const skillset = reactive({
 </script>
 
 <template>
-  <div class="text-lg">
-    <HeadlineComponenent>
+  <section
+    class="text-lg"
+    aria-labelledby="skillset-headline"
+  >
+    <HeadlineComponenent id="skillset-headline">
       <slot />
     </HeadlineComponenent>
-    <template
+    <div
       v-for="(skills, set) in skillset"
       :key="set"
+      class="inline"
+      aria-label="skillsubset"
     >
       <h3
         class="mr-2 mt-6 text-base-semilight dark:text-slate-300 md:mt-0 md:inline-block"
         v-text="set"
       />
-      <ul class="inline">
+      <ul
+        class="inline"
+        aria-label=""
+      >
         <SkillPill
           v-for="skill in skills"
           :key="set + skill"
+          :aria-label="skill"
         >
           {{ skill }}
         </SkillPill>
       </ul>
-    </template>
-  </div>
+    </div>
+  </section>
 </template>

@@ -17,10 +17,12 @@ const { toggle, isActive, isInitial } = useDarkMode()
     <button
       class="group flex flex-wrap items-center justify-center self-start text-2xl text-base-light
       transition-colors delay-500 duration-500 dark:text-slate-950 md:text-4xl md:text-base-lightest md:vertical-lr"
+      aria-label="Toggle light mode"
     >
       <component
         :is="isActive ? LightOnIcon : LightOffIcon"
         class="mb-2 block w-10"
+        aria-hidden="true"
       />
       <span
         class="basis-full text-base font-semibold lowercase
