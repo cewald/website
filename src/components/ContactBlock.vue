@@ -1,12 +1,13 @@
 <script lang="ts" setup>
+import HeadlineComponenent from '@/components/HeadlineComponent.vue'
 import ContactPill from '@/components/ContactPill.vue'
 </script>
 
 <template>
   <div class="flex flex-wrap overflow-scroll">
-    <h2 class="mb-4 w-full text-xl font-medium lowercase md:text-2xl">
+    <HeadlineComponenent>
       <slot />
-    </h2>
+    </HeadlineComponenent>
     <div class="flex flex-wrap [&>*]:mb-4 [&>*]:mr-4 md:[&>*]:mb-0">
       <ContactPill
         title="Github"

@@ -1,69 +1,73 @@
 <script lang="ts" setup>
 import { reactive } from 'vue'
+import HeadlineComponenent from '@/components/HeadlineComponent.vue'
 import SkillPill from '@/components/SkillPill.vue'
 
 const skillset = reactive({
   frontend: [
-    'javascript',
-    'nodejs',
-    'typescript',
-    'vuejs',
-    'gsap',
-    'motion one',
-    'tailwindcss',
-    'vite',
-    'rollup',
+    'JavaScript',
+    'node.js',
+    'TypeScript',
+    'Vue.js',
+    'Nuxt',
+    'GSAP',
+    'Motion One',
+    'TailwindCSS',
+    'Vite',
+    'Rollup',
     'esbuild',
     'webpack',
   ],
-  'server-side': ['nodejs', 'php', 'nginx'],
+  'server-side': ['node.js', 'PHP', 'NGINX'],
   'dev-ops': [
-    'jest',
+    'Jest',
     'cypress-io',
-    'continous-integration',
-    'continous-deployment',
-    'test-driven development',
-    'automated-testing',
-    'github-actions',
-    'gitlab-pipelines',
+    'Continous-Integration',
+    'Continous-Deployment',
+    'Test-Driven Development',
+    'Automated-Testing',
+    'GitHub-Actions',
+    'GitLab-Pipelines',
     'git'
   ],
   architecture: [
-    'docker',
-    'gcp',
-    'app-engine',
-    'cloud-run',
-    'firebase',
-    'aws',
-    'netlify',
-    'kubernetes',
-    'helmet'
+    'Docker',
+    'GCP',
+    'App-Engine',
+    'Cloud-Run',
+    'Firebase',
+    'supabase',
+    'Netlify',
+    'Kubernetes',
+    'Helmet'
   ],
-  data: ['elasticsearch', 'firestore', 'mysql', 'redis'],
-  paradigm: ['microservice', 'headless', 'serverless', 'acss', '1312'],
-  seo: ['lighthouse', 'web-vitals', 'structured-data']
+  data: ['ElasticSearch', 'Firestore', 'MYSQL', 'PostgreSQL', 'Redis'],
+  paradigm: ['WAI-ARIA', 'Microservice', 'Headless', 'Serverless', 'aCSS', '1312'],
+  seo: ['Lighthouse', 'Web-Vitals', 'Structured-Data']
 })
 </script>
 
 <template>
   <div class="text-lg">
-    <h2 class="mb-4 text-xl font-medium lowercase md:text-2xl">
+    <HeadlineComponenent>
       <slot />
-    </h2>
+    </HeadlineComponenent>
     <template
       v-for="(skills, set) in skillset"
       :key="set"
     >
       <h3
         class="mr-2 mt-6 text-base-semilight dark:text-slate-300 md:mt-0 md:inline-block"
-        v-text="`${set}:`"
+        v-text="set"
       />
-      <SkillPill
-        v-for="skill in skills"
-        :key="set + skill"
-      >
-        {{ skill }}
-      </SkillPill>
+      <ul class="inline">
+        <SkillPill
+          v-for="skill in skills"
+          :key="set + skill"
+        >
+          {{ skill }}
+        </SkillPill>
+      </ul>
     </template>
   </div>
 </template>

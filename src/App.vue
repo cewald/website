@@ -4,6 +4,7 @@ import { useHead } from 'unhead'
 
 import Logo from '@/assets/logo.svg'
 import SkillSet from '@/components/SkillSet.vue'
+import ProjectsBlock from '@/components/ProjectsBlock.vue'
 import ContactBlock from '@/components/ContactBlock.vue'
 import DarkModeToggle from '@/components/DarkModeToggle.vue'
 
@@ -58,6 +59,9 @@ useHead({
     <SkillSet class="mb-16">
       Skillset:
     </SkillSet>
+    <ProjectsBlock class="mb-16">
+      Recent projects:
+    </ProjectsBlock>
     <ContactBlock>Contact:</ContactBlock>
   </div>
   <DarkModeToggle />
