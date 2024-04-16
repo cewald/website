@@ -1,7 +1,11 @@
 <template>
-  <div class="text-center">
-    <h1 class="mb-4 text-4xl">
-      {{ $t('Lorem Ipsum') }}
-    </h1>
+  <div>
+    <SkillSet class="mb-16">
+      Skillset:
+    </SkillSet>
+    <ProjectsBlock class="mb-16">
+      Recent projects:
+    </ProjectsBlock>
+    <ContactBlock>Contact:</ContactBlock>
   </div>
 </template>
