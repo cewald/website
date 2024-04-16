@@ -32,7 +32,7 @@ const projects: {
         v-for="({ title, link, tags}, i) in projects"
         :key="i"
         class="mt-2"
-        aria-label="Project"
+        aria-label="project"
       >
         <h3 class="mr-2 mt-6 dark:text-white md:mt-0 md:inline-block">
           <span class="mr-2 dark:text-white">_</span>

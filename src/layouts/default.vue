@@ -39,7 +39,7 @@ useHead({
     class="container mx-auto flex min-h-screen flex-col justify-center
     px-6 py-16 font-mono text-base-darkest dark:text-white"
   >
-    <div class="mb-16 flex flex-wrap items-center">
+    <header class="mb-16 flex flex-wrap items-center" aria-label="header">
       <div class="basis-full">
         <Logo
           class="mb-16 w-40 fill-base-darkest dark:fill-white md:w-48"
@@ -48,7 +48,6 @@ useHead({
       </div>
       <div
         class="flex flex-wrap items-center"
-        aria-label="Title"
       >
         <h1
           class="mb-5 flex flex-initial items-baseline text-5xl font-bold"
@@ -62,7 +61,7 @@ useHead({
           v-text="'_' + metaLine"
         />
       </div>
-    </div>
+    </header>
     <slot/>
   </div>
   <DarkModeToggle />
