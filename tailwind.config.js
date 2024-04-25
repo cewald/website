@@ -7,16 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        mono: [
-          'Martian Mono',
-          'ui-monospace',
-          'Menlo',
-          'Monaco',
-          'Consolas',
-          '"Liberation Mono"',
-          '"Courier New"',
-          'monospace'
-        ]
+        mono: [ 'Martian Mono', ...defaultTheme.fontFamily.mono ]
       },
       colors: {
         base: {
