@@ -5,13 +5,13 @@ export const useName = () => {
   )
 
   const shortName = computed(() => {
-    const [prename, lastname] = name.value.toLowerCase().split(' ')
+    const [ prename, lastname ] = name.value.toLowerCase().split(' ')
     return `${prename[0]}:/${lastname}`
   })
 
   const lastName = computed(() => {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const [prename, lastname] = name.value.split(' ')
+    const [ prename, lastname ] = name.value.split(' ')
     return lastname
   })
 

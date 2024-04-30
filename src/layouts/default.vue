@@ -19,7 +19,7 @@ useHead({
     },
   ],
   htmlAttrs: { lang: 'en', dir: 'ltr' },
-  link: [{ rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' }],
+  link: [ { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' } ],
 })
 </script>
 

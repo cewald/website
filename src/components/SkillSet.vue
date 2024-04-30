@@ -16,7 +16,7 @@ const skillset = ref<{
     'esbuild',
     'webpack',
   ],
-  'server-side': ['node.js', 'PHP', 'NGINX'],
+  'server-side': [ 'node.js', 'PHP', 'NGINX' ],
   'dev-ops': [
     'Jest',
     'cypress-io',
@@ -39,9 +39,9 @@ const skillset = ref<{
     'Kubernetes',
     'Helmet',
   ],
-  'data': ['ElasticSearch', 'Firestore', 'MYSQL', 'PostgreSQL', 'Redis'],
-  'paradigm': ['WAI-ARIA', 'Microservice', 'Headless', 'Serverless', 'aCSS', '1312'],
-  'seo': ['Lighthouse', 'Web-Vitals', 'Structured-Data'],
+  'data': [ 'ElasticSearch', 'Firestore', 'MYSQL', 'PostgreSQL', 'Redis' ],
+  'paradigm': [ 'WAI-ARIA', 'Microservice', 'Headless', 'Serverless', 'aCSS', '1312' ],
+  'seo': [ 'Lighthouse', 'Web-Vitals', 'Structured-Data' ],
 })
 </script>
 

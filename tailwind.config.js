@@ -2,12 +2,12 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./src/**/*.{vue,js,ts,jsx,tsx}'],
+  content: [ './src/**/*.{vue,js,ts,jsx,tsx}' ],
   darkMode: 'class',
   theme: {
     extend: {
       fontFamily: {
-        mono: ['Martian Mono', ...defaultTheme.fontFamily.mono],
+        mono: [ 'Martian Mono', ...defaultTheme.fontFamily.mono ],
       },
       colors: {
         base: {

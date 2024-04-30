@@ -14,8 +14,7 @@ export const useDarkMode = () => {
   const applyDocClass = () => {
     if (isActive.value) {
       document.documentElement.classList.add('dark')
-    }
-    else {
+    } else {
       document.documentElement.classList.remove('dark')
     }
   }

@@ -7,7 +7,7 @@ export default defineNuxtConfig({
   googleFonts: {
     families: {
       'Martian Mono': {
-        wght: [300, 400, 500, 700],
+        wght: [ 300, 400, 500, 700 ],
       },
     },
     download: true,
@@ -17,7 +17,7 @@ export default defineNuxtConfig({
       svgLoader(),
     ],
   },
-  css: ['@/styles/main.scss'],
+  css: [ '@/styles/main.scss' ],
   postcss: {
     plugins: {
       tailwindcss: {},
