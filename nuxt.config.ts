@@ -28,6 +28,7 @@ export default defineNuxtConfig({
     '/': { prerender: true },
   },
   modules: [
+    '@nuxt/eslint',
     '@nuxtjs/google-fonts',
     '@nuxtjs/fontaine',
   ],
@@ -36,6 +37,11 @@ export default defineNuxtConfig({
       nuxtLink: {
         trailingSlash: 'remove'
       }
+    }
+  },
+  eslint: {
+    config: {
+      stylistic: true
     }
   },
   devtools: { enabled: true },
