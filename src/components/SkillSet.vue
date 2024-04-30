@@ -2,7 +2,7 @@
 const skillset = ref<{
   [title: string]: string[]
 }>({
-  frontend: [
+  'frontend': [
     'JavaScript',
     'node.js',
     'TypeScript',
@@ -26,9 +26,9 @@ const skillset = ref<{
     'Automated-Testing',
     'GitHub-Actions',
     'GitLab-Pipelines',
-    'git'
+    'git',
   ],
-  architecture: [
+  'architecture': [
     'Docker',
     'GCP',
     'App-Engine',
@@ -37,11 +37,11 @@ const skillset = ref<{
     'supabase',
     'Netlify',
     'Kubernetes',
-    'Helmet'
+    'Helmet',
   ],
-  data: ['ElasticSearch', 'Firestore', 'MYSQL', 'PostgreSQL', 'Redis'],
-  paradigm: ['WAI-ARIA', 'Microservice', 'Headless', 'Serverless', 'aCSS', '1312'],
-  seo: ['Lighthouse', 'Web-Vitals', 'Structured-Data']
+  'data': ['ElasticSearch', 'Firestore', 'MYSQL', 'PostgreSQL', 'Redis'],
+  'paradigm': ['WAI-ARIA', 'Microservice', 'Headless', 'Serverless', 'aCSS', '1312'],
+  'seo': ['Lighthouse', 'Web-Vitals', 'Structured-Data'],
 })
 </script>
 

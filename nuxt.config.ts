@@ -10,12 +10,12 @@ export default defineNuxtConfig({
         wght: [300, 400, 500, 700],
       },
     },
-    download: true
+    download: true,
   },
   vite: {
     plugins: [
       svgLoader(),
-    ]
+    ],
   },
   css: ['@/styles/main.scss'],
   postcss: {
@@ -35,18 +35,18 @@ export default defineNuxtConfig({
   experimental: {
     defaults: {
       nuxtLink: {
-        trailingSlash: 'remove'
-      }
-    }
+        trailingSlash: 'remove',
+      },
+    },
   },
   eslint: {
     config: {
-      stylistic: true
-    }
+      stylistic: true,
+    },
   },
   devtools: { enabled: true },
   devServer: {
     /** @see https://github.com/nuxt/cli/issues/181 */
-    host: '0.0.0.0'
-  }
+    host: '0.0.0.0',
+  },
 })

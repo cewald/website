@@ -7,18 +7,18 @@ const projects: {
   {
     title: '16stimmt.de',
     link: 'https://www.16stimmt.de',
-    tags: ['vue', 'nuxt', 'wai-aria', 'continuos-integration', 'headless-cms']
+    tags: ['vue', 'nuxt', 'wai-aria', 'continuos-integration', 'headless-cms'],
   },
   {
     title: 'twodo.studio',
     link: 'https://www.twodo.studio',
-    tags: ['vue', 'nuxt', 'wai-aria', 'continuos-integration', 'headless-cms']
+    tags: ['vue', 'nuxt', 'wai-aria', 'continuos-integration', 'headless-cms'],
   },
   {
     title: 'space-transformer.com',
     link: 'https://www.space-transformer.com',
-    tags: ['vue', 'nuxt', 'wai-aria', 'gsap', 'continuos-integration', 'headless-cms']
-  }
+    tags: ['vue', 'nuxt', 'wai-aria', 'gsap', 'continuos-integration', 'headless-cms'],
+  },
 ]
 </script>
 
@@ -29,7 +29,7 @@ const projects: {
     </HeadlineComponent>
     <div>
       <div
-        v-for="({ title, link, tags}, i) in projects"
+        v-for="({ title, link, tags }, i) in projects"
         :key="i"
         class="mt-2"
         aria-label="project"

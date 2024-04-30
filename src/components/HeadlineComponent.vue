@@ -2,7 +2,7 @@
 withDefaults(defineProps<{
   level?: 'h2' | 'h3'
 }>(), {
-  level: 'h2'
+  level: 'h2',
 })
 </script>
 

@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        mono: [ 'Martian Mono', ...defaultTheme.fontFamily.mono ]
+        mono: ['Martian Mono', ...defaultTheme.fontFamily.mono],
       },
       colors: {
         base: {
@@ -16,10 +16,10 @@ export default {
           semilight: '#707070',
           default: '#999999',
           dark: '#666666',
-          darkest: '#333333'
-        }
-      }
-    }
+          darkest: '#333333',
+        },
+      },
+    },
   },
   plugins: [
     ({ addUtilities }) => {
@@ -28,7 +28,6 @@ export default {
         '.vertical-lr': { writingMode: 'vertical-lr' },
         '.horizontal-tb': { writingMode: 'horizontal-tb' },
       })
-    }
+    },
   ],
 }
-

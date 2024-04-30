@@ -7,14 +7,15 @@ export const useDarkMode = () => {
   const isActive = ref(current)
 
   const toggle = () => {
-    if(!isInitial) return
+    if (!isInitial) return
     isActive.value = !isActive.value
   }
 
   const applyDocClass = () => {
     if (isActive.value) {
       document.documentElement.classList.add('dark')
-    } else {
+    }
+    else {
       document.documentElement.classList.remove('dark')
     }
   }

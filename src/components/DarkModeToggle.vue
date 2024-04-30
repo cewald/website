@@ -5,7 +5,6 @@ import LightOnIcon from '@/assets/mdi-lightbuld-on.svg'
 import LightOffIcon from '@/assets/mdi-lightbulb-on-outline.svg'
 
 const { toggle, isActive, isInitial } = useDarkMode()
-
 </script>
 
 <template>
