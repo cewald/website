@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import Skillset from '~/data/skillset.json'
+import Skillset from '~/data/SkillGant.json'
 
 type SkillSetSkill = {
   title: string
@@ -120,7 +120,7 @@ const getRange = (upper: number, lower: number, steps: number) => {
 </script>
 
 <template>
-  <div class="relative mb-8 h-4 font-mono text-xxs">
+  <div class="relative mb-8 h-4">
     <div
       v-for="({ year, percent }, i) in yearScale"
       :key="`year-scale-${year}`"
@@ -135,7 +135,7 @@ const getRange = (upper: number, lower: number, steps: number) => {
     :key="'section' + section"
     class="mb-8 text-xxxs"
   >
-    <div class="flex items-baseline font-mono text-base-lighter">
+    <div class="flex items-baseline font-mono text-base-semilight">
       {{ section }}
     </div>
     <div
@@ -164,7 +164,7 @@ const getRange = (upper: number, lower: number, steps: number) => {
           {{ title }}
           <span
             v-if="subTitle"
-            class="text-base-lighter"
+            class="text-base-semilight"
             v-text="subTitle"
           />
         </div>

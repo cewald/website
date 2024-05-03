@@ -1,48 +1,9 @@
 <script lang="ts" setup>
+import Skillset from '~/data/SkillSet.json'
+
 const skillset = ref<{
   [title: string]: string[]
-}>({
-  'frontend': [
-    'JavaScript',
-    'node.js',
-    'TypeScript',
-    'Vue.js',
-    'Nuxt',
-    'GSAP',
-    'Motion One',
-    'TailwindCSS',
-    'Vite',
-    'Rollup',
-    'esbuild',
-    'webpack',
-  ],
-  'server-side': [ 'node.js', 'PHP', 'NGINX' ],
-  'dev-ops': [
-    'Jest',
-    'cypress-io',
-    'Continous-Integration',
-    'Continous-Deployment',
-    'Test-Driven Development',
-    'Automated-Testing',
-    'GitHub-Actions',
-    'GitLab-Pipelines',
-    'git',
-  ],
-  'architecture': [
-    'Docker',
-    'GCP',
-    'App-Engine',
-    'Cloud-Run',
-    'Firebase',
-    'supabase',
-    'Netlify',
-    'Kubernetes',
-    'Helmet',
-  ],
-  'data': [ 'ElasticSearch', 'Firestore', 'MYSQL', 'PostgreSQL', 'Redis' ],
-  'paradigm': [ 'WAI-ARIA', 'Microservice', 'Headless', 'Serverless', 'aCSS', '1312' ],
-  'seo': [ 'Lighthouse', 'Web-Vitals', 'Structured-Data' ],
-})
+}>(Skillset)
 </script>
 
 <template>
