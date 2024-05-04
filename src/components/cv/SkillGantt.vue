@@ -133,7 +133,7 @@ const getRange = (upper: number, lower: number, steps: number) => {
   <div
     v-for="{ section, skills } in skillsetStruct"
     :key="'section' + section"
-    class="mb-8 text-xxxs"
+    class="mb-8 lowercase"
   >
     <div class="flex items-baseline font-mono text-base-semilight">
       {{ section }}
