@@ -11,16 +11,16 @@ const age = now.diff(dob, 'years')
     <CvSectionWrapper class="print:break-after-page">
       <p class="mb-4">
         I’m a proficient full-stack software engineer with a passion for crafting accessible and inclusive digital
-        solutions. I possess a deep understanding of the entire software development lifecycle, from ideation to
-        deployment, and excel in translating complex requirements into robust, scale- and maintainable code.
+        solutions. I bring a deep understanding of the entire software development lifecycle, from ideation to
+        deployment, and translate complex requirements into robust, scale- and maintainable code.
       </p>
       <p class="mb-4">
-        My expertise encompasses a wide range of technologies, including frontend frameworks, backend languages, as
+        My expertise covers a wide range of technologies, including frontend frameworks, backend languages, as
         well as dev-ops practices. I am a firm believer in continuous improvement and am always eager to adopt new tools
         and methodologies that enhance the development process.
       </p>
       <p>
-        I thrive in collaborative environments and have a proven ability to work effectively with cross-functional
+        I enjoy collaborative environments and have a proven ability to work effectively with cross-functional
         teams to deliver high-quality software solutions that meet the needs of both users and clients.
       </p>
     </CvSectionWrapper>
