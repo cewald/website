@@ -10,7 +10,7 @@ defineProps<{
     {{ title }}
     <span
       v-if="subTitle"
-      class="font-extralight text-base-light md:text-lg"
+      class="font-light text-base-light md:text-lg"
     >
       {{ subTitle }}
     </span>

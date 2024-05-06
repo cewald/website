@@ -1,12 +1,18 @@
 <script setup lang="ts">
-defineProps<{
+withDefaults(defineProps<{
   title?: string
   subTitle?: string
-}>()
+  margin?: boolean
+}>(), {
+  margin: true,
+})
 </script>
 
 <template>
-  <section class="mb-16 text-lg">
+  <section
+    class="text-lg"
+    :class="{ 'mb-16': margin }"
+  >
     <CvSectionTitle
       v-if="title"
       :title="title"

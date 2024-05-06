@@ -135,7 +135,7 @@ const getRange = (upper: number, lower: number, steps: number) => {
     :key="'section' + section"
     class="mb-8 lowercase"
   >
-    <div class="flex items-baseline font-mono text-base-semilight">
+    <div class="flex items-baseline font-mono text-base-semilight mb-1">
       {{ section }}
     </div>
     <div
@@ -159,7 +159,7 @@ const getRange = (upper: number, lower: number, steps: number) => {
         />
         <div
           v-if="i === percentTimeslots.length - 1"
-          class="flex-auto pl-2 text-base"
+          class="flex-auto pl-2 text-base font-light"
         >
           {{ title }}
           <span
