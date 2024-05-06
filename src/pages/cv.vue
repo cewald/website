@@ -9,7 +9,7 @@ const age = now.diff(dob, 'years')
 <template>
   <div class="flex flex-wrap -mx-4">
     <CvSectionWrapper
-      class="print:break-after-page px-6 font-light"
+      class="px-6 font-light print:order-1"
     >
       <p class="mb-4">
         I’m a proficient full-stack software engineer with a passion for crafting accessible and inclusive digital
@@ -29,13 +29,13 @@ const age = now.diff(dob, 'years')
     <CvSectionWrapper
       title="Skillset "
       sub-title="_chronolocical"
-      class="grow w-full print:break-after-page px-6"
+      class="grow w-full px-6 print:order-5 print:mb-0"
     >
       <CvSkillGantt />
     </CvSectionWrapper>
     <CvSectionWrapper
       title="Key strengths"
-      class="w-full md:w-2/4 md:grow print:w-full px-6"
+      class="w-full md:w-2/4 md:grow print:w-full px-6 print:order-2"
     >
       <ul class="font-light">
         <li class="mb-4">
@@ -81,7 +81,7 @@ const age = now.diff(dob, 'years')
     </CvSectionWrapper>
     <CvSectionWrapper
       title="Details"
-      class="w-full md:w-auto print:w-1/2 px-6"
+      class="w-full md:w-auto print:w-1/2 px-6 print:order-3"
     >
       <h3 class="text-base mb-2 lowercase font-normal">
         Based in
@@ -110,10 +110,10 @@ const age = now.diff(dob, 'years')
         </a>
       </p>
     </CvSectionWrapper>
-    <div class="w-full md:w-auto print:w-1/2 px-6">
+    <div class="w-full md:w-auto print:w-1/2 px-6 print:order-4">
       <CvSectionWrapper
         title="Languages"
-        class="md:mb-8"
+        class="md:mb-8 print:mb-8"
       >
         <ul class="font-light">
           <li>
@@ -126,7 +126,10 @@ const age = now.diff(dob, 'years')
           </li>
         </ul>
       </CvSectionWrapper>
-      <CvSectionWrapper title="Links">
+      <CvSectionWrapper
+        title="Links"
+        class="print:break-after-page"
+      >
         <ul class="font-light">
           <li>
             <a
@@ -163,3 +166,14 @@ const age = now.diff(dob, 'years')
     </div>
   </div>
 </template>
+
+<style lang="scss">
+@media print {
+  html { font-size: 7pt; }
+}
+
+@page {
+  size: A4;
+  margin: 20mm 20mm 30mm 30mm;
+}
+</style>
