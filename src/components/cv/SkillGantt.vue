@@ -131,17 +131,19 @@ const getRange = (upper: number, lower: number, steps: number) => {
     />
   </div>
   <div
-    v-for="{ section, skills } in skillsetStruct"
-    :key="'section' + section"
-    class="mb-8 lowercase"
+    v-for="({ section, skills }, i) in skillsetStruct"
+    :key="'section-' + section"
+    class="lowercase"
+    :class="{ 'mb-8': skillsetStruct.length - 1 !== i }"
   >
     <div class="flex items-baseline font-mono text-base-semilight mb-1">
       {{ section }}
     </div>
     <div
-      v-for="{ title, subTitle, percentTimeslots } in skills"
+      v-for="({ title, subTitle, percentTimeslots }, j) in skills"
       :key="title"
-      class="flex items-center leading-snug"
+      class="flex items-baseline leading-snug"
+      :class="{ 'mb-0.5': skills.length - 1 !== j }"
     >
       <template
         v-for="({ width, start }, i) in percentTimeslots"
