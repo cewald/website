@@ -146,8 +146,8 @@ const getRange = (upper: number, lower: number, steps: number) => {
       :class="{ 'mb-0.5': skills.length - 1 !== j }"
     >
       <template
-        v-for="({ width, start }, i) in percentTimeslots"
-        :key="'bar-' + title + i"
+        v-for="({ width, start }, k) in percentTimeslots"
+        :key="'bar-' + title + k"
       >
         <div
           v-if="100 - start - width > 0"
@@ -160,7 +160,7 @@ const getRange = (upper: number, lower: number, steps: number) => {
           :style="{ width: width + '%' }"
         />
         <div
-          v-if="i === percentTimeslots.length - 1"
+          v-if="k === percentTimeslots.length - 1"
           class="flex-auto pl-2 text-base font-light"
         >
           {{ title }}
