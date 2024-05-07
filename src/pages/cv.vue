@@ -142,7 +142,7 @@ const age = now.diff(dob, 'years')
               target="_blank"
               :title="title"
               class="mb-3 flex items-center underline underline-offset-8 print:underline-offset-4
-                decoration-1 decoration-base-light hover:decoration-black"
+                decoration-1 decoration-base-lighter hover:decoration-black"
             >
               {{ link }}
             </a>

@@ -14,7 +14,7 @@ const { toggle, isActive, isInitial } = useDarkMode()
     @click="toggle()"
   >
     <button
-      class="group flex flex-wrap items-center justify-center self-start text-2xl text-base-light
+      class="group flex flex-wrap items-center justify-center self-start text-2xl text-base-lighter
       transition-colors delay-500 duration-500 dark:text-slate-950 md:text-4xl md:text-base-lightest md:vertical-lr"
       aria-label="Toggle light mode"
     >

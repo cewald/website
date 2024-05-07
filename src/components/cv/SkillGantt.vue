@@ -124,7 +124,7 @@ const getRange = (upper: number, lower: number, steps: number) => {
     <div
       v-for="({ year, percent }, i) in yearScale"
       :key="`year-scale-${year}`"
-      class="absolute top-0 border-base-light px-2"
+      class="absolute top-0 border-base-lighter px-2"
       :class="[i > 0 ? '-translate-x-full border-r' : 'border-l']"
       :style="{ left: 100 - percent + '%' }"
       aria-hidden="true"
@@ -176,7 +176,7 @@ const getRange = (upper: number, lower: number, steps: number) => {
           {{ title }}
           <span
             v-if="subTitle"
-            class="text-base-semilight"
+            class="text-base-light"
             v-text="subTitle"
           />
         </div>
