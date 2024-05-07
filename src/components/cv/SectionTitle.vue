@@ -14,7 +14,7 @@ defineProps<{
     {{ title }}
     <span
       v-if="subTitle"
-      class="font-light text-base-semilight md:text-lg"
+      class="font-light text-base-semilight dark:text-slate-300 md:text-lg"
     >
       {{ subTitle }}
     </span>

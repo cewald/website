@@ -124,7 +124,7 @@ const getRange = (upper: number, lower: number, steps: number) => {
     <div
       v-for="({ year, percent }, i) in yearScale"
       :key="`year-scale-${year}`"
-      class="absolute top-0 border-base-lighter px-2"
+      class="absolute top-0 border-base-lighter dark:border-slate-300 px-2"
       :class="[i > 0 ? '-translate-x-full border-r' : 'border-l']"
       :style="{ left: 100 - percent + '%' }"
       aria-hidden="true"
@@ -140,7 +140,7 @@ const getRange = (upper: number, lower: number, steps: number) => {
     :aria-label="section"
   >
     <h3
-      class="flex items-baseline font-mono text-base-semilight mb-1"
+      class="flex items-baseline font-mono text-base-semilight dark:text-white mb-1"
       aria-hidden="true"
     >
       {{ section }}
@@ -165,7 +165,7 @@ const getRange = (upper: number, lower: number, steps: number) => {
           class="flex-fix"
         />
         <div
-          class="h-4 bg-base-lightest text-right"
+          class="h-4 bg-base-lightest"
           :class="[start === 0 ? 'flex-auto' : 'flex-fix shrink']"
           :style="{ width: width + '%' }"
         />
@@ -176,7 +176,7 @@ const getRange = (upper: number, lower: number, steps: number) => {
           {{ title }}
           <span
             v-if="subTitle"
-            class="text-base-light"
+            class="text-base-light dark:text-slate-400"
             v-text="subTitle"
           />
         </div>

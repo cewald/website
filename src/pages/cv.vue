@@ -63,10 +63,10 @@ const age = now.diff(dob, 'years')
         >
           <h4
             :id="`key-strength-${i}`"
-            class="mb-2 font-normal"
+            class="mb-2 font-normal flex items-center"
             :aria-label="title"
           >
-            _
+            <span class="w-6">_</span>
             {{ title }}
           </h4>
           <p
@@ -123,7 +123,9 @@ const age = now.diff(dob, 'years')
             :aria-label="lang"
           >
             <span class="lowercase">{{ lang }}</span>
-            <span class="text-base text-base-light ml-1 print:text-base-semilight">_{{ state }}</span>
+            <span
+              class="text-base text-base-light ml-1 dark:text-slate-300 print:text-base-semilight"
+            >_{{ state }}</span>
           </li>
         </ul>
       </CvSectionWrapper>
@@ -142,7 +144,8 @@ const age = now.diff(dob, 'years')
               target="_blank"
               :title="title"
               class="mb-3 flex items-center underline underline-offset-8 print:underline-offset-4
-                decoration-1 decoration-base-lighter hover:decoration-black"
+                decoration-1 decoration-base-lighter hover:decoration-black
+                dark:decoration-slate-300 dark:hover:decoration-white"
             >
               {{ link }}
             </a>
