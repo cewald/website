@@ -1,5 +1,19 @@
 <script setup lang="ts">
 import dayjs from 'dayjs'
+import KeyStrengthsData from '~/data/KeyStrengths.json'
+
+const keyStrengths = shallowRef(KeyStrengthsData)
+
+const languages = shallowRef([
+  [ 'German', 'native speaker' ],
+  [ 'English', 'proficient' ],
+])
+
+const links = shallowRef([
+  [ 'Website', 'www.ewaldewald.com' ],
+  [ 'GitHub', 'github.com/cewald' ],
+  [ 'LinkedIn', 'linkedin.com/in/ewaldtm' ],
+])
 
 const now = dayjs()
 const dob = dayjs.unix(550627200)
@@ -10,6 +24,7 @@ const age = now.diff(dob, 'years')
   <div class="flex flex-wrap -mx-4">
     <CvSectionWrapper
       class="px-6 font-light print:order-1"
+      aria-label="Introduction"
     >
       <p class="mb-4">
         I’m a proficient full-stack software engineer with a passion for crafting accessible and inclusive digital
@@ -27,9 +42,11 @@ const age = now.diff(dob, 'years')
       </p>
     </CvSectionWrapper>
     <CvSectionWrapper
-      title="Skillset "
-      sub-title="_chronolocical"
+      title="Skillset"
+      sub-title="_chronological"
       class="grow w-full px-6 print:order-5 print:mb-0"
+      aria-label="Chronological Skillset"
+      title-aria-label="Chronological Skillset"
     >
       <CvSkillGantt />
     </CvSectionWrapper>
@@ -38,43 +55,25 @@ const age = now.diff(dob, 'years')
       class="w-full md:w-2/4 md:grow print:w-full px-6 print:order-2"
     >
       <ul class="font-light">
-        <li class="mb-4">
-          <h4 class="mb-2 font-normal">
+        <li
+          v-for="({ title, text }, i) in keyStrengths"
+          :key="`key-strength-${i}`"
+          class="mb-4"
+          :aria-labelledby="`key-strength-${i}`"
+        >
+          <h4
+            :id="`key-strength-${i}`"
+            class="mb-2 font-normal"
+            :aria-label="title"
+          >
             _
-            Full-stack development expertise
+            {{ title }}
           </h4>
           <p
             class="ml-6 hyphens-auto"
             lang="en"
           >
-            I am proficient in both front-end and back-end development technologies, allowing me to take ownership of
-            projects from start to finish.
-          </p>
-        </li>
-        <li class="mb-4">
-          <h4 class="mb-2 font-normal">
-            _
-            Strong problem-solving skills
-          </h4>
-          <p
-            class="ml-6 hyphens-auto"
-            lang="en"
-          >
-            I have a knack for identifying and resolving complex technical challenges, ensuring that projects stay on
-            track and within budget.
-          </p>
-        </li>
-        <li class="mb-4">
-          <h4 class="mb-2 font-normal">
-            _
-            Passion for learning
-          </h4>
-          <p
-            class="ml-6 hyphens-auto"
-            lang="en"
-          >
-            I am always eager to learn new technologies and methodologies, ensuring that my skills remain up-to-date in
-            the ever-evolving world of software development.
+            {{ text }}
           </p>
         </li>
       </ul>
@@ -82,6 +81,8 @@ const age = now.diff(dob, 'years')
     <CvSectionWrapper
       title="Details"
       class="w-full md:w-auto print:w-1/2 px-6 print:order-3"
+      aria-label="Personal Details"
+      title-aria-label="Personal Details"
     >
       <h3 class="text-base mb-2 lowercase font-normal">
         Based in
@@ -116,13 +117,13 @@ const age = now.diff(dob, 'years')
         class="md:mb-8 print:mb-8"
       >
         <ul class="font-light">
-          <li>
-            <span class="lowercase">German</span>
-            <span class="text-base text-base-light ml-1 print:text-base-semilight">_native speaker</span><br>
-          </li>
-          <li>
-            <span class="lowercase">English</span>
-            <span class="text-base text-base-light ml-1 print:text-base-semilight">_proficient</span>
+          <li
+            v-for="([lang, state], i) in languages"
+            :key="`lang-${i}`"
+            :aria-label="lang"
+          >
+            <span class="lowercase">{{ lang }}</span>
+            <span class="text-base text-base-light ml-1 print:text-base-semilight">_{{ state }}</span>
           </li>
         </ul>
       </CvSectionWrapper>
@@ -131,34 +132,19 @@ const age = now.diff(dob, 'years')
         class="print:break-after-page"
       >
         <ul class="font-light">
-          <li>
+          <li
+            v-for="([title, link], i) in links"
+            :key="`link-${i}`"
+            :aria-label="title"
+          >
             <a
-              href="https://www.ewaldewald.com"
+              :href="`https://${link}`"
               target="_blank"
+              :title="title"
               class="mb-3 flex items-center underline underline-offset-8 print:underline-offset-4
                 decoration-1 decoration-base-light hover:decoration-black"
             >
-              www.ewaldewald.com
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://github.com/cewald"
-              target="_blank"
-              class="mb-3 flex items-center underline underline-offset-8 print:underline-offset-4
-                decoration-1 decoration-base-light hover:decoration-black"
-            >
-              github.com/cewald
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://linkedin.com/in/ewaldtm"
-              target="_blank"
-              class="flex items-center underline underline-offset-8 print:underline-offset-4
-                decoration-1 decoration-base-light hover:decoration-black"
-            >
-              linkedin.com/in/ewaldtm
+              {{ link }}
             </a>
           </li>
         </ul>

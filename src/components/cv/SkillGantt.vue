@@ -127,6 +127,7 @@ const getRange = (upper: number, lower: number, steps: number) => {
       class="absolute top-0 border-base-light px-2"
       :class="[i > 0 ? '-translate-x-full border-r' : 'border-l']"
       :style="{ left: 100 - percent + '%' }"
+      aria-hidden="true"
       v-text="year"
     />
   </div>
@@ -135,15 +136,24 @@ const getRange = (upper: number, lower: number, steps: number) => {
     :key="'section-' + section"
     class="lowercase"
     :class="{ 'mb-8': skillsetStruct.length - 1 !== i }"
+    role="list"
+    :aria-label="section"
   >
-    <div class="flex items-baseline font-mono text-base-semilight mb-1">
+    <div
+      class="flex items-baseline font-mono text-base-semilight mb-1"
+      aria-hidden="true"
+    >
       {{ section }}
     </div>
     <div
-      v-for="({ title, subTitle, percentTimeslots }, j) in skills"
+      v-for="({ title, subTitle, percentTimeslots, timestampedTimeslots }, j) in skills"
       :key="title"
       class="flex items-baseline leading-snug"
       :class="{ 'mb-0.5': skills.length - 1 !== j }"
+      role="listitem"
+      :aria-label="title + (subTitle ? ' ' + subTitle : '') + ': '
+        + timestampedTimeslots.map(({ start: a, stop: b }) => a.getFullYear() + ' - ' + (b ? b.getFullYear() : 'now'))
+          .join(', ')"
     >
       <template
         v-for="({ width, start }, k) in percentTimeslots"
