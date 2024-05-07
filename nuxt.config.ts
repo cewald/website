@@ -6,9 +6,7 @@ export default defineNuxtConfig({
   srcDir: 'src',
   googleFonts: {
     families: {
-      'Martian Mono': {
-        wght: [ 300, 400, 500, 700 ],
-      },
+      'Martian Mono': [ 300, 400, 500, 600, 700 ],
     },
     download: true,
   },
@@ -26,6 +24,7 @@ export default defineNuxtConfig({
   },
   routeRules: {
     '/': { prerender: true },
+    '/cv': { prerender: true },
   },
   modules: [
     '@nuxt/eslint',
