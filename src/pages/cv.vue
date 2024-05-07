@@ -118,11 +118,11 @@ const age = now.diff(dob, 'years')
         <ul class="font-light">
           <li>
             <span class="lowercase">German</span>
-            <span class="text-base text-base-light ml-1">_native speaker</span><br>
+            <span class="text-base text-base-light ml-1 print:text-base-semilight">_native speaker</span><br>
           </li>
           <li>
             <span class="lowercase">English</span>
-            <span class="text-base text-base-light ml-1">_proficient</span>
+            <span class="text-base text-base-light ml-1 print:text-base-semilight">_proficient</span>
           </li>
         </ul>
       </CvSectionWrapper>
@@ -135,7 +135,7 @@ const age = now.diff(dob, 'years')
             <a
               href="https://www.ewaldewald.com"
               target="_blank"
-              class="mb-3 flex items-center underline underline-offset-8
+              class="mb-3 flex items-center underline underline-offset-8 print:underline-offset-4
                 decoration-1 decoration-base-light hover:decoration-black"
             >
               www.ewaldewald.com
@@ -145,7 +145,7 @@ const age = now.diff(dob, 'years')
             <a
               href="https://github.com/cewald"
               target="_blank"
-              class="mb-3 flex items-center underline underline-offset-8
+              class="mb-3 flex items-center underline underline-offset-8 print:underline-offset-4
                 decoration-1 decoration-base-light hover:decoration-black"
             >
               github.com/cewald
@@ -155,7 +155,7 @@ const age = now.diff(dob, 'years')
             <a
               href="https://linkedin.com/in/ewaldtm"
               target="_blank"
-              class="flex items-center underline underline-offset-8
+              class="flex items-center underline underline-offset-8 print:underline-offset-4
                 decoration-1 decoration-base-light hover:decoration-black"
             >
               linkedin.com/in/ewaldtm
@@ -174,6 +174,6 @@ const age = now.diff(dob, 'years')
 
 @page {
   size: A4;
-  margin: 20mm 20mm 30mm 30mm;
+  margin: 20mm 20mm 20mm 30mm;
 }
 </style>
