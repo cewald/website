@@ -139,12 +139,12 @@ const getRange = (upper: number, lower: number, steps: number) => {
     role="list"
     :aria-label="section"
   >
-    <div
+    <h3
       class="flex items-baseline font-mono text-base-semilight mb-1"
       aria-hidden="true"
     >
       {{ section }}
-    </div>
+    </h3>
     <div
       v-for="({ title, subTitle, percentTimeslots, timestampedTimeslots }, j) in skills"
       :key="title"
