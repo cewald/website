@@ -10,7 +10,7 @@ const { toggle, isActive, isInitial } = useDarkMode()
 <template>
   <div
     v-if="isInitial"
-    class="mb-12 flex justify-center p-4  hover:cursor-pointer max-md:top-12 md:fixed md:right-6 md:top-6"
+    class="mb-12 flex justify-center p-4  hover:cursor-pointer max-md:top-12 md:fixed md:right-6 md:top-6 print:hidden"
     @click="toggle()"
   >
     <button
