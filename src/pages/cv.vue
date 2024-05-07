@@ -106,7 +106,9 @@ const age = now.diff(dob, 'years')
           href="mailto:me@ewaldewald.com"
           title="Email"
           target="_blank"
-          class="hover:underline"
+          class="hover:underline underline-offset-8 print:underline-offset-4
+            decoration-1 decoration-base-lighter hover:decoration-black
+            dark:decoration-slate-300 dark:hover:decoration-white"
         >
           me@ewaldewald.com
         </a>
