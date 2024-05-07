@@ -23,8 +23,9 @@ const age = now.diff(dob, 'years')
 <template>
   <div class="flex flex-wrap -mx-6">
     <CvSectionWrapper
-      class="px-6 font-light print:order-1"
+      class="px-6 font-light print:order-1 hyphens-auto"
       aria-label="Introduction"
+      lang="en"
     >
       <p class="mb-4">
         I’m a proficient full-stack software engineer with a passion for crafting accessible and inclusive digital
