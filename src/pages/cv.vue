@@ -21,7 +21,7 @@ const age = now.diff(dob, 'years')
 </script>
 
 <template>
-  <div class="flex flex-wrap -mx-4">
+  <div class="flex flex-wrap -mx-6">
     <CvSectionWrapper
       class="px-6 font-light print:order-1"
       aria-label="Introduction"
