@@ -96,7 +96,7 @@ const startDate = computed(() => {
     ref="containerEl"
     :class="{ 'overflow-x-visible': isReady }"
   >
-    <div :class="{ 'w-[200vw] md:w-auto': isReady }">
+    <div :class="{ 'w-[200vw] pr-8 md:pr-0 md:w-auto': isReady }">
       <CvSkillGanttHeader
         ref="yearScaleEl"
         :start-date="startDate"
