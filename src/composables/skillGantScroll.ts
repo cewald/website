@@ -15,7 +15,11 @@ export const useSkillGantScroll = (
     isReady.value = true
 
     if (sectionEl.value && yearScaleEl.value?.$el && containerEl.value) {
-      gsap.timeline({
+      window.addEventListener('beforeprint', () => {
+        console.error('Before print', scaleTimeline)
+      })
+
+      const scaleTimeline = gsap.timeline({
         scrollTrigger: {
           trigger: containerEl.value,
           endTrigger: sectionEl.value[sectionEl.value.length - 1],
