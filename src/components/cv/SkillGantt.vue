@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import Skillset from '~/data/SkillGant.json'
+import type CvSkillGanttHeader from '~/components/cv/SkillGanttHeader.vue'
 
 type SkillSetSkill = {
   title: string
@@ -22,7 +23,7 @@ const skillset = ref(Skillset as SkillSetSection[])
 const endDate = ref(new Date(new Date().getFullYear().toString()))
 
 const containerEl = ref<HTMLElement | null>(null)
-const yearScaleEl = ref<HTMLElement | null>(null)
+const yearScaleEl = ref<InstanceType<typeof CvSkillGanttHeader> | null>(null)
 const sectionEl = ref<HTMLElement[] | null>(null)
 const { isReady } = useSkillGantScroll(containerEl, yearScaleEl, sectionEl)
 
@@ -43,8 +44,8 @@ const skillsetStruct = computed(() => {
       skill.percentTimeslots = skill.timestampedTimeslots
       // Map start/stop time in %
         .map(({ start, stop }) => ({
-          start: timeStampToPercent(start),
-          stop: stop ? timeStampToPercent(stop) : undefined,
+          start: timeStampToPercent(start, startDate, endDate),
+          stop: stop ? timeStampToPercent(stop, startDate, endDate) : undefined,
         }))
       // Map bar-width in %
         .map(({ start, stop }) => {
@@ -88,40 +89,6 @@ const startDate = computed(() => {
 
   return new Date(firstYear.toString())
 })
-
-const yearScale = computed(() => {
-  return getRange(
-    endDate.value.getFullYear(),
-    startDate.value.getFullYear(),
-    4,
-  )
-    .map(y => Math.round(y))
-    .map(year => ({
-      year,
-      percent: timeStampToPercent(new Date(year.toString())),
-    }))
-    .reverse()
-})
-
-const timeStampToPercent = (timestamp: Date): number => {
-  const start = startDate.value.getTime()
-  const end = endDate.value.getTime()
-  const scale = end - start
-  const point = timestamp.getTime() - start
-  return Math.round((point * 100) / scale)
-}
-
-const getRange = (upper: number, lower: number, steps: number) => {
-  const difference = upper - lower
-  const increment = difference / (steps - 1)
-  return [
-    lower,
-    ...Array(steps - 2)
-      .fill('')
-      .map((_, index) => lower + increment * (index + 1)),
-    upper,
-  ]
-}
 </script>
 
 <template>
@@ -130,20 +97,11 @@ const getRange = (upper: number, lower: number, steps: number) => {
     :class="{ 'overflow-x-visible': isReady }"
   >
     <div :class="{ 'w-[200vw] md:w-auto': isReady }">
-      <div
+      <CvSkillGanttHeader
         ref="yearScaleEl"
-        class="relative mb-8 h-7 bg-white"
-      >
-        <div
-          v-for="({ year, percent }, i) in yearScale"
-          :key="`year-scale-${year}`"
-          class="absolute top-0 border-base-lighter dark:border-slate-300 px-2"
-          :class="[i > 0 ? '-translate-x-full border-r' : 'border-l']"
-          :style="{ left: 100 - percent + '%' }"
-          aria-hidden="true"
-          v-text="year"
-        />
-      </div>
+        :start-date="startDate"
+        :end-date="endDate"
+      />
       <div ref="sectionsWrapperEl">
         <div
           v-for="({ section, skills }, i) in skillsetStruct"
