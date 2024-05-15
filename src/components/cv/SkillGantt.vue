@@ -21,6 +21,11 @@ type SkillSetSection = {
 const skillset = ref(Skillset as SkillSetSection[])
 const endDate = ref(new Date(new Date().getFullYear().toString()))
 
+const containerEl = ref<HTMLElement | null>(null)
+const yearScaleEl = ref<HTMLElement | null>(null)
+const sectionEl = ref<HTMLElement[] | null>(null)
+const { isReady } = useSkillGantScroll(containerEl, yearScaleEl, sectionEl)
+
 const skillsetStruct = computed(() => {
   return ([ ...skillset.value ]).map(section => {
     section.skills.map(skill => {
@@ -120,67 +125,83 @@ const getRange = (upper: number, lower: number, steps: number) => {
 </script>
 
 <template>
-  <div class="relative mb-8 h-4">
-    <div
-      v-for="({ year, percent }, i) in yearScale"
-      :key="`year-scale-${year}`"
-      class="absolute top-0 border-base-lighter dark:border-slate-300 px-2"
-      :class="[i > 0 ? '-translate-x-full border-r' : 'border-l']"
-      :style="{ left: 100 - percent + '%' }"
-      aria-hidden="true"
-      v-text="year"
-    />
-  </div>
   <div
-    v-for="({ section, skills }, i) in skillsetStruct"
-    :key="'section-' + section"
-    class="lowercase"
-    :class="{ 'mb-8': skillsetStruct.length - 1 !== i }"
-    role="list"
-    :aria-label="section"
+    ref="containerEl"
+    :class="{ 'overflow-x-visible': isReady }"
   >
-    <h3
-      class="flex items-baseline font-mono text-base-semilight dark:text-white mb-1"
-      aria-hidden="true"
-    >
-      {{ section }}
-    </h3>
-    <div
-      v-for="({ title, subTitle, percentTimeslots, timestampedTimeslots }, j) in skills"
-      :key="title"
-      class="flex items-baseline leading-snug"
-      :class="{ 'mb-0.5': skills.length - 1 !== j }"
-      role="listitem"
-      :aria-label="title + (subTitle ? ' ' + subTitle : '') + ': '
-        + timestampedTimeslots.map(({ start: a, stop: b }) => a.getFullYear() + ' - ' + (b ? b.getFullYear() : 'now'))
-          .join(', ')"
-    >
-      <template
-        v-for="({ width, start }, k) in percentTimeslots"
-        :key="'bar-' + title + k"
+    <div :class="{ 'w-[200vw] md:w-auto': isReady }">
+      <div
+        ref="yearScaleEl"
+        class="relative mb-8 h-7 bg-white"
       >
         <div
-          v-if="100 - start - width > 0"
-          :style="{ width: 100 - start - width + '%' }"
-          class="flex-fix"
+          v-for="({ year, percent }, i) in yearScale"
+          :key="`year-scale-${year}`"
+          class="absolute top-0 border-base-lighter dark:border-slate-300 px-2"
+          :class="[i > 0 ? '-translate-x-full border-r' : 'border-l']"
+          :style="{ left: 100 - percent + '%' }"
+          aria-hidden="true"
+          v-text="year"
         />
+      </div>
+      <div ref="sectionsWrapperEl">
         <div
-          class="h-4 bg-base-lightest"
-          :class="[start === 0 ? 'flex-auto' : 'flex-fix shrink']"
-          :style="{ width: width + '%' }"
-        />
-        <div
-          v-if="k === percentTimeslots.length - 1"
-          class="flex-auto pl-2 text-base font-light"
+          v-for="({ section, skills }, i) in skillsetStruct"
+          :key="'section-' + section"
+          ref="sectionEl"
+          class="lowercase"
+          :class="{
+            'mb-8': skillsetStruct.length - 1 !== i,
+          }"
+          role="list"
+          :aria-label="section"
         >
-          {{ title }}
-          <span
-            v-if="subTitle"
-            class="text-base-light dark:text-slate-400"
-            v-text="subTitle"
-          />
+          <h3
+            class="flex items-baseline font-mono text-base-semilight dark:text-white mb-1"
+            aria-hidden="true"
+          >
+            {{ section }}
+          </h3>
+          <div
+            v-for="({ title, subTitle, percentTimeslots, timestampedTimeslots }, j) in skills"
+            :key="title"
+            class="flex items-baseline leading-snug"
+            :class="{ 'mb-0.5': skills.length - 1 !== j }"
+            role="listitem"
+            :aria-label="title + (subTitle ? ' ' + subTitle : '') + ': '
+              + timestampedTimeslots
+                .map(({ start: a, stop: b }) => a.getFullYear() + ' - ' + (b ? b.getFullYear() : 'now'))
+                .join(', ')"
+          >
+            <template
+              v-for="({ width, start }, k) in percentTimeslots"
+              :key="'bar-' + title + k"
+            >
+              <div
+                v-if="100 - start - width > 0"
+                :style="{ width: 100 - start - width + '%' }"
+                class="flex-fix"
+              />
+              <div
+                class="h-4 bg-base-lightest"
+                :class="[start === 0 ? 'flex-auto' : 'flex-fix shrink']"
+                :style="{ width: width + '%' }"
+              />
+              <div
+                v-if="k === percentTimeslots.length - 1"
+                class="flex-auto pl-2 text-base font-light"
+              >
+                {{ title }}
+                <span
+                  v-if="subTitle"
+                  class="text-base-light dark:text-slate-400"
+                  v-text="subTitle"
+                />
+              </div>
+            </template>
+          </div>
         </div>
-      </template>
+      </div>
     </div>
   </div>
 </template>
