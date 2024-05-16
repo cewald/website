@@ -18,6 +18,8 @@ const links = shallowRef([
 const now = dayjs()
 const dob = dayjs.unix(550627200)
 const age = now.diff(dob, 'years')
+
+const print = () => window.print()
 </script>
 
 <template>
@@ -155,6 +157,27 @@ const age = now.diff(dob, 'years')
           </li>
         </ul>
       </CvSectionWrapper>
+    </div>
+    <div
+      class="px-6 text-center text-sm w-full mt-16 text-base-light ml-1 dark:text-slate-300
+        hover:text-base-darkest print:hidden leading-loose hyphens-auto"
+      lang="en"
+      aria-label="Print and GitHub link"
+    >
+      <div class="bg-base-light h-0.5 w-6 mx-auto mb-8" />
+      Feel free to <a
+        href="https://github.com/cewald/website"
+        target="_blank"
+        title="GitHub Repository of this website"
+        class="underline underline-offset-8 decoration-1 decoration-base-lighter
+          hover:decoration-black dark:decoration-slate-300 dark:hover:decoration-white"
+      >view the project-code on GitHub</a> or <a
+        href="#print"
+        class="underline underline-offset-8 decoration-1 decoration-base-lighter
+          hover:decoration-black dark:decoration-slate-300 dark:hover:decoration-white"
+        title="Print this CV"
+        @click="print()"
+      >print this CV</a> for your reference.
     </div>
   </div>
 </template>
