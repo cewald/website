@@ -6,29 +6,48 @@ gsap.registerPlugin(ScrollTrigger)
 
 export const useSkillGantScroll = (
   containerEl: Ref<HTMLElement | null>,
-  yearScaleEl: Ref<InstanceType<typeof CvSkillGanttHeader> | null>,
+  yearScaleEl: Ref<InstanceType<typeof CvSkillGanttHeader>[] | null>,
   sectionEl: Ref<HTMLElement[] | null>,
 ) => {
   const isReady = ref(false)
+  const isDomReady = computed(() => sectionEl.value && yearScaleEl.value?.[0].$el && containerEl.value)
 
   onMounted(() => {
     isReady.value = true
 
-    if (sectionEl.value && yearScaleEl.value?.$el && containerEl.value) {
-      window.addEventListener('beforeprint', () => {
-        console.error('Before print', scaleTimeline)
-      })
+    if (isDomReady.value) {
+      const mm = gsap.matchMedia()
 
-      const scaleTimeline = gsap.timeline({
-        scrollTrigger: {
-          trigger: containerEl.value,
-          endTrigger: sectionEl.value[sectionEl.value.length - 1],
-          pin: yearScaleEl.value.$el,
-          pinSpacing: false,
-          start: 'top top',
-          end: '-28px top',
+      mm.add(
+        {
+          isDesktop: '(min-width: 800px)',
+          isMobile: '(max-width: 799px)',
+          reduceMotion: '(prefers-reduced-motion: reduce)',
         },
-      })
+        context => {
+          if (!isDomReady.value) return
+
+          const { isDesktop, isMobile, reduceMotion } = context.conditions as Record<string, boolean>
+          console.error(isDesktop, isMobile, reduceMotion)
+
+          if (isDesktop) {
+            const desktopScaleTimeline = gsap.timeline({
+              scrollTrigger: {
+                trigger: containerEl.value,
+                endTrigger: sectionEl.value?.[sectionEl.value.length - 1],
+                pin: yearScaleEl.value?.[0].$el,
+                pinSpacing: false,
+                start: 'top top',
+                end: '-28px top',
+              },
+            })
+
+            window.addEventListener('beforeprint', () => {
+              console.error('Before print', desktopScaleTimeline)
+            })
+          }
+        },
+      )
 
       // sectionEl.value.forEach(el => {
       // const tl = gsap.timeline({

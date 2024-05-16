@@ -23,9 +23,10 @@ const skillset = ref(Skillset as SkillSetSection[])
 const endDate = ref(new Date(new Date().getFullYear().toString()))
 
 const containerEl = ref<HTMLElement | null>(null)
-const yearScaleEl = ref<InstanceType<typeof CvSkillGanttHeader> | null>(null)
+const yearScaleEl = ref<InstanceType<typeof CvSkillGanttHeader>[] | null>(null)
 const sectionEl = ref<HTMLElement[] | null>(null)
-const { isReady } = useSkillGantScroll(containerEl, yearScaleEl, sectionEl)
+
+useSkillGantScroll(containerEl, yearScaleEl, sectionEl)
 
 const skillsetStruct = computed(() => {
   return ([ ...skillset.value ]).map(section => {
@@ -94,14 +95,9 @@ const startDate = computed(() => {
 <template>
   <div
     ref="containerEl"
-    :class="{ 'overflow-x-visible': isReady }"
+    class="overflow-hidden"
   >
-    <div :class="{ 'w-[200vw] pr-8 md:pr-0 md:w-auto print:w-auto print:pr-0': isReady }">
-      <CvSkillGanttHeader
-        ref="yearScaleEl"
-        :start-date="startDate"
-        :end-date="endDate"
-      />
+    <div class="w-[200vw] pr-8 md:pr-0 md:w-auto print:w-auto print:pr-0">
       <div ref="sectionsWrapperEl">
         <div
           v-for="({ section, skills }, i) in skillsetStruct"
@@ -114,6 +110,12 @@ const startDate = computed(() => {
           role="list"
           :aria-label="section"
         >
+          <CvSkillGanttHeader
+            ref="yearScaleEl"
+            :start-date="startDate"
+            :end-date="endDate"
+            :class="{ 'print:hidden md:hidden': i > 0 }"
+          />
           <h3
             class="flex items-baseline font-mono text-base-semilight dark:text-white mb-1"
             aria-hidden="true"
