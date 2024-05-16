@@ -43,7 +43,7 @@ export const useSkillGanttScroll = (
                 pin: yearScaleEl.value?.$el,
                 pinSpacing: false,
                 start: 'top top',
-                end: '-28px top',
+                end: '-48px top',
               },
             })
           } else if (isMobile) {
