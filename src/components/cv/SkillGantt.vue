@@ -23,7 +23,7 @@ const skillset = ref(Skillset as SkillSetSection[])
 const endDate = ref(new Date(new Date().getFullYear().toString()))
 
 const containerEl = ref<HTMLElement | null>(null)
-const yearScaleEl = ref<InstanceType<typeof CvSkillGanttHeader>[] | null>(null)
+const yearScaleEl = ref<InstanceType<typeof CvSkillGanttHeader> | null>(null)
 const sectionEl = ref<HTMLElement[] | null>(null)
 
 useSkillGantScroll(containerEl, yearScaleEl, sectionEl)
@@ -98,6 +98,12 @@ const startDate = computed(() => {
     class="overflow-hidden"
   >
     <div class="w-[200vw] pr-8 md:pr-0 md:w-auto print:w-auto print:pr-0">
+      <CvSkillGanttHeader
+        ref="yearScaleEl"
+        :start-date="startDate"
+        :end-date="endDate"
+        class="hidden md:block"
+      />
       <div ref="sectionsWrapperEl">
         <div
           v-for="({ section, skills }, i) in skillsetStruct"
@@ -110,55 +116,56 @@ const startDate = computed(() => {
           role="list"
           :aria-label="section"
         >
-          <CvSkillGanttHeader
-            ref="yearScaleEl"
-            :start-date="startDate"
-            :end-date="endDate"
-            :class="{ 'print:hidden md:hidden': i > 0 }"
-          />
           <h3
             class="flex items-baseline font-mono text-base-semilight dark:text-white mb-1"
             aria-hidden="true"
           >
             {{ section }}
           </h3>
-          <div
-            v-for="({ title, subTitle, percentTimeslots, timestampedTimeslots }, j) in skills"
-            :key="title"
-            class="flex items-baseline leading-snug"
-            :class="{ 'mb-0.5': skills.length - 1 !== j }"
-            role="listitem"
-            :aria-label="title + (subTitle ? ' ' + subTitle : '') + ': '
-              + timestampedTimeslots
-                .map(({ start: a, stop: b }) => a.getFullYear() + ' - ' + (b ? b.getFullYear() : 'now'))
-                .join(', ')"
-          >
-            <template
-              v-for="({ width, start }, k) in percentTimeslots"
-              :key="'bar-' + title + k"
+          <div id="scrollElement">
+            <CvSkillGanttHeader
+              :start-date="startDate"
+              :end-date="endDate"
+              class="print:hidden md:hidden"
+            />
+            <div
+              v-for="({ title, subTitle, percentTimeslots, timestampedTimeslots }, j) in skills"
+              :key="title"
+              class="flex items-baseline leading-snug"
+              :class="{ 'mb-0.5': skills.length - 1 !== j }"
+              role="listitem"
+              :aria-label="title + (subTitle ? ' ' + subTitle : '') + ': '
+                + timestampedTimeslots
+                  .map(({ start: a, stop: b }) => a.getFullYear() + ' - ' + (b ? b.getFullYear() : 'now'))
+                  .join(', ')"
             >
-              <div
-                v-if="100 - start - width > 0"
-                :style="{ width: 100 - start - width + '%' }"
-                class="flex-fix"
-              />
-              <div
-                class="h-4 bg-base-lightest"
-                :class="[start === 0 ? 'flex-auto' : 'flex-fix shrink']"
-                :style="{ width: width + '%' }"
-              />
-              <div
-                v-if="k === percentTimeslots.length - 1"
-                class="flex-auto pl-2 text-base font-light"
+              <template
+                v-for="({ width, start }, k) in percentTimeslots"
+                :key="'bar-' + title + k"
               >
-                {{ title }}
-                <span
-                  v-if="subTitle"
-                  class="text-base-light dark:text-slate-400"
-                  v-text="subTitle"
+                <div
+                  v-if="100 - start - width > 0"
+                  :style="{ width: 100 - start - width + '%' }"
+                  class="flex-fix"
                 />
-              </div>
-            </template>
+                <div
+                  class="h-4 bg-base-lightest"
+                  :class="[start === 0 ? 'flex-auto' : 'flex-fix shrink']"
+                  :style="{ width: width + '%' }"
+                />
+                <div
+                  v-if="k === percentTimeslots.length - 1"
+                  class="flex-auto pl-2 text-base font-light"
+                >
+                  {{ title }}
+                  <span
+                    v-if="subTitle"
+                    class="text-base-light dark:text-slate-400"
+                    v-text="subTitle"
+                  />
+                </div>
+              </template>
+            </div>
           </div>
         </div>
       </div>
