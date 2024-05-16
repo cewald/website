@@ -25,11 +25,12 @@ export const useSkillGanttScroll = (
           isDesktop: getMediaQuery('sm'),
           isMobile: getMediaQuery('sm', 'max'),
           reduceMotion: '(prefers-reduced-motion: reduce)',
+          print: 'print',
         },
         context => {
-          const { isDesktop, isMobile, reduceMotion } = context.conditions as Record<string, boolean>
+          const { isDesktop, isMobile, reduceMotion, print } = context.conditions as Record<string, boolean>
 
-          if (!isDomReady.value || reduceMotion) return
+          if (!isDomReady.value || reduceMotion || print) return
 
           if (isDesktop) {
             gsap.timeline({
