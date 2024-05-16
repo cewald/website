@@ -64,7 +64,7 @@ const age = now.diff(dob, 'years')
         >
           <h4
             :id="`key-strength-${i}`"
-            class="mb-2 font-normal flex items-center"
+            class="mb-2 font-normal flex items-baseline"
             :aria-label="title"
           >
             <span class="w-6">_</span>
