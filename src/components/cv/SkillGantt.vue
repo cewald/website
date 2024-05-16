@@ -2,31 +2,12 @@
 import Skillset from '~/data/SkillGant.json'
 import type CvSkillGanttHeader from '~/components/cv/SkillGanttHeader.vue'
 
-type SkillSetSkill = {
-  title: string
-  subTitle?: string
-  timeslots: string[]
-  timestampedTimeslots: { start: Date, stop?: Date }[]
-  percentTimeslots: {
-    start: number
-    stop?: number
-    width: number
-  }[]
-}
-
-type SkillSetSection = {
-  section: string
-  skills: SkillSetSkill[]
-}
-
 const skillset = ref(Skillset as SkillSetSection[])
-const endDate = ref(new Date(new Date().getFullYear().toString()))
+const { endDate, getStartDateFromSkillset } = useSkillGanttDates()
 
-const containerEl = ref<HTMLElement | null>(null)
-const yearScaleEl = ref<InstanceType<typeof CvSkillGanttHeader> | null>(null)
-const sectionEl = ref<HTMLElement[] | null>(null)
-
-useSkillGantScroll(containerEl, yearScaleEl, sectionEl)
+const startDate = computed(() => {
+  return getStartDateFromSkillset(skillset.value, endDate.value)
+})
 
 const skillsetStruct = computed(() => {
   return ([ ...skillset.value ]).map(section => {
@@ -69,40 +50,21 @@ const skillsetStruct = computed(() => {
   })
 })
 
-const startDate = computed(() => {
-  const slots: number[] = []
-  skillset.value.forEach(section => {
-    for (const skill of section.skills) {
-      const startSlots = skill.timeslots.map(
-        s => s.split('-').map(v => parseInt(v))[0],
-      )
+const containerEl = ref<HTMLElement | null>(null)
+const yearScaleEl = ref<InstanceType<typeof CvSkillGanttHeader> | null>(null)
+const sectionEl = ref<HTMLElement[] | null>(null)
 
-      slots.push(...startSlots)
-    }
-  })
-
-  const firstYear = slots.reduce((a, b) => (a > b ? b : a))
-
-  const endDateYear = endDate.value.getFullYear()
-  if (firstYear < endDateYear - 12) {
-    return new Date((endDateYear - 12).toString())
-  }
-
-  return new Date(firstYear.toString())
-})
+useSkillGanttScroll(containerEl, yearScaleEl, sectionEl)
 </script>
 
 <template>
-  <div
-    ref="containerEl"
-    class="overflow-hidden"
-  >
+  <div ref="containerEl">
     <div class="w-[200vw] pr-8 md:pr-0 md:w-auto print:w-auto print:pr-0">
       <CvSkillGanttHeader
         ref="yearScaleEl"
         :start-date="startDate"
         :end-date="endDate"
-        class="hidden md:block"
+        class="hidden md:block print:block"
       />
       <div ref="sectionsWrapperEl">
         <div

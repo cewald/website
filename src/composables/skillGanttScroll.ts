@@ -4,7 +4,7 @@ import type CvSkillGanttHeader from '~/components/cv/SkillGanttHeader.vue'
 
 gsap.registerPlugin(ScrollTrigger)
 
-export const useSkillGantScroll = (
+export const useSkillGanttScroll = (
   containerEl: Ref<HTMLElement | null>,
   yearScaleEl: Ref<InstanceType<typeof CvSkillGanttHeader> | null>,
   sectionEl: Ref<HTMLElement[] | null>,
