@@ -21,6 +21,7 @@
     "dayjs": "^1.11.11",
     "eslint": "^9.2.0",
     "eslint-plugin-tailwindcss": "^3.15.1",
+    "gsap": "^3.12.5",
     "husky": "^9.0.11",
     "nuxt": "^3.11.2",
     "postcss": "^8.4.38",
@@ -29,8 +30,5 @@
     "vite-svg-loader": "^5.1.0",
     "vue": "^3.4.27",
     "vue-router": "^4.3.2"
-  },
-  "dependencies": {
-    "gsap": "^3.12.5"
   }
 }
