@@ -30,7 +30,8 @@ export const useSkillGanttScroll = (
           if (!isDomReady.value || reduceMotion) return
 
           if (isDesktop) {
-            const desktopScaleTimeline = gsap.timeline({
+            gsap.timeline({
+              label: 'desktop-scale-timeline',
               scrollTrigger: {
                 trigger: containerEl.value,
                 endTrigger: sectionEl.value?.[sectionEl.value.length - 1],
@@ -40,13 +41,10 @@ export const useSkillGanttScroll = (
                 end: '-28px top',
               },
             })
-
-            window.addEventListener('beforeprint', () => {
-              console.error('Before print', desktopScaleTimeline)
-            })
           } else if (isMobile) {
-            sectionEl.value?.forEach(el => {
+            sectionEl.value?.forEach((el, i) => {
               const tl = gsap.timeline({
+                label: 'section-scroll-' + i,
                 scrollTrigger: {
                   trigger: el,
                   start: 'top 35%',
