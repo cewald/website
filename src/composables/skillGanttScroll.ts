@@ -25,12 +25,11 @@ export const useSkillGanttScroll = (
           isDesktop: getMediaQuery('sm'),
           isMobile: getMediaQuery('sm', 'max'),
           reduceMotion: '(prefers-reduced-motion: reduce)',
-          print: 'print',
         },
         context => {
-          const { isDesktop, isMobile, reduceMotion, print } = context.conditions as Record<string, boolean>
+          const { isDesktop, isMobile, reduceMotion } = context.conditions as Record<string, boolean>
 
-          if (!isDomReady.value || reduceMotion || print) return
+          if (!isDomReady.value || reduceMotion) return
 
           const beforePrintEvent = () => context.kill(true)
           window.addEventListener('beforeprint', beforePrintEvent)
@@ -68,9 +67,7 @@ export const useSkillGanttScroll = (
             })
           }
 
-          return () => {
-            window.removeEventListener('beforeprint', beforePrintEvent)
-          }
+          return () => window.removeEventListener('beforeprint', beforePrintEvent)
         },
       )
     }
