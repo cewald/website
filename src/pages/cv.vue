@@ -19,7 +19,7 @@ const now = dayjs()
 const dob = dayjs.unix(550627200)
 const age = now.diff(dob, 'years')
 
-const print = () => window.print()
+useSeoMeta({ title: 'curriculum vitae' })
 </script>
 
 <template>
@@ -172,12 +172,12 @@ const print = () => window.print()
         class="underline underline-offset-8 decoration-1 decoration-base-lighter
           hover:decoration-black dark:decoration-slate-300 dark:hover:decoration-white"
       >view the project-code on GitHub</a> or <a
-        href="#print"
+        download
+        href="/20240516-cv-ewald.pdf"
         class="underline underline-offset-8 decoration-1 decoration-base-lighter
           hover:decoration-black dark:decoration-slate-300 dark:hover:decoration-white"
-        title="Print this CV"
-        @click="print()"
-      >print this CV</a> for your reference.
+        title="Download this CV"
+      >download this CV</a> for your reference.
     </div>
   </div>
 </template>
