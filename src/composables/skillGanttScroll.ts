@@ -25,10 +25,9 @@ export const useSkillGanttScroll = (
           reduceMotion: '(prefers-reduced-motion: reduce)',
         },
         context => {
-          if (!isDomReady.value) return
-
           const { isDesktop, isMobile, reduceMotion } = context.conditions as Record<string, boolean>
-          console.error(isDesktop, isMobile, reduceMotion)
+
+          if (!isDomReady.value || reduceMotion) return
 
           if (isDesktop) {
             const desktopScaleTimeline = gsap.timeline({
@@ -51,7 +50,7 @@ export const useSkillGanttScroll = (
                 scrollTrigger: {
                   trigger: el,
                   start: 'top 35%',
-                  end: 'top 5%',
+                  end: 'top top',
                   scrub: 1,
                 },
               })
@@ -59,7 +58,7 @@ export const useSkillGanttScroll = (
               tl.to(el.querySelector('#scrollElement'), {
                 x: () => {
                   const { right } = el.getBoundingClientRect()
-                  return -1 * right - 32 + window.innerWidth
+                  return -1 * right + window.innerWidth
                 },
               })
             })

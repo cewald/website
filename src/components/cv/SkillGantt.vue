@@ -58,7 +58,10 @@ useSkillGanttScroll(containerEl, yearScaleEl, sectionEl)
 </script>
 
 <template>
-  <div ref="containerEl">
+  <div
+    ref="containerEl"
+    class="overflow-hidden -mx-6 md:mx-0 print:mx-0"
+  >
     <div class="w-[200vw] pr-8 md:pr-0 md:w-auto print:w-auto print:pr-0">
       <CvSkillGanttHeader
         ref="yearScaleEl"
@@ -79,12 +82,15 @@ useSkillGanttScroll(containerEl, yearScaleEl, sectionEl)
           :aria-label="section"
         >
           <h3
-            class="flex items-baseline font-mono text-base-semilight dark:text-white mb-1"
+            class="flex items-baseline font-mono text-base-semilight dark:text-white mb-1 mx-6 md:mx-0 print:mx-0"
             aria-hidden="true"
           >
             {{ section }}
           </h3>
-          <div id="scrollElement">
+          <div
+            id="scrollElement"
+            class="mx-6 md:mx-0 print:mx-0"
+          >
             <CvSkillGanttHeader
               :start-date="startDate"
               :end-date="endDate"
