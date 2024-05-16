@@ -7,16 +7,20 @@
       <slot />
     </HeadlineComponent>
     <div class="flex flex-wrap [&>*]:mb-4 [&>*]:mr-4 md:[&>*]:mb-0">
-      <ContactPill
+      <ButtonPill
+        title="CV"
+        to="/cv"
+      />
+      <ButtonPill
         title="Github"
         to="https://github.com/cewald"
       />
-      <ContactPill
+      <ButtonPill
         title="LinkedIn"
         to="https://www.linkedin.com/in/ewaldtm"
       />
     </div>
-    <ContactPill
+    <ButtonPill
       title="me@ewaldewald.com"
       to="mailto:me@ewaldewald.com"
       :transparent="true"

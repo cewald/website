@@ -12,7 +12,8 @@ export default {
       colors: {
         base: {
           lightest: '#eeeeee',
-          light: '#cccccc',
+          lighter: '#cccccc',
+          light: '#aaa',
           semilight: '#707070',
           default: '#999999',
           dark: '#666666',

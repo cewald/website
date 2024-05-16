@@ -10,11 +10,11 @@ const { toggle, isActive, isInitial } = useDarkMode()
 <template>
   <div
     v-if="isInitial"
-    class="mb-12 flex justify-center p-4  hover:cursor-pointer max-md:top-12 md:fixed md:right-6 md:top-6"
+    class="mb-12 flex justify-center p-4  hover:cursor-pointer max-md:top-12 md:fixed md:right-6 md:top-6 print:hidden"
     @click="toggle()"
   >
     <button
-      class="group flex flex-wrap items-center justify-center self-start text-2xl text-base-light
+      class="group flex flex-wrap items-center justify-center self-start text-2xl text-base-lighter
       transition-colors delay-500 duration-500 dark:text-slate-950 md:text-4xl md:text-base-lightest md:vertical-lr"
       aria-label="Toggle light mode"
     >
