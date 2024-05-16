@@ -32,6 +32,9 @@ export const useSkillGanttScroll = (
 
           if (!isDomReady.value || reduceMotion || print) return
 
+          const beforePrintEvent = () => context.kill(true)
+          window.addEventListener('beforeprint', beforePrintEvent)
+
           if (isDesktop) {
             gsap.timeline({
               label: 'desktop-scale-timeline',
@@ -63,6 +66,10 @@ export const useSkillGanttScroll = (
                 },
               })
             })
+          }
+
+          return () => {
+            window.removeEventListener('beforeprint', beforePrintEvent)
           }
         },
       )
