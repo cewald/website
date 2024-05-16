@@ -12,6 +12,8 @@ export const useSkillGanttScroll = (
   const isReady = ref(false)
   const isDomReady = computed(() => sectionEl.value && yearScaleEl.value?.$el && containerEl.value)
 
+  const { getMediaQuery } = useScreens()
+
   onMounted(() => {
     isReady.value = true
 
@@ -20,8 +22,8 @@ export const useSkillGanttScroll = (
 
       mm.add(
         {
-          isDesktop: '(min-width: 800px)',
-          isMobile: '(max-width: 799px)',
+          isDesktop: getMediaQuery('sm'),
+          isMobile: getMediaQuery('sm', 'max'),
           reduceMotion: '(prefers-reduced-motion: reduce)',
         },
         context => {

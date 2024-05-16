@@ -53,7 +53,7 @@ const age = now.diff(dob, 'years')
     </CvSectionWrapper>
     <CvSectionWrapper
       title="Key strengths"
-      class="w-full md:w-2/4 md:grow print:w-full px-6 print:order-2"
+      class="w-full xl:w-2/4 md:grow print:w-full px-6 print:order-2"
     >
       <ul class="font-light">
         <li
@@ -81,7 +81,7 @@ const age = now.diff(dob, 'years')
     </CvSectionWrapper>
     <CvSectionWrapper
       title="Details"
-      class="w-full md:w-auto print:w-1/2 px-6 print:order-3"
+      class="w-full md:w-1/2 xl:w-auto print:w-1/2 px-6 print:order-3"
       aria-label="Personal Details"
       title-aria-label="Personal Details"
     >
@@ -114,7 +114,7 @@ const age = now.diff(dob, 'years')
         </a>
       </p>
     </CvSectionWrapper>
-    <div class="w-full md:w-auto print:w-1/2 px-6 print:order-4">
+    <div class="w-full md:w-1/2 xl:w-auto print:w-1/2 px-6 print:order-4">
       <CvSectionWrapper
         title="Languages"
         class="md:mb-8 print:mb-8"
