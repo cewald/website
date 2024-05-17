@@ -21,7 +21,7 @@ const yearScale = computed(() => {
 
 <template>
   <div
-    class="relative mb-3 h-9 bg-white"
+    class="relative mb-3 h-9 bg-white dark:bg-gray-800"
   >
     <div
       v-for="({ year, percent }, i) in yearScale"

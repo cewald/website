@@ -117,7 +117,7 @@ useSkillGanttScroll(containerEl, yearScaleEl, sectionEl)
                   class="flex-fix"
                 />
                 <div
-                  class="h-4 bg-base-lightest"
+                  class="h-4 bg-base-lightest dark:dark:bg-slate-300"
                   :class="[start === 0 ? 'flex-auto' : 'flex-fix shrink']"
                   :style="{ width: width + '%' }"
                 />
