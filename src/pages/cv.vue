@@ -171,8 +171,8 @@ useSeoMeta({ title: 'curriculum vitae' })
         title="GitHub Repository of this website"
         class="underline underline-offset-8 decoration-1 decoration-base-lighter
           hover:decoration-black dark:decoration-slate-300 dark:hover:decoration-white"
-      >view the project-code on GitHub</a> or <a
-        download
+      >check out the project-code on GitHub</a> or <a
+        target="_blank"
         href="/20240516-cv-ewald.pdf"
         class="underline underline-offset-8 decoration-1 decoration-base-lighter
           hover:decoration-black dark:decoration-slate-300 dark:hover:decoration-white"
