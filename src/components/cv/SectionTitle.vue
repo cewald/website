@@ -8,7 +8,7 @@ defineProps<{
 
 <template>
   <h2
-    class="text-xl lowercase xl:text-2xl mb-6 w-full"
+    class="mb-6 w-full text-xl lowercase xl:text-2xl"
     :aria-label="ariaLabel"
   >
     {{ title }}

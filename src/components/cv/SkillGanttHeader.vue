@@ -26,7 +26,7 @@ const yearScale = computed(() => {
     <div
       v-for="({ year, percent }, i) in yearScale"
       :key="`year-scale-${year}`"
-      class="absolute top-0 border-base-lighter dark:border-slate-300 px-2"
+      class="absolute top-0 border-base-lighter px-2 dark:border-slate-300"
       :class="[i > 0 ? '-translate-x-full border-r' : 'border-l']"
       :style="{ left: 100 - percent + '%' }"
       aria-hidden="true"

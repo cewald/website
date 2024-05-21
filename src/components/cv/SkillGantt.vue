@@ -60,9 +60,9 @@ useSkillGanttScroll(containerEl, yearScaleEl, sectionEl)
 <template>
   <div
     ref="containerEl"
-    class="overflow-hidden -mx-6 sm:mx-0 print:mx-0"
+    class="-mx-6 overflow-hidden sm:mx-0 print:mx-0"
   >
-    <div class="w-[200vw] pr-8 sm:pr-0 sm:w-auto print:w-auto print:pr-0">
+    <div class="w-[200vw] pr-8 sm:w-auto sm:pr-0 print:w-auto print:pr-0">
       <CvSkillGanttHeader
         ref="yearScaleEl"
         :start-date="startDate"
@@ -82,7 +82,7 @@ useSkillGanttScroll(containerEl, yearScaleEl, sectionEl)
           :aria-label="section"
         >
           <h3
-            class="flex items-baseline font-mono text-base-semilight dark:text-white mb-1 mx-6 sm:mx-0 print:mx-0"
+            class="mx-6 mb-1 flex items-baseline font-mono text-base-semilight dark:text-white sm:mx-0 print:mx-0"
             aria-hidden="true"
           >
             {{ section }}
@@ -94,7 +94,7 @@ useSkillGanttScroll(containerEl, yearScaleEl, sectionEl)
             <CvSkillGanttHeader
               :start-date="startDate"
               :end-date="endDate"
-              class="print:hidden sm:hidden"
+              class="sm:hidden print:hidden"
             />
             <div
               v-for="({ title, subTitle, percentTimeslots, timestampedTimeslots }, j) in skills"

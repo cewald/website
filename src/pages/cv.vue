@@ -23,9 +23,9 @@ useSeoMeta({ title: 'curriculum vitae' })
 </script>
 
 <template>
-  <div class="flex flex-wrap -mx-6">
+  <div class="-mx-6 flex flex-wrap">
     <CvSectionWrapper
-      class="px-6 font-light print:order-1 hyphens-auto"
+      class="hyphens-auto px-6 font-light print:order-1"
       aria-label="Introduction"
       lang="en"
     >
@@ -47,7 +47,7 @@ useSeoMeta({ title: 'curriculum vitae' })
     <CvSectionWrapper
       title="Skillset"
       sub-title="_chronological"
-      class="grow w-full px-6 print:order-5 print:mb-0"
+      class="w-full grow px-6 print:order-5 print:mb-0"
       aria-label="Chronological Skillset"
       title-aria-label="Chronological Skillset"
     >
@@ -55,7 +55,7 @@ useSeoMeta({ title: 'curriculum vitae' })
     </CvSectionWrapper>
     <CvSectionWrapper
       title="Key strengths"
-      class="w-full xl:w-2/4 md:grow print:w-full px-6 print:order-2"
+      class="w-full px-6 md:grow xl:w-2/4 print:order-2 print:w-full"
     >
       <ul class="font-light">
         <li
@@ -66,7 +66,7 @@ useSeoMeta({ title: 'curriculum vitae' })
         >
           <h4
             :id="`key-strength-${i}`"
-            class="mb-2 font-normal flex items-baseline"
+            class="mb-2 flex items-baseline font-normal"
             :aria-label="title"
           >
             <span class="w-6">_</span>
@@ -83,24 +83,24 @@ useSeoMeta({ title: 'curriculum vitae' })
     </CvSectionWrapper>
     <CvSectionWrapper
       title="Details"
-      class="w-full md:w-1/2 xl:w-auto print:w-1/2 px-6 print:order-3"
+      class="w-full px-6 md:w-1/2 xl:w-auto print:order-3 print:w-1/2"
       aria-label="Personal Details"
       title-aria-label="Personal Details"
     >
-      <h3 class="text-base mb-2 lowercase font-normal">
+      <h3 class="mb-2 text-base font-normal lowercase">
         Based in
       </h3>
       <p class="mb-4 font-light">
         04105 Leipzig<br>
         Germany
       </p>
-      <h3 class="text-base mb-2 lowercase font-normal">
+      <h3 class="mb-2 text-base font-normal lowercase">
         Age
       </h3>
       <p class="mb-4 font-light">
         {{ age }} years
       </p>
-      <h3 class="text-base mb-2 lowercase font-normal">
+      <h3 class="mb-2 text-base font-normal lowercase">
         Email
       </h3>
       <p class="mb-4 font-light">
@@ -108,15 +108,15 @@ useSeoMeta({ title: 'curriculum vitae' })
           href="mailto:me@ewaldewald.com"
           title="Email"
           target="_blank"
-          class="hover:underline underline-offset-8 print:underline-offset-4
-            decoration-1 decoration-base-lighter hover:decoration-black
-            dark:decoration-slate-300 dark:hover:decoration-white"
+          class="decoration-base-lighter decoration-1 underline-offset-8
+            hover:underline hover:decoration-black dark:decoration-slate-300
+            dark:hover:decoration-white print:underline-offset-4"
         >
           me@ewaldewald.com
         </a>
       </p>
     </CvSectionWrapper>
-    <div class="w-full md:w-1/2 xl:w-auto print:w-1/2 px-6 print:order-4">
+    <div class="w-full px-6 md:w-1/2 xl:w-auto print:order-4 print:w-1/2">
       <CvSectionWrapper
         title="Languages"
         class="md:mb-8 print:mb-8"
@@ -129,7 +129,7 @@ useSeoMeta({ title: 'curriculum vitae' })
           >
             <span class="lowercase">{{ lang }}</span>
             <span
-              class="text-base text-base-light ml-1 dark:text-slate-300 print:text-base-semilight"
+              class="ml-1 text-base text-base-light dark:text-slate-300 print:text-base-semilight"
             >_{{ state }}</span>
           </li>
         </ul>
@@ -148,9 +148,9 @@ useSeoMeta({ title: 'curriculum vitae' })
               :href="`https://${link}`"
               target="_blank"
               :title="title"
-              class="mb-3 flex items-center underline underline-offset-8 print:underline-offset-4
-                decoration-1 decoration-base-lighter hover:decoration-black
-                dark:decoration-slate-300 dark:hover:decoration-white"
+              class="mb-3 flex items-center underline decoration-base-lighter decoration-1
+                underline-offset-8 hover:decoration-black dark:decoration-slate-300
+                dark:hover:decoration-white print:underline-offset-4"
             >
               {{ link }}
             </a>
@@ -159,22 +159,22 @@ useSeoMeta({ title: 'curriculum vitae' })
       </CvSectionWrapper>
     </div>
     <div
-      class="px-6 text-center text-sm w-full mt-16 text-base-light ml-1 dark:text-slate-300
-        hover:text-base-darkest print:hidden leading-loose hyphens-auto"
+      class="ml-1 mt-16 w-full hyphens-auto px-6 text-center text-sm leading-loose
+        text-base-light hover:text-base-darkest dark:text-slate-300 print:hidden"
       lang="en"
       aria-label="Print and GitHub link"
     >
-      <div class="bg-base-light h-0.5 w-6 mx-auto mb-8" />
+      <div class="mx-auto mb-8 h-0.5 w-6 bg-base-light" />
       Feel free to <a
         href="https://github.com/cewald/website"
         target="_blank"
         title="GitHub Repository of this website"
-        class="underline underline-offset-8 decoration-1 decoration-base-lighter
+        class="underline decoration-base-lighter decoration-1 underline-offset-8
           hover:decoration-black dark:decoration-slate-300 dark:hover:decoration-white"
       >check out the project-code on GitHub</a> or <a
         target="_blank"
         href="/20240516-cv-ewald.pdf"
-        class="underline underline-offset-8 decoration-1 decoration-base-lighter
+        class="underline decoration-base-lighter decoration-1 underline-offset-8
           hover:decoration-black dark:decoration-slate-300 dark:hover:decoration-white"
         title="Download this CV"
       >download this CV</a> for your reference.
