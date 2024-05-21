@@ -20,6 +20,9 @@ export default {
           darkest: '#333333',
         },
       },
+      flex: {
+        fix: '0 0 auto',
+      },
     },
   },
   plugins: [
