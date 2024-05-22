@@ -64,14 +64,14 @@ useSeoMeta({ title: 'curriculum vitae' })
           class="mb-4"
           :aria-labelledby="`key-strength-${i}`"
         >
-          <h4
+          <h3
             :id="`key-strength-${i}`"
             class="mb-2 flex items-baseline font-normal"
             :aria-label="title"
           >
             <span class="w-6">_</span>
             {{ title }}
-          </h4>
+          </h3>
           <p
             class="ml-6 hyphens-auto"
             lang="en"
