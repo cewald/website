@@ -129,7 +129,7 @@ useSeoMeta({ title: 'curriculum vitae' })
           >
             <span class="lowercase">{{ lang }}</span>
             <span
-              class="ml-1 text-base text-base-light dark:text-slate-300 print:text-base-semilight"
+              class="ml-2 text-base-semilight-contrast dark:text-slate-300 print:text-base-semilight"
             >_{{ state }}</span>
           </li>
         </ul>
@@ -159,8 +159,9 @@ useSeoMeta({ title: 'curriculum vitae' })
       </CvSectionWrapper>
     </div>
     <div
-      class="ml-1 mt-16 w-full hyphens-auto px-6 text-center text-sm leading-loose
-        text-base-light hover:text-base-darkest dark:text-slate-300 print:hidden"
+      class="ml-1 mt-16 w-full hyphens-auto px-6 text-center text-sm font-light leading-loose
+        text-base-semilight-contrast hover:text-base-darkest contrast-more:text-base dark:text-slate-300
+        dark:contrast-more:text-white print:hidden"
       lang="en"
       aria-label="Print and GitHub link"
     >

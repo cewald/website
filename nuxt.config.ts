@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   srcDir: 'src',
   googleFonts: {
     families: {
-      'Martian Mono': [ 300, 400, 500, 600, 700 ],
+      'Martian Mono': [ 300, 400, 500, 700 ],
     },
     download: true,
   },

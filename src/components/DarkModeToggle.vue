@@ -24,7 +24,7 @@ const { toggle, isActive, isInitial } = useDarkMode()
         aria-hidden="true"
       />
       <span
-        class="basis-full text-base font-semibold lowercase
+        class="basis-full text-base font-medium lowercase
         max-md:whitespace-pre-line md:ml-0 md:mt-4 md:hidden md:basis-auto md:group-hover:inline"
       >
         {{ isActive ? 'Lights \n on' : 'Lights \n off' }}
