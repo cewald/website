@@ -1,4 +1,4 @@
-# ewaldewald.com / cewald.de / christianewald.de
+# ewaldewald.com
 
 This is the code-repository for my [website](https://www.ewaldewald.com) and [online resumé](https://www.ewaldewald.com/cv).  
 *– have a look at it, it's a small POC as well ;)*
