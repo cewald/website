@@ -129,7 +129,7 @@ useSkillGanttScroll(containerEl, yearScaleEl, sectionEl)
                   <span
                     v-if="subTitle"
                     class="text-base-semilight-contrast contrast-more:text-base
-                      dark:text-slate-400 dark:contrast-more:text-white"
+                      dark:text-slate-400 dark:contrast-more:text-white print:text-base-semilight"
                     v-text="subTitle"
                   />
                 </div>
