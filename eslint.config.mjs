@@ -3,10 +3,6 @@ import pluginTailwindCSS from 'eslint-plugin-tailwindcss'
 import withNuxt from './.nuxt/eslint.config.mjs'
 
 export default withNuxt([
-  /**
-   * `eslint-plugin-tailwindcss` is not ported to the new eslint flat config syntax yet.
-   * @see https://github.com/francoismassart/eslint-plugin-tailwindcss/issues/335
-   */
   ...pluginTailwindCSS.configs['flat/recommended'],
   {
     plugins: { '@stylistic': stylistic },
