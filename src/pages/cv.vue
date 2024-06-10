@@ -95,10 +95,10 @@ useSeoMeta({ title: 'curriculum vitae' })
         Germany
       </p>
       <h3 class="mb-2 text-base font-normal lowercase">
-        Age
+        Demographics
       </h3>
       <p class="mb-4 font-light">
-        {{ age }} years
+        {{ age }} years (he/him)
       </p>
       <h3 class="mb-2 text-base font-normal lowercase">
         Email
