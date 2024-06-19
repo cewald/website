@@ -1,8 +1,10 @@
 export const useName = () => {
   const name = ref('Christian Ewald')
-  const metaLine = ref(
-    'Freelance full-stack javascript developer and software-engineer',
-  )
+  const freelanceMetaLine = 'Freelance full-stack javascript developer and software-engineer'
+  const employeMetaLine = 'Full-stack javascript developer and software-engineer'
+
+  const route = useRoute()
+  const metaLine = computed(() => route.name === 'cv' ? employeMetaLine : freelanceMetaLine)
 
   const shortName = computed(() => {
     const [ prename, lastname ] = name.value.toLowerCase().split(' ')

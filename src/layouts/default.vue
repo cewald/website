@@ -3,7 +3,7 @@ const { shortName, metaLine } = useName()
 
 useHead({
   titleTemplate: titleChunk => {
-    const tmpl = import.meta.env.VITE_APP_TITLE || `${shortName.value} _ full-stack developer`
+    const tmpl = import.meta.env.VITE_APP_TITLE || `${shortName.value} _ full-stack javascript developer`
     return titleChunk ? `${tmpl} _ ${titleChunk}` : tmpl
   },
   meta: [
