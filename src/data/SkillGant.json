@@ -27,6 +27,13 @@
         ]
       },
       {
+        "title":"React",
+        "subTitle":"/w Next.js",
+        "timeslots":[
+          "2020"
+        ]
+      },
+      {
         "title":"TailwindCSS",
         "timeslots":[
           "2017"
