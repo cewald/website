@@ -174,7 +174,7 @@ useSeoMeta({ title: 'curriculum vitae' })
           hover:decoration-black dark:decoration-slate-300 dark:hover:decoration-white"
       >check out the project-code on GitHub</a> or <a
         target="_blank"
-        href="/20240619-cv-ewald.pdf"
+        href="/20240620-cv-ewald.pdf"
         class="underline decoration-base-lighter decoration-1 underline-offset-8
           hover:decoration-black dark:decoration-slate-300 dark:hover:decoration-white"
         title="Download this CV"
