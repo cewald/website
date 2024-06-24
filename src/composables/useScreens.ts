@@ -1,5 +1,4 @@
-import { useMediaQuery as useMediaQueryCore, type ConfigurableWindow } from '@vueuse/core'
-import { toValue } from '@vueuse/shared'
+import { useMediaQuery as useMediaQueryCore, toValue, type ConfigurableWindow } from '@vueuse/core'
 
 export default function useScreens() {
   const { screens } = useAppConfig()
