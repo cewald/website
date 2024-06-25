@@ -15,6 +15,15 @@ export default defineNuxtConfig({
       svgLoader(),
     ],
   },
+  nitro: {
+    /** Serve /src/data/*.json files as statics under /data */
+    publicAssets: [
+      {
+        dir: '../data',
+        baseURL: 'data',
+      },
+    ],
+  },
   css: [ '@/styles/main.scss' ],
   postcss: {
     plugins: {
