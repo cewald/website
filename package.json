@@ -17,6 +17,7 @@
     "@nuxtjs/fontaine": "^0.4.3",
     "@nuxtjs/google-fonts": "^3.2.0",
     "@stylistic/eslint-plugin": "^2.2.2",
+    "@vueuse/core": "^10.11.0",
     "autoprefixer": "^10.4.19",
     "dayjs": "^1.11.11",
     "eslint": "^9.5.0",
