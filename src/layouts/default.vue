@@ -26,7 +26,7 @@ useHead({
   <div>
     <div
       class="container mx-auto flex min-h-screen flex-col justify-center
-    px-6 py-16 font-mono text-base-darkest dark:text-white"
+        px-6 py-16 font-mono text-base-darkest dark:text-white"
     >
       <HeaderBlock />
       <slot />
