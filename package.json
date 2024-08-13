@@ -16,20 +16,20 @@
     "@nuxt/eslint": "^0.5.0",
     "@nuxtjs/fontaine": "^0.4.3",
     "@nuxtjs/google-fonts": "^3.2.0",
-    "@stylistic/eslint-plugin": "^2.3.0",
-    "@vueuse/core": "^10.11.0",
+    "@stylistic/eslint-plugin": "^2.6.2",
+    "@vueuse/core": "^10.11.1",
     "autoprefixer": "^10.4.20",
     "dayjs": "^1.11.12",
-    "eslint": "^9.8.0",
+    "eslint": "^9.9.0",
     "eslint-plugin-tailwindcss": "^3.17.4",
     "gsap": "^3.12.5",
     "husky": "^9.1.4",
     "nuxt": "^3.12.4",
     "postcss": "^8.4.41",
     "sass": "^1.77.8",
-    "tailwindcss": "^3.4.7",
+    "tailwindcss": "^3.4.9",
     "vite-svg-loader": "^5.1.0",
-    "vue": "^3.4.35",
-    "vue-router": "^4.4.2"
+    "vue": "^3.4.37",
+    "vue-router": "^4.4.3"
   }
 }
