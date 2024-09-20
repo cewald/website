@@ -5,11 +5,6 @@ const projects: {
   tags: string[]
 }[] = [
   {
-    title: '16stimmt.de',
-    link: 'https://www.16stimmt.de',
-    tags: [ 'vue', 'nuxt', 'wai-aria', 'continuos-integration', 'headless-cms' ],
-  },
-  {
     title: 'twodo.studio',
     link: 'https://www.twodo.studio',
     tags: [ 'vue', 'nuxt', 'wai-aria', 'continuos-integration', 'headless-cms' ],
@@ -18,6 +13,11 @@ const projects: {
     title: 'space-transformer.com',
     link: 'https://www.space-transformer.com',
     tags: [ 'vue', 'nuxt', 'wai-aria', 'gsap', 'continuos-integration', 'headless-cms' ],
+  },
+  {
+    title: '16stimmt.de',
+    link: 'https://www.16stimmt.de',
+    tags: [ 'vue', 'nuxt', 'wai-aria', 'continuos-integration', 'headless-cms' ],
   },
 ]
 </script>
