@@ -14,6 +14,15 @@ export default defineNuxtConfig({
     plugins: [
       svgLoader(),
     ],
+    // Remove SASS deprecation message
+    // @see https://github.com/vitejs/vite/issues/18164
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: 'modern-compiler',
+        },
+      },
+    },
   },
   nitro: {
     /** Serve /src/data/*.json files as statics under /data */
@@ -57,4 +66,5 @@ export default defineNuxtConfig({
     /** @see https://github.com/nuxt/cli/issues/181 */
     host: '0.0.0.0',
   },
+  compatibilityDate: '2024-10-07',
 })

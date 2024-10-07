@@ -1,13 +1,11 @@
 <script setup lang="ts">
-withDefaults(defineProps<{
+const { margin = true } = defineProps<{
   title?: string
   subTitle?: string
   ariaLabel?: string
   titleAriaLabel?: string
   margin?: boolean
-}>(), {
-  margin: true,
-})
+}>()
 </script>
 
 <template>

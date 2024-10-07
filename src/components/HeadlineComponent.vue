@@ -1,9 +1,7 @@
 <script lang="ts" setup>
-withDefaults(defineProps<{
+const { level = 'h2' } = defineProps<{
   level?: 'h2' | 'h3'
-}>(), {
-  level: 'h2',
-})
+}>()
 </script>
 
 <template>
