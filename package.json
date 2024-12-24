@@ -13,14 +13,14 @@
     "lint:fix": "eslint --fix"
   },
   "devDependencies": {
-    "@cewald/eslint-config": "^1.3.2",
+    "@cewald/eslint-config": "^1.3.3",
     "@commitlint/cli": "^19.6.1",
     "@commitlint/config-conventional": "^19.6.0",
     "@nuxt/devtools": "^1.6.4",
-    "@nuxt/eslint": "^0.7.3",
+    "@nuxt/eslint": "^0.7.4",
     "@nuxtjs/fontaine": "^0.4.4",
     "@nuxtjs/google-fonts": "^3.2.0",
-    "@vueuse/core": "^12.0.0",
+    "@vueuse/core": "^12.2.0",
     "autoprefixer": "^10.4.20",
     "dayjs": "^1.11.13",
     "eslint": "^9.17.0",
@@ -30,7 +30,7 @@
     "nuxt": "^3.14.1592",
     "postcss": "^8.4.49",
     "sass": "^1.83.0",
-    "tailwindcss": "^3.4.16",
+    "tailwindcss": "^3.4.17",
     "vite-svg-loader": "^5.1.0",
     "vue": "^3.5.13",
     "vue-router": "^4.5.0"
