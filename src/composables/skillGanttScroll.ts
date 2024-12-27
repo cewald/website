@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger)
 export const useSkillGanttScroll = (
   containerEl: Ref<HTMLElement | null>,
   yearScaleEl: Ref<InstanceType<typeof CvSkillGanttHeader> | null>,
-  sectionEl: Ref<HTMLElement[] | null>,
+  sectionEl: Ref<HTMLElement[] | null>
 ) => {
   const isReady = ref(false)
   const isDomReady = computed(() => sectionEl.value && yearScaleEl.value?.$el && containerEl.value)
@@ -68,7 +68,7 @@ export const useSkillGanttScroll = (
           }
 
           return () => window.removeEventListener('beforeprint', beforePrintEvent)
-        },
+        }
       )
     }
   })

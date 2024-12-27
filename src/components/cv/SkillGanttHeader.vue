@@ -8,7 +8,7 @@ const yearScale = computed(() => {
   return getRange(
     endDate.getFullYear(),
     startDate.getFullYear(),
-    4,
+    4
   )
     .map(y => Math.round(y))
     .map(year => ({

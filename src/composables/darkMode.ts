@@ -1,10 +1,9 @@
-import { onBeforeMount, ref, watch } from 'vue'
 import { useMediaQuery } from '@vueuse/core'
 
 export const useDarkMode = () => {
   const current = useMediaQuery('(prefers-color-scheme: dark)')
   const isInitial = current.value
-  const isActive = ref(current)
+  const isActive = ref(isInitial)
 
   const toggle = () => {
     if (!isInitial) return
