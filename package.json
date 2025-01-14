@@ -17,10 +17,10 @@
     "typecheck": "npx nuxi typecheck"
   },
   "devDependencies": {
-    "@cewald/nuxt-boilerplate-layer": "^1.17.2",
+    "@cewald/nuxt-boilerplate-layer": "^1.17.5",
     "@commitlint/cli": "^19.6.1",
     "@commitlint/config-conventional": "^19.6.0",
-    "@vueuse/core": "^12.3.0",
+    "@vueuse/core": "^12.4.0",
     "gsap": "^3.12.5",
     "husky": "^9.1.7",
     "lint-staged": "^15.3.0",
