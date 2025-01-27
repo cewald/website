@@ -14,6 +14,11 @@ const projects: {
     link: 'https://www.space-transformer.com',
     tags: [ 'vue', 'nuxt', 'wai-aria', 'gsap', 'continuos-integration', 'headless-cms' ],
   },
+  {
+    title: 'schwabenbauer.de',
+    link: 'https://www.schwabenbauer.de',
+    tags: [ 'vue', 'nuxt', 'wai-aria', 'gsap', 'continuos-integration', 'headless-cms' ],
+  },
 ]
 </script>
 
