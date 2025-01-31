@@ -19,6 +19,11 @@ const projects: {
     link: 'https://www.schwabenbauer.de',
     tags: [ 'vue', 'nuxt', 'wai-aria', 'gsap', 'continuos-integration', 'headless-cms' ],
   },
+  {
+    title: 'vermaechtnis-ohne-grenzen.de',
+    link: 'https://www.vermaechtnis-ohne-grenzen.de/',
+    tags: [ 'vue', 'nuxt', 'wai-aria', 'continuos-integration', 'headless-cms' ],
+  },
 ]
 </script>
 
