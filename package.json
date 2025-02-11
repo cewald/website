@@ -17,7 +17,7 @@
     "typecheck": "npx nuxi typecheck"
   },
   "devDependencies": {
-    "@cewald/nuxt-boilerplate-layer": "^1.18.7",
+    "@cewald/nuxt-boilerplate-layer": "^1.19.8",
     "@commitlint/cli": "^19.7.1",
     "@commitlint/config-conventional": "^19.7.1",
     "@vueuse/core": "^12.5.0",
