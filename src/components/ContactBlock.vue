@@ -9,7 +9,7 @@
     <div class="flex flex-wrap [&>*]:mb-4 [&>*]:mr-4 md:[&>*]:mb-0">
       <ButtonPill
         title="CV"
-        to="/cv"
+        to="/cv/"
       />
       <ButtonPill
         title="Github"

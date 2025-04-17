@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   srcDir: 'src',
   routeRules: {
     '/': { prerender: true },
-    '/cv': { prerender: true },
+    '/cv/': { prerender: true },
   },
   compatibilityDate: '2024-10-07',
   nitro: {
