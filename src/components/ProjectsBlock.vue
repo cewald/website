@@ -5,7 +5,7 @@ const projects: {
   tags: string[]
 }[] = [
   {
-    title: 'Initiative Awareness e. V. Leipzig',
+    title: 'initiative-awareness.de',
     link: 'https://initiative-awareness.de',
     tags: [ 'vue', 'nuxt', 'wai-aria', 'continuos-integration', 'headless-cms' ],
   },
