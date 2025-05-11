@@ -5,6 +5,11 @@ const projects: {
   tags: string[]
 }[] = [
   {
+    title: 'Initiative Awareness e. V. Leipzig',
+    link: 'https://initiative-awareness.de',
+    tags: [ 'vue', 'nuxt', 'wai-aria', 'continuos-integration', 'headless-cms' ],
+  },
+  {
     title: 'twodo.studio',
     link: 'https://www.twodo.studio',
     tags: [ 'vue', 'nuxt', 'wai-aria', 'continuos-integration', 'headless-cms' ],
