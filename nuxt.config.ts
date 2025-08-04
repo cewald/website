@@ -3,7 +3,6 @@ export default defineNuxtConfig({
   extends: [ '@cewald/nuxt-boilerplate-layer' ],
   devtools: { enabled: true },
   css: [ '@/styles/main.scss' ],
-  srcDir: 'src',
   routeRules: {
     '/': { prerender: true },
     '/cv/': { prerender: true },
