@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss'
+import type { PluginAPI } from 'tailwindcss/types/config'
 import defaultTheme from 'tailwindcss/defaultTheme'
 
 const config: Config = {
@@ -28,7 +29,7 @@ const config: Config = {
     },
   },
   plugins: [
-    ({ addUtilities }) => {
+    ({ addUtilities }: PluginAPI) => {
       addUtilities({
         '.vertical-rl': { writingMode: 'vertical-rl' },
         '.vertical-lr': { writingMode: 'vertical-lr' },
