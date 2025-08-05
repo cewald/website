@@ -2,7 +2,7 @@ import type { Config } from 'tailwindcss'
 import defaultTheme from 'tailwindcss/defaultTheme'
 
 const config: Config = {
-  content: [ './src/**/*.{vue,js,ts,jsx,tsx}' ],
+  content: [ './{app,modules}/**/*.{vue,js,ts,jsx,tsx,scss}' ],
   darkMode: 'class',
   theme: {
     extend: {

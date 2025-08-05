@@ -5,10 +5,10 @@ const projects: {
   tags: string[]
 }[] = [
   {
-    title: 'www.livekulturwissen.org',
+    title: 'livekulturwissen.org',
     link: 'https://www.livekulturwissen.org',
     tags: [ 'payload-cms', 'vue', 'nuxt', 'wai-aria', 'continuos-integration',
-      'headless-cms', 'kubernetes', 'hetzner' ],
+      'headless-cms' ],
   },
   {
     title: 'initiative-awareness.de',
