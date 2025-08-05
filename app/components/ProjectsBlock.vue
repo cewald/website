@@ -12,7 +12,7 @@ const projects: {
   },
   {
     title: 'initiative-awareness.de',
-    link: 'https://initiative-awareness.de',
+    link: 'https://www.initiative-awareness.de',
     tags: [ 'vue', 'nuxt', 'wai-aria', 'continuos-integration', 'headless-cms' ],
   },
   {
