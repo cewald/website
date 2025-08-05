@@ -7,7 +7,7 @@ export const useName = () => {
   const metaLine = computed(() => route.name === 'cv' ? employeMetaLine : freelanceMetaLine)
 
   const shortName = computed(() => {
-    const [ prename, lastname ] = name.value.toLowerCase().split(' ')
+    const [ prename, lastname ] = name.value.toLowerCase().split(' ') as [string, string]
     return `${prename[0]}:/${lastname}`
   })
 

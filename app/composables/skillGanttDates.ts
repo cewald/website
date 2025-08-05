@@ -5,7 +5,7 @@ export const useSkillGanttDates = () => {
     const slots: number[] = []
     skillset.forEach(section => {
       for (const skill of section.skills) {
-        const startSlots = skill.timeslots.map(s => s.split('-').map(v => parseInt(v))[0])
+        const startSlots = skill.timeslots.map(s => s.split('-').map(v => parseInt(v))[0] || 0)
         slots.push(...startSlots)
       }
     })

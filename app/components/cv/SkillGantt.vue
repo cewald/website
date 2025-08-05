@@ -15,8 +15,8 @@ const skillsetStruct = computed(() => {
       // Map year as JS date
       skill.timestampedTimeslots = skill.timeslots.map(s => {
         // eslint-disable-next-line prefer-const
-        let [ start, stop ] = s.split('-').map(v => new Date(v))
-        if (start.getFullYear() < startDate.value.getFullYear()) {
+        let [ start, stop ] = s.split('-').map(v => new Date(v)) as [Date, Date]
+        if (start && start.getFullYear() < startDate.value.getFullYear()) {
           start = startDate.value
         }
 
@@ -38,8 +38,11 @@ const skillsetStruct = computed(() => {
       // Reset start point if slot has prepending slots
         .map((s, i, arr) => {
           if (i > 0) {
-            const { width: w } = arr[i - 1]
-            s.start = s.start + w
+            const item = arr[i - 1]
+            if (item) {
+              const { width: w } = item
+              s.start = s.start + w
+            }
           }
           return s
         })
