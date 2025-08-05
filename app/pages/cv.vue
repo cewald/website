@@ -148,9 +148,10 @@ useSeoMeta({ title: 'curriculum vitae' })
               :href="`https://${link}`"
               target="_blank"
               :title="title"
-              class="mb-3 flex items-center underline decoration-base-lighter decoration-1
-                underline-offset-8 hover:decoration-black dark:decoration-slate-300
-                dark:hover:decoration-white print:underline-offset-4"
+              class="
+                mb-3 flex items-center underline decoration-base-lighter decoration-1 underline-offset-8
+                hover:decoration-black dark:decoration-slate-300 dark:hover:decoration-white print:underline-offset-4
+              "
             >
               {{ link }}
             </a>
@@ -159,9 +160,11 @@ useSeoMeta({ title: 'curriculum vitae' })
       </CvSectionWrapper>
     </div>
     <div
-      class="ml-1 mt-16 w-full hyphens-auto px-6 text-center text-sm font-light leading-loose
-        text-base-semilight-contrast hover:text-base-darkest contrast-more:text-base dark:text-slate-300
-        dark:contrast-more:text-white print:hidden"
+      class="
+        ml-1 mt-16 w-full hyphens-auto px-6 text-center text-sm font-light
+        leading-loose text-base-semilight-contrast hover:text-base-darkest contrast-more:text-base dark:text-slate-300
+        dark:contrast-more:text-white print:hidden
+      "
       lang="en"
       aria-label="Print and GitHub link"
     >
