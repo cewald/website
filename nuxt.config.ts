@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  extends: [ '../' ],
+  extends: [ '@cewald/nuxt-boilerplate-layer' ],
   devtools: { enabled: true },
   css: [ '@/styles/main.scss' ],
   routeRules: {
