@@ -1,6 +1,6 @@
 import type { Config } from 'tailwindcss'
-import type { PluginAPI } from 'tailwindcss/types/config'
 import defaultTheme from 'tailwindcss/defaultTheme'
+import type { PluginAPI } from 'tailwindcss/types/config'
 
 const config: Config = {
   content: ['./{app,modules}/**/*.{vue,js,ts,jsx,tsx,scss}'],

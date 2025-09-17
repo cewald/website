@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import { useDarkMode } from '@/composables/darkMode'
 
-import LightOnIcon from '@/assets/mdi-lightbuld-on.svg'
 import LightOffIcon from '@/assets/mdi-lightbulb-on-outline.svg'
+import LightOnIcon from '@/assets/mdi-lightbuld-on.svg'
 
 const { toggle, isActive, isInitial } = useDarkMode()
 </script>

@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import Skillset from '~/data/SkillGant.json'
 import type CvSkillGanttHeader from '~/components/cv/SkillGanttHeader.vue'
+import Skillset from '~/data/SkillGant.json'
 
 const skillset = ref(Skillset as SkillSetSection[])
 const { endDate, getStartDateFromSkillset } = useSkillGanttDates()
