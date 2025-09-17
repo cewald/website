@@ -3,12 +3,12 @@ import type { PluginAPI } from 'tailwindcss/types/config'
 import defaultTheme from 'tailwindcss/defaultTheme'
 
 const config: Config = {
-  content: [ './{app,modules}/**/*.{vue,js,ts,jsx,tsx,scss}' ],
+  content: ['./{app,modules}/**/*.{vue,js,ts,jsx,tsx,scss}'],
   darkMode: 'class',
   theme: {
     extend: {
       fontFamily: {
-        mono: [ 'Martian Mono', ...defaultTheme.fontFamily.mono ],
+        mono: ['Martian Mono', ...defaultTheme.fontFamily.mono],
       },
       colors: {
         base: {

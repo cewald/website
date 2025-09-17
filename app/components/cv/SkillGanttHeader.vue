@@ -5,11 +5,7 @@ const { startDate, endDate } = defineProps<{
 }>()
 
 const yearScale = computed(() => {
-  return getRange(
-    endDate.getFullYear(),
-    startDate.getFullYear(),
-    4
-  )
+  return getRange(endDate.getFullYear(), startDate.getFullYear(), 4)
     .map(y => Math.round(y))
     .map(year => ({
       year,
@@ -20,9 +16,7 @@ const yearScale = computed(() => {
 </script>
 
 <template>
-  <div
-    class="relative mb-3 h-9 bg-white dark:bg-gray-800"
-  >
+  <div class="relative mb-3 h-9 bg-white dark:bg-gray-800">
     <div
       v-for="({ year, percent }, i) in yearScale"
       :key="`year-scale-${year}`"

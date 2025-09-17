@@ -14,10 +14,7 @@ const { toggle, isActive, isInitial } = useDarkMode()
     @click="toggle()"
   >
     <button
-      class="
-        group flex flex-wrap items-center justify-center self-start text-2xl text-base-lighter
-        transition-colors delay-500 duration-500 dark:text-slate-950 md:text-4xl md:text-base-lightest md:vertical-lr
-      "
+      class="group flex flex-wrap items-center justify-center self-start text-2xl text-base-lighter transition-colors delay-500 duration-500 dark:text-slate-950 md:text-4xl md:text-base-lightest md:vertical-lr"
       aria-label="Toggle light mode"
     >
       <component
@@ -26,10 +23,7 @@ const { toggle, isActive, isInitial } = useDarkMode()
         aria-hidden="true"
       />
       <span
-        class="
-          basis-full text-base font-medium lowercase max-md:whitespace-pre-line md:ml-0 md:mt-4 md:hidden
-          md:basis-auto md:group-hover:inline
-        "
+        class="basis-full text-base font-medium lowercase max-md:whitespace-pre-line md:ml-0 md:mt-4 md:hidden md:basis-auto md:group-hover:inline"
       >
         {{ isActive ? 'Lights \n on' : 'Lights \n off' }}
       </span>

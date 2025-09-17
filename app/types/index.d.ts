@@ -2,7 +2,7 @@ type SkillSetSkill = {
   title: string
   subTitle?: string
   timeslots: string[]
-  timestampedTimeslots: { start: Date, stop?: Date }[]
+  timestampedTimeslots: { start: Date; stop?: Date }[]
   percentTimeslots: {
     start: number
     stop?: number

@@ -10,12 +10,12 @@ const startDate = computed(() => {
 })
 
 const skillsetStruct = computed(() => {
-  return ([ ...skillset.value ]).map(section => {
+  return [...skillset.value].map(section => {
     section.skills.map(skill => {
       // Map year as JS date
       skill.timestampedTimeslots = skill.timeslots.map(s => {
         // eslint-disable-next-line prefer-const
-        let [ start, stop ] = s.split('-').map(v => new Date(v)) as [Date, Date]
+        let [start, stop] = s.split('-').map(v => new Date(v)) as [Date, Date]
         if (start && start.getFullYear() < startDate.value.getFullYear()) {
           start = startDate.value
         }
@@ -24,18 +24,17 @@ const skillsetStruct = computed(() => {
       })
 
       skill.percentTimeslots = skill.timestampedTimeslots
-      // Map start/stop time in %
+        // Map start/stop time in %
         .map(({ start, stop }) => ({
           start: timeStampToPercent(start, startDate, endDate),
           stop: stop ? timeStampToPercent(stop, startDate, endDate) : undefined,
         }))
-      // Map bar-width in %
+        // Map bar-width in %
         .map(({ start, stop }) => {
-          const width: number
-                = stop && stop > 0 ? stop - start : 100 - start
+          const width: number = stop && stop > 0 ? stop - start : 100 - start
           return { start, stop, width }
         })
-      // Reset start point if slot has prepending slots
+        // Reset start point if slot has prepending slots
         .map((s, i, arr) => {
           if (i > 0) {
             const item = arr[i - 1]
@@ -105,10 +104,14 @@ useSkillGanttScroll(containerEl, yearScaleEl, sectionEl)
               class="flex items-baseline leading-snug"
               :class="{ 'mb-0.5': skills.length - 1 !== j }"
               role="listitem"
-              :aria-label="title + (subTitle ? ' ' + subTitle : '') + ': '
-                + timestampedTimeslots
+              :aria-label="
+                title +
+                (subTitle ? ' ' + subTitle : '') +
+                ': ' +
+                timestampedTimeslots
                   .map(({ start: a, stop: b }) => a.getFullYear() + ' - ' + (b ? b.getFullYear() : 'now'))
-                  .join(', ')"
+                  .join(', ')
+              "
             >
               <template
                 v-for="({ width, start }, k) in percentTimeslots"
@@ -131,8 +134,7 @@ useSkillGanttScroll(containerEl, yearScaleEl, sectionEl)
                   {{ title }}
                   <span
                     v-if="subTitle"
-                    class="text-base-semilight-contrast contrast-more:text-base
-                      dark:text-slate-400 dark:contrast-more:text-white print:text-base-semilight"
+                    class="text-base-semilight-contrast contrast-more:text-base dark:text-slate-400 dark:contrast-more:text-white print:text-base-semilight"
                     v-text="subTitle"
                   />
                 </div>

@@ -1,8 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  extends: [ '@cewald/nuxt-boilerplate-layer' ],
+  extends: ['@cewald/nuxt-boilerplate-layer'],
   devtools: { enabled: true },
-  css: [ '@/styles/main.scss' ],
+  css: ['@/styles/main.scss'],
   routeRules: {
     '/': { prerender: true },
     '/cv/': { prerender: true },
@@ -23,7 +23,7 @@ export default defineNuxtConfig({
   },
   googleFonts: {
     families: {
-      'Martian Mono': [ 300, 400, 500, 700 ],
+      'Martian Mono': [300, 400, 500, 700],
     },
     download: true,
   },

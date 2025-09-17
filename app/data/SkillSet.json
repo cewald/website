@@ -1,5 +1,5 @@
 {
-  "frontend":[
+  "frontend": [
     "JavaScript",
     "node.js",
     "TypeScript",
@@ -15,12 +15,8 @@
     "esbuild",
     "webpack"
   ],
-  "server-side":[
-    "node.js",
-    "PHP",
-    "NGINX"
-  ],
-  "dev-ops":[
+  "server-side": ["node.js", "PHP", "NGINX"],
+  "dev-ops": [
     "Jest",
     "Cypress-io",
     "Continous-Integration",
@@ -31,7 +27,7 @@
     "GitLab-Pipelines",
     "git"
   ],
-  "architecture":[
+  "architecture": [
     "Docker",
     "GCP",
     "App-Engine",
@@ -42,24 +38,7 @@
     "Kubernetes",
     "Helmet"
   ],
-  "data":[
-    "ElasticSearch",
-    "Firestore",
-    "MYSQL",
-    "PostgreSQL",
-    "Redis"
-  ],
-  "paradigm":[
-    "WAI-ARIA",
-    "Microservice",
-    "Headless",
-    "Serverless",
-    "aCSS",
-    "1312"
-  ],
-  "seo":[
-    "Lighthouse",
-    "Web-Vitals",
-    "Structured-Data"
-  ]
+  "data": ["ElasticSearch", "Firestore", "MYSQL", "PostgreSQL", "Redis"],
+  "paradigm": ["WAI-ARIA", "Microservice", "Headless", "Serverless", "aCSS", "1312"],
+  "seo": ["Lighthouse", "Web-Vitals", "Structured-Data"]
 }

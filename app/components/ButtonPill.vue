@@ -6,8 +6,8 @@ const { to } = defineProps<{
 }>()
 
 const isExternal = computed(() => to.startsWith('http') || to.startsWith('mailto') || to.startsWith('tel'))
-const component = computed(() => isExternal.value ? 'a' : 'RouterLink')
-const link = computed(() => isExternal.value ? { href: to } : { to })
+const component = computed(() => (isExternal.value ? 'a' : 'RouterLink'))
+const link = computed(() => (isExternal.value ? { href: to } : { to }))
 </script>
 
 <template>
