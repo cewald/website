@@ -1,0 +1,43 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-mono:
+    'Martian Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+
+  --color-base-lightest: #eeeeee;
+  --color-base-lighter: #cccccc;
+  --color-base-light: #aaaaaa;
+  --color-base-lightcontrast: #949494;
+  --color-base-semilight: #707070;
+  --color-base-semilightcontrast: #757575;
+  --color-base-default: #999999;
+  --color-base-dark: #666666;
+  --color-base-darkest: #333333;
+}
+
+@layer base {
+  body {
+    @apply bg-white antialiased dark:bg-gray-800;
+  }
+}
+
+/**
+ * This is to apply dark: variant when switching to dark-mode
+ **/
+@custom-variant dark (&:where(.dark, .dark *));
+
+@utility flex-fix {
+  flex: 0 0 auto;
+}
+
+@utility vertical-rl {
+  writingmode: 'vertical-rl';
+}
+
+@utility vertical-lr {
+  writingmode: 'vertical-lr';
+}
+
+@utility horizontal-tb {
+  writingmode: 'horizontal-tb';
+}
