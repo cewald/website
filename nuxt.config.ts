@@ -19,7 +19,6 @@ export default defineNuxtConfig({
   },
   boilerplate: {
     i18n: false,
-    storyblok: false,
   },
   googleFonts: {
     families: {
