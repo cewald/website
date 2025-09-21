@@ -9,7 +9,6 @@
     "vscode": {
       "extensions": [
         "bradlc.vscode-tailwindcss",
-        "csstools.postcss",
         "dbaeumer.vscode-eslint",
         "esbenp.prettier-vscode",
         "tamasfe.even-better-toml",
