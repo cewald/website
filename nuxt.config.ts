@@ -17,9 +17,6 @@ export default defineNuxtConfig({
       },
     ],
   },
-  boilerplate: {
-    i18n: false,
-  },
   googleFonts: {
     families: {
       'Martian Mono': [300, 400, 500, 700],
