@@ -1,6 +1,5 @@
 {
   "css.lint.unknownAtRules": "ignore",
-  "scss.lint.unknownAtRules": "ignore",
   "tailwindCSS.experimental.configFile": "./app/assets/styles/main.css",
   "typescript.tsdk": "node_modules/typescript/lib",
   "prettier.enable": true,
