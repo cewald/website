@@ -1,6 +1,9 @@
 {
   "name": "@cewald/website",
-  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-22-bullseye",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "mounts": ["source=${localEnv:HOME}/.npmrc,target=/home/node/.npmrc,type=bind,readonly"],
   "features": {
     "ghcr.io/devcontainers/features/github-cli:1": {},
     "ghcr.io/jckimble/devcontainer-features/ngrok:3": {}
