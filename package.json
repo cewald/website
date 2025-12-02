@@ -20,12 +20,12 @@
     "@cewald/nuxt-boilerplate-layer": "^5.4.6",
     "@commitlint/cli": "^20.1.0",
     "@commitlint/config-conventional": "^20.0.0",
-    "@vueuse/core": "^14.0.0",
+    "@vueuse/core": "^14.1.0",
     "gsap": "^3.13.0",
     "husky": "^9.1.7",
-    "lint-staged": "^16.2.6",
+    "lint-staged": "^16.2.7",
     "nuxt": "^4.2.1",
-    "vue": "^3.5.22",
+    "vue": "^3.5.25",
     "vue-router": "^4.5.0"
   },
   "lint-staged": {
