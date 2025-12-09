@@ -18,10 +18,10 @@
   },
   "devDependencies": {
     "@cewald/nuxt-boilerplate-layer": "^5.4.6",
-    "@commitlint/cli": "^20.1.0",
-    "@commitlint/config-conventional": "^20.0.0",
+    "@commitlint/cli": "^20.2.0",
+    "@commitlint/config-conventional": "^20.2.0",
     "@vueuse/core": "^14.1.0",
-    "gsap": "^3.13.0",
+    "gsap": "^3.14.1",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
     "nuxt": "^4.2.1",
