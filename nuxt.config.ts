@@ -19,7 +19,7 @@ export default defineNuxtConfig({
   },
   googleFonts: {
     families: {
-      'Martian Mono': [300, 400, 500, 700],
+      'IBM Plex Mono': [300, 400, 500, 700],
     },
     download: true,
   },

@@ -84,7 +84,7 @@ useSkillGanttScroll(containerEl, yearScaleEl, sectionEl)
           :aria-label="section"
         >
           <h3
-            class="mx-6 mb-1 flex items-baseline font-mono text-base-semilight dark:text-white sm:mx-0 print:mx-0"
+            class="mx-6 mb-1 flex items-baseline font-mono font-medium sm:mx-0 dark:text-white print:mx-0"
             aria-hidden="true"
           >
             {{ section }}
@@ -129,7 +129,7 @@ useSkillGanttScroll(containerEl, yearScaleEl, sectionEl)
                 />
                 <div
                   v-if="k === percentTimeslots.length - 1"
-                  class="flex-auto pl-2 text-base font-light"
+                  class="flex-auto pl-2 text-base"
                 >
                   {{ title }}
                   <span

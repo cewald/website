@@ -2,7 +2,7 @@
 
 @theme {
   --font-mono:
-    'Martian Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+    'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
 
   --color-base-lightest: #eeeeee;
   --color-base-lighter: #cccccc;

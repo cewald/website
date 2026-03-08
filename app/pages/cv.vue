@@ -25,7 +25,7 @@ useSeoMeta({ title: 'curriculum vitae' })
 <template>
   <div class="-mx-6 flex flex-wrap">
     <CvSectionWrapper
-      class="hyphens-auto px-6 font-light print:order-1"
+      class="px-6 hyphens-auto print:order-1"
       aria-label="Introduction"
       lang="en"
     >
@@ -57,7 +57,7 @@ useSeoMeta({ title: 'curriculum vitae' })
       title="Key strengths"
       class="w-full px-6 md:grow xl:w-2/4 print:order-2 print:w-full"
     >
-      <ul class="font-light">
+      <ul class="">
         <li
           v-for="({ title, text }, i) in keyStrengths"
           :key="`key-strength-${i}`"
@@ -66,7 +66,7 @@ useSeoMeta({ title: 'curriculum vitae' })
         >
           <h3
             :id="`key-strength-${i}`"
-            class="mb-2 flex items-baseline font-normal"
+            class="mb-2 flex items-baseline font-medium"
             :aria-label="title"
           >
             <span class="w-6">_</span>
@@ -87,15 +87,15 @@ useSeoMeta({ title: 'curriculum vitae' })
       aria-label="Personal Details"
       title-aria-label="Personal Details"
     >
-      <h3 class="mb-2 text-base font-normal lowercase">Based in</h3>
-      <p class="mb-4 font-light">
+      <h3 class="mb-2 text-base font-medium lowercase">Based in</h3>
+      <p class="mb-4">
         04105 Leipzig<br />
         Germany
       </p>
-      <h3 class="mb-2 text-base font-normal lowercase">Demographics</h3>
-      <p class="mb-4 font-light">{{ age }} years (he/him)</p>
-      <h3 class="mb-2 text-base font-normal lowercase">Email</h3>
-      <p class="mb-4 font-light">
+      <h3 class="mb-2 text-base font-medium lowercase">Demographics</h3>
+      <p class="mb-4">{{ age }} years (he/him)</p>
+      <h3 class="mb-2 text-base font-medium lowercase">Email</h3>
+      <p class="mb-4">
         <a
           href="mailto:me@ewaldewald.com"
           title="Email"
@@ -111,14 +111,14 @@ useSeoMeta({ title: 'curriculum vitae' })
         title="Languages"
         class="md:mb-8 print:mb-8"
       >
-        <ul class="font-light">
+        <ul class="">
           <li
             v-for="([lang, state], i) in languages"
             :key="`lang-${i}`"
             :aria-label="lang"
           >
             <span class="lowercase">{{ lang }}</span>
-            <span class="ml-2 text-base-semilight-contrast dark:text-slate-300 print:text-base-semilight"
+            <span class="text-base-semilight-contrast ml-2 dark:text-slate-300 print:text-base-semilight"
               >_{{ state }}</span
             >
           </li>
@@ -128,7 +128,7 @@ useSeoMeta({ title: 'curriculum vitae' })
         title="Links"
         class="print:break-after-page"
       >
-        <ul class="font-light">
+        <ul class="">
           <li
             v-for="([title, link], i) in links"
             :key="`link-${i}`"
@@ -147,7 +147,7 @@ useSeoMeta({ title: 'curriculum vitae' })
       </CvSectionWrapper>
     </div>
     <div
-      class="ml-1 mt-16 w-full hyphens-auto px-6 text-center text-sm font-light leading-loose text-base-semilight-contrast hover:text-base-darkest contrast-more:text-base dark:text-slate-300 dark:contrast-more:text-white print:hidden"
+      class="text-base-semilight-contrast mt-16 ml-1 w-full px-6 text-center text-sm leading-loose hyphens-auto hover:text-base-darkest contrast-more:text-base dark:text-slate-300 dark:contrast-more:text-white print:hidden"
       lang="en"
       aria-label="Print and GitHub link"
     >

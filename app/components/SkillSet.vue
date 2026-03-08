@@ -21,7 +21,7 @@ const skillset = ref<{
       aria-label="skillsubset"
     >
       <h3
-        class="mr-2 mt-6 text-base-semilight dark:text-slate-300 md:mt-0 md:inline-block"
+        class="mt-6 mr-3 font-medium md:mt-0 md:inline-block dark:text-slate-300"
         v-text="set"
       />
       <ul
