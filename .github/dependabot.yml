@@ -9,8 +9,12 @@ updates:
     groups:
       production-dependencies:
         dependency-type: "production"
+        patterns:
+          - "*"
       development-dependencies:
         dependency-type: "development"
+        patterns:
+          - "*"
     pull-request-branch-name:
       separator: "-"
     commit-message:
