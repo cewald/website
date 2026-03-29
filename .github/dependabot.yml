@@ -1,7 +1,14 @@
 version: 2
+registries:
+  cewald:
+    type: npm-registry
+    url: https://npm.pkg.github.com
+    token: ${{secrets.NPM_TOKEN}}
 updates:
   - package-ecosystem: "npm"
     directory: "/"
+    registries:
+      - cewald
     schedule:
       interval: "weekly"
       day: "tuesday"
