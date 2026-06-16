@@ -17,13 +17,13 @@
     "typecheck": "npx nuxi typecheck"
   },
   "devDependencies": {
-    "@cewald/nuxt-boilerplate-layer": "^6.1.20",
-    "@commitlint/cli": "^21.0.1",
-    "@commitlint/config-conventional": "^21.0.1",
+    "@cewald/nuxt-boilerplate-layer": "^7.1.0",
+    "@commitlint/cli": "^21.0.2",
+    "@commitlint/config-conventional": "^21.0.2",
     "@vueuse/core": "^14.3.0",
     "gsap": "^3.15.0",
     "husky": "^9.1.7",
-    "lint-staged": "^17.0.5",
+    "lint-staged": "^17.0.7",
     "nuxt": "^4.4.8",
     "vue": "^3.5.33",
     "vue-router": "^5.0.6"
